@@ -1,0 +1,12 @@
+
+{
+  "ITEM-001": { "sku": "CPU-45", "name": "Unidad Central de Procesamiento v4.5", "family": "Equipos", "unitCost": 350, "unit": "ud", "suppliers": ["WF-SUP-001"], "type": "simple", "observations": "Componente principal para la mayoría de kits." },
+  "ITEM-002": { "sku": "BRKT-SML", "name": "Soporte de Montaje Pequeño", "family": "Herrajes", "unitCost": 15.50, "unit": "ud", "suppliers": ["WF-SUP-002"], "type": "simple" },
+  "ITEM-003": { "sku": "CONN-PLT-01", "name": "Placa de Conexión Principal", "family": "Herrajes", "unitCost": 45, "unit": "ud", "suppliers": ["WF-SUP-002"], "type": "simple" },
+  "ITEM-004": { "sku": "SCRW-M5", "name": "Paquete de Tornillos M5 (100ct)", "family": "Tornillería", "unitCost": 8, "unit": "ud", "suppliers": ["WF-SUP-003"], "type": "simple" },
+  "ITEM-005": { "sku": "GPS-MOD-2", "name": "Módulo GPS v2", "family": "Equipos", "unitCost": 120, "unit": "ud", "suppliers": ["WF-SUP-004"], "type": "simple" },
+  "ITEM-006": { "sku": "CAM-SEC-HD", "name": "Cámara de Seguridad HD", "family": "Equipos", "unitCost": 85, "unit": "ud", "suppliers": ["WF-SUP-001"], "type": "simple" },
+  "ITEM-007": { "sku": "CBL-PWR-10M", "name": "Cable de Alimentación 2-hilos", "family": "Cableado", "unitCost": 2.5, "unit": "ml", "suppliers": ["WF-SUP-001"], "type": "simple" },
+  "ITEM-101": { "sku": "SERV-INST-HR", "name": "Hora de Instalación Técnica", "unitCost": 75, "unit": "ud", "type": "service" },
+  "ITEM-100": { "sku": "KIT-INST-BASIC", "name": "Kit de Instalación Básico", "unitCost": 478, "unit": "ud", "type": "composite", "components": [ { "itemId": "ITEM-001", "quantity": 1 }, { "itemId": "ITEM-005", "quantity": 1 }, { "itemId": "ITEM-004", "quantity": 1 } ] }
+}

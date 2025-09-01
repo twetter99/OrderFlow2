@@ -1,0 +1,11 @@
+
+{
+  "INVLOC-001": { "itemId": "ITEM-001", "locationId": "LOC-002", "quantity": 15 },
+  "INVLOC-002": { "itemId": "ITEM-001", "locationId": "LOC-003", "quantity": 10 },
+  "INVLOC-003": { "itemId": "ITEM-002", "locationId": "LOC-001", "quantity": 8 },
+  "INVLOC-004": { "itemId": "ITEM-003", "locationId": "LOC-001", "quantity": 55 },
+  "INVLOC-005": { "itemId": "ITEM-004", "locationId": "LOC-001", "quantity": 200 },
+  "INVLOC-006": { "itemId": "ITEM-005", "locationId": "LOC-002", "quantity": 12 },
+  "INVLOC-007": { "itemId": "ITEM-006", "locationId": "LOC-002", "quantity": 30 },
+  "INVLOC-008": { "itemId": "ITEM-007", "locationId": "LOC-001", "quantity": 150 }
+}

@@ -1,0 +1,15 @@
+
+{
+  "WF-OP-001": {
+    "name": "Instalaciones Electrónicas Avanzadas S.L.",
+    "cif": "B-12345678",
+    "phone": "911 23 45 67",
+    "email": "facturacion@iea-sl.com",
+    "address": "Calle de la Innovación, 1, 28010 Madrid",
+    "notes": "Operador principal para proyectos en la comunidad de Madrid.",
+    "depots": [
+      { "id": "DEPOT-01", "name": "Cochera Central", "address": "Calle de la Logística, 42, Getafe" },
+      { "id": "DEPOT-02", "name": "Base Norte", "address": "Avenida de la Industria, 1, Alcobendas" }
+    ]
+  }
+}

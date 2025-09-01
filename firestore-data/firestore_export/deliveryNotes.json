@@ -1,0 +1,25 @@
+
+{
+  "WF-DN-2024-0001": {
+    "clientId": "WF-CLI-001",
+    "projectId": "WF-PROJ-001",
+    "date": "2024-07-20T00:00:00.000Z",
+    "status": "Completado",
+    "locationId": "LOC-002",
+    "items": [
+      { "itemId": "ITEM-001", "quantity": 5 },
+      { "itemId": "ITEM-004", "quantity": 10 }
+    ]
+  },
+  "WF-DN-2024-0002": {
+    "clientId": "WF-CLI-002",
+    "projectId": "WF-PROJ-002",
+    "date": "2024-07-22T00:00:00.000Z",
+    "status": "Completado",
+    "locationId": "LOC-001",
+    "items": [
+      { "itemId": "ITEM-002", "quantity": 20 },
+      { "itemId": "ITEM-003", "quantity": 15 }
+    ]
+  }
+}

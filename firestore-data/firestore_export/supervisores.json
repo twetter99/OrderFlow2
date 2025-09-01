@@ -1,0 +1,6 @@
+
+{
+  "hstmO2zM2JQDRnbrvjJHPz3i3nj2": { "name": "Juan Winfin", "phone": "600-111-222", "notes": "Supervisor general.", "email": "juan@winfin.es" },
+  "WF-SUPV-001": { "name": "Laura Martín", "phone": "600-111-222", "notes": "Supervisora de zona centro.", "email": "lmartin@winfin.es" },
+  "WF-SUPV-002": { "name": "Roberto Sánchez", "phone": "600-333-444", "notes": "Supervisor de grandes cuentas.", "email": "rsanchez@winfin.es" }
+}

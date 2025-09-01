@@ -1,0 +1,21 @@
+
+{
+  "WF-CLI-001": {
+    "name": "Tránsito de la Ciudad",
+    "contactPerson": "Carlos Ruiz",
+    "email": "c.ruiz@transitociudad.gov",
+    "phone": "611-222-3333"
+  },
+  "WF-CLI-002": {
+    "name": "Compañía de Turismo",
+    "contactPerson": "Ana Torres",
+    "email": "ana.torres@turismo.com",
+    "phone": "622-333-4444"
+  },
+  "WF-CLI-003": {
+    "name": "Junta Escolar del Distrito",
+    "contactPerson": "Maria Lopez",
+    "email": "m.lopez@juntaescolar.edu",
+    "phone": "633-444-5555"
+  }
+}

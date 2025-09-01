@@ -1,0 +1,46 @@
+# ============================================================================
+# Firebase App Hosting Configuration for a Next.js App
+# https://firebase.google.com/docs/app-hosting/configure
+#
+# INSTRUCCIONES:
+# 1. Este archivo está configurado para usar secretos de Google Secret Manager.
+# 2. Asegúrate de que los siguientes secretos existen en tu proyecto:
+#    - NEXT_PUBLIC_BASE_URL_PROD: Contiene la URL de producción (ej. https://tu-app.web.app)
+#    - ORDERFLOW_GMAIL_USER: Tu email de Gmail.
+#    - ORDERFLOW_GMAIL_PASSWORD: Tu contraseña de aplicación de Gmail.
+#    - FIREBASE_PROJECT_ID: El ID de tu proyecto de Firebase.
+#    - FIREBASE_CLIENT_EMAIL: El email de la cuenta de servicio del SDK de Admin.
+#    - FIREBASE_PRIVATE_KEY: La clave privada de la cuenta de servicio.
+# ============================================================================
+
+# --- Configuración de Rendimiento y Escalado ---
+runConfig:
+  cpu: 1
+  memoryMiB: 512
+  maxInstances: 10
+  minInstances: 0
+  concurrency: 80
+
+# --- Secretos y Claves de API (MUY IMPORTANTE) ---
+# Estas variables se inyectan en tu aplicación durante el despliegue.
+secretEnv:
+  # URL base para producción. Esta es la URL de tu aplicación desplegada.
+  # Apunta al secreto que contiene tu URL de producción.
+  - key: 'BASE_URL' # Cambiado para uso en el servidor
+    secret: 'NEXT_PUBLIC_BASE_URL_PROD'
+
+  # Credenciales de Gmail para el envío de correos en producción.
+  - key: 'GMAIL_USER'
+    secret: 'ORDERFLOW_GMAIL_USER'
+  - key: 'GMAIL_APP_PASSWORD'
+    secret: 'ORDERFLOW_GMAIL_PASSWORD'
+
+  # Credenciales del SDK de Admin de Firebase para operaciones de backend.
+  - key: 'FIREBASE_PROJECT_ID'
+    secret: 'FIREBASE_PROJECT_ID'
+  - key: 'FIREBASE_CLIENT_EMAIL'
+    secret: 'FIREBASE_CLIENT_EMAIL'
+  - key: 'FIREBASE_PRIVATE_KEY'
+    secret: 'FIREBASE_PRIVATE_KEY'
+
+# --- Fin del archivo ---

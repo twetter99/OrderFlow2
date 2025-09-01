@@ -1,0 +1,9 @@
+
+{
+  "WF-SUP-001": { "name": "TechParts Inc.", "contactPerson": "Jane Doe", "email": "sales@techparts.com", "phone": "123-456-7890", "deliveryRating": 4.5, "qualityRating": 4.8 },
+  "WF-SUP-002": { "name": "MetalWorks Ltd.", "contactPerson": "John Smith", "email": "contact@metalworks.com", "phone": "987-654-3210", "deliveryRating": 4.2, "qualityRating": 4.5 },
+  "WF-SUP-003": { "name": "Soluciones de Ferretería", "contactPerson": "Peter Jones", "email": "orders@hardwaresolutions.com", "phone": "555-123-4567", "deliveryRating": 4.8, "qualityRating": 4.3 },
+  "WF-SUP-004": { "name": "Global Nav", "contactPerson": "Susan Chen", "email": "support@globalnav.com", "phone": "555-987-6543", "deliveryRating": 4.0, "qualityRating": 4.7 },
+  "WF-SUP-005": { "name": "Ensamblado Interno", "contactPerson": "N/A", "email": "N/A", "phone": "N/A", "deliveryRating": 5.0, "qualityRating": 5.0 },
+  "WF-SUP-006": { "name": "Viajes Corporativos", "contactPerson": "Agencia de Viajes", "email": "reservas@viajescorp.com", "phone": "555-555-5555", "deliveryRating": 5.0, "qualityRating": 5.0 }
+}

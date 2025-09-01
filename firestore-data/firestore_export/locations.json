@@ -1,0 +1,6 @@
+
+{
+  "LOC-001": { "name": "Almacén Principal", "description": "Almacén principal para componentes generales." },
+  "LOC-002": { "name": "Almacén Secundario", "description": "Almacén para componentes electrónicos sensibles." },
+  "LOC-003": { "name": "Zona de Recepción", "description": "Mercancía pendiente de clasificar." }
+}

@@ -1,0 +1,8 @@
+
+{
+  "PAY-001": { "invoiceId": "INV-001", "invoiceNumber": "FACT-TECH-501", "supplierName": "TechParts Inc.", "dueDate": "2024-08-02T12:00:00.000Z", "amountDue": 4235, "paymentMethod": "Transferencia", "status": "Pagado total", "paymentHistory": [{ "date": "2024-08-02T12:00:00.000Z", "amount": 4235, "reference": "TR-2024-5821" }] },
+  "PAY-002": { "invoiceId": "INV-002", "invoiceNumber": "MW-INV-982", "supplierName": "MetalWorks Ltd.", "dueDate": "2024-08-29T12:00:00.000Z", "amountDue": 937.75, "paymentMethod": "Transferencia", "status": "Pendiente" },
+  "PAY-003": { "invoiceId": "INV-003", "invoiceNumber": "FACT-TECH-508", "supplierName": "TechParts Inc.", "dueDate": "2024-09-21T12:00:00.000Z", "amountDue": 3085.50, "paymentMethod": "Confirming", "status": "Pendiente" },
+  "PAY-004": { "invoiceId": "INV-004", "invoiceNumber": "MW-INV-991", "supplierName": "MetalWorks Ltd.", "dueDate": "2024-08-15T12:00:00.000Z", "amountDue": 1089, "paymentMethod": "Transferencia", "status": "Pendiente" },
+  "PAY-005": { "invoiceId": "INV-005", "invoiceNumber": "FACT-TECH-512", "supplierName": "TechParts Inc.", "dueDate": "2024-08-22T12:00:00.000Z", "amountDue": 5000, "paymentMethod": "Transferencia", "status": "Pagado parcialmente", "paymentHistory": [{ "date": "2024-08-16T12:00:00.000Z", "amount": 2500, "reference": "TR-2024-5911" }] }
+}

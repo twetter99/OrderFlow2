@@ -1,0 +1,5 @@
+
+{
+  "WF-TECH-001": { "name": "Mario García", "phone": "655-444-333", "specialty": "Electrónica", "category": "Técnico Integrador de Sistemas Embarcados", "email": "mgarcia@winfin.es" },
+  "WF-TECH-002": { "name": "Laura Jimenez", "phone": "655-111-222", "specialty": "GPS y Comunicaciones", "category": "Técnico de SAT (Servicio de Asistencia Técnica)", "email": "ljimenez@winfin.es" }
+}

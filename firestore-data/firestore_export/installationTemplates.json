@@ -1,0 +1,40 @@
+
+{
+  "TPL-001": {
+    "nombre": "Instalación Básica GPS Autobús Urbano",
+    "tipo_vehiculo": "autobuses",
+    "descripcion": "Plantilla estándar para la instalación del sistema de seguimiento GPS en autobuses urbanos. Incluye la unidad central y la antena.",
+    "tiempo_estimado_horas": 2.5,
+    "num_tecnicos_requeridos": 1,
+    "activa": true,
+    "version": 1,
+    "fecha_creacion": "2023-10-15T09:00:00.000Z",
+    "materiales": [
+      { "id": "MAT-001", "material_id": "ITEM-100", "cantidad_estandar": 1, "opcional": false }
+    ],
+    "herramientas": [
+      { "id": "HER-001", "herramienta": "Juego de destornilladores de precisión", "obligatoria": true },
+      { "id": "HER-002", "herramienta": "Multímetro digital", "obligatoria": true },
+      { "id": "HER-003", "herramienta": "Taladro inalámbrico con juego de brocas", "obligatoria": true }
+    ]
+  },
+  "TPL-002": {
+    "nombre": "Instalación Completa Seguridad Camión Larga Distancia",
+    "tipo_vehiculo": "camiones",
+    "descripcion": "Instalación completa que incluye GPS, 4 cámaras de seguridad y sistema de bloqueo remoto.",
+    "tiempo_estimado_horas": 6,
+    "num_tecnicos_requeridos": 2,
+    "activa": true,
+    "version": 2,
+    "fecha_creacion": "2024-02-20T14:30:00.000Z",
+    "materiales": [
+      { "id": "MAT-002", "material_id": "ITEM-100", "cantidad_estandar": 1, "opcional": false },
+      { "id": "MAT-003", "material_id": "ITEM-006", "cantidad_estandar": 4, "opcional": false },
+      { "id": "MAT-004", "material_id": "ITEM-007", "cantidad_estandar": 20, "opcional": false }
+    ],
+    "herramientas": [
+      { "id": "HER-004", "herramienta": "Juego de llaves de vaso", "obligatoria": true },
+      { "id": "HER-005", "herramienta": "Herramienta de crimpado de terminales", "obligatoria": true }
+    ]
+  }
+}

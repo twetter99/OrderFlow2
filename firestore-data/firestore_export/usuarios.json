@@ -1,0 +1,6 @@
+
+{
+  "hstmO2zM2JQDRnbrvjJHPz3i3nj2": { "personId": "hstmO2zM2JQDRnbrvjJHPz3i3nj2", "name": "Juan Winfin", "email": "juan@winfin.es", "phone": "111-222-3333", "permissions": ["dashboard", "projects", "inventory", "purchasing", "users", "supervisores", "settings", "installation-templates", "replan", "resource-planning", "travel-planning", "locations", "receptions", "despatches", "completed-orders", "suppliers", "supplier-invoices", "payments", "project-tracking", "reports", "documentation", "ai-assistant", "clients", "operadores", "technicians", "approval-flows", "reminders"] },
+  "gH7jKlM9nBvC1xZ2a3s4d5f6g7h8": { "name": "Warehouse Staff", "email": "warehouse@orderflow.com", "phone": "444-555-6666", "permissions": ["inventory", "locations", "receptions"] },
+  "a1b2c3d4e5f6g7h8i9j0k1l2m3n4": { "name": "Solicitante Ejemplo", "email": "solicitante@orderflow.com", "phone": "777-888-9999", "permissions": ["purchasing"] }
+}

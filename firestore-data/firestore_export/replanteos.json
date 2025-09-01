@@ -1,0 +1,38 @@
+
+{
+  "RE-001": {
+    "proyecto_id": "WF-PROJ-001",
+    "vehiculo_identificacion": "Autobús #345",
+    "matricula": "1234 ABC",
+    "fecha_replanteo": "2024-07-10T00:00:00.000Z",
+    "tecnico_responsable_id": "WF-TECH-001",
+    "plantilla_base_id": "TPL-001",
+    "tiempo_estimado_ajustado": 3.0,
+    "observaciones": "El espacio para la CPU es reducido, se necesita un soporte de montaje modificado. Se requiere cableado adicional.",
+    "estado": "Completado",
+    "materiales": [
+      { "id": "RE-MAT-001", "replanteo_id": "RE-001", "material_id": "ITEM-100", "cantidad_prevista": 1 },
+      { "id": "RE-MAT-002", "replanteo_id": "RE-001", "material_id": "ITEM-002", "cantidad_prevista": 1, "justificacion_cambio": "Soporte estándar no cabe" },
+      { "id": "RE-MAT-003", "replanteo_id": "RE-001", "material_id": "ITEM-007", "cantidad_prevista": 2, "justificacion_cambio": "Extensión de cableado necesaria" }
+    ],
+    "imagenes": [
+      { "id": "RE-IMG-001", "replanteo_id": "RE-001", "tipo": "estado_inicial", "url_imagen": "https://placehold.co/600x400.png", "descripcion": "Vista del salpicadero antes de la instalación." },
+      { "id": "RE-IMG-002", "replanteo_id": "RE-001", "tipo": "esquema", "url_imagen": "https://placehold.co/600x400.png", "descripcion": "Diagrama de la nueva ubicación de la CPU." }
+    ]
+  },
+  "RE-002": {
+    "proyecto_id": "WF-PROJ-001",
+    "vehiculo_identificacion": "Autobús #346",
+    "matricula": "1235 ABC",
+    "fecha_replanteo": "2024-07-11T00:00:00.000Z",
+    "tecnico_responsable_id": "WF-TECH-002",
+    "plantilla_base_id": "TPL-001",
+    "tiempo_estimado_ajustado": 2.5,
+    "observaciones": "Instalación estándar. Sin desviaciones.",
+    "estado": "Pendiente",
+    "materiales": [
+      { "id": "RE-MAT-004", "replanteo_id": "RE-002", "material_id": "ITEM-100", "cantidad_prevista": 1 }
+    ],
+    "imagenes": []
+  }
+}
