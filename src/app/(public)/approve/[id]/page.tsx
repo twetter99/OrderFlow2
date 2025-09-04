@@ -6,7 +6,7 @@ import { CheckCircle, XCircle, Package, CalendarDays, AlertTriangle, Info, HardH
 import type { PurchaseOrder, StatusHistoryEntry, Project } from '@/lib/types';
 import { cn, convertTimestampsToISO } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
-import { ApproveButton, RejectButton } from '@/lib/actions';
+import { ApproveButton } from '@/lib/actions/ai-assistant';
 
 
 async function getOrderDetails(id: string): Promise<PurchaseOrder | null> {
@@ -174,7 +174,7 @@ export default async function PublicApprovalPage({ params }: { params: { id: str
          </CardContent>
          {isActionable && (
            <CardFooter className="bg-gray-50 px-6 py-4 flex justify-end gap-3">
-               <RejectButton orderId={order.id} />
+               {/* <RejectButton/> */}
                <ApproveButton orderId={order.id} />
            </CardFooter>
          )}
@@ -183,3 +183,4 @@ export default async function PublicApprovalPage({ params }: { params: { id: str
    </div>
  )
 }
+
