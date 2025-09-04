@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -13,8 +14,8 @@ import { Loader2 } from 'lucide-react';
 import { PasswordInput } from '../shared/password-input';
 
 const formSchema = z.object({
-  email: z.string().email("Por favor, introduce un correo electrónico válido."),
-  password: z.string().min(1, "La contraseña no puede estar vacía."),
+  email: z.string().email("Por favor, introduce un correo electrónico válido.").default("juan@winfin.es"),
+  password: z.string().min(1, "La contraseña no puede estar vacía.").default("h8QJsx"),
 });
 
 type LoginFormValues = z.infer<typeof formSchema>;
@@ -24,7 +25,7 @@ export function LoginForm() {
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: { email: "", password: "" },
+    defaultValues: { email: "juan@winfin.es", password: "h8QJsx" },
   });
 
   const onSubmit = (values: LoginFormValues) => {
