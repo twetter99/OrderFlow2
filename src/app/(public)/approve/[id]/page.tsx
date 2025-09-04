@@ -6,7 +6,7 @@ import { CheckCircle, XCircle, Package, CalendarDays, AlertTriangle, Info, HardH
 import type { PurchaseOrder, StatusHistoryEntry, Project } from '@/lib/types';
 import { cn, convertTimestampsToISO } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
-import { ApproveButton, RejectButton } from './actions';
+import { ApproveButton, RejectButton } from '@/lib/actions';
 
 
 async function getOrderDetails(id: string): Promise<PurchaseOrder | null> {
