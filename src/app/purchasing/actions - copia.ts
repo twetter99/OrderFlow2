@@ -58,9 +58,9 @@ export async function addPurchaseOrder(orderData: Partial<PurchaseOrder>) {
   if (orderData.status === 'Pendiente de Aprobación') {
       try {
           // --- INICIO DE LA CORRECCIÓN ---
-          // Usa la variable de entorno para el puerto local, y VERCEL_URL para producción.
+          // Detecta automáticamente la URL de producción en Vercel.
           const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
-          const host = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL || process.env.NEXT_PUBLIC_BASE_URL || 'localhost:3000';
+          const host = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL || 'localhost:3000';
           const baseUrl = `${protocol}://${host}`;
           
           const approvalUrl = `${baseUrl}/approve/${docRef.id}`;
