@@ -57,11 +57,14 @@ export async function addPurchaseOrder(orderData: Partial<PurchaseOrder>) {
 
   if (orderData.status === 'Pendiente de Aprobación') {
       try {
+          // --- INICIO DE LA CORRECCIÓN ---
+          // Usa la variable de entorno para el puerto local, y VERCEL_URL para producción.
           const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
           const host = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL || process.env.NEXT_PUBLIC_BASE_URL || 'localhost:3000';
           const baseUrl = `${protocol}://${host}`;
           
           const approvalUrl = `${baseUrl}/approve/${docRef.id}`;
+          // --- FIN DE LA CORRECCIÓN ---
           
           console.log(`Triggering approval email for order ${docRef.id} to juan@winfin.es`);
           console.log(`Generated approval URL: ${approvalUrl}`);
@@ -151,62 +154,17 @@ export async function updatePurchaseOrder(id: string, orderData: Partial<Purchas
 export async function updatePurchaseOrderStatus(id: string, status: PurchaseOrder['status'], comment?: string) {
   try {
     const orderRef = db.collection("purchaseOrders").doc(id);
-    const orderDoc = await orderRef.get();
-    
-    if (!orderDoc.exists) {
-      return { success: false, message: "La orden de compra no existe." };
-    }
-
-    const orderData = orderDoc.data() as PurchaseOrder;
-    const previousStatus = orderData.status;
-
     const newHistoryEntry: StatusHistoryEntry = {
       status,
       date: admin.firestore.Timestamp.now(),
       comment: comment || `Estado cambiado a ${status}`
     };
-
     await orderRef.update({ 
       status: status,
       statusHistory: admin.firestore.FieldValue.arrayUnion(newHistoryEntry)
     });
 
-    // ✅ NUEVA LÓGICA: Actualizar el spent del proyecto cuando se aprueba
-    if (status === 'Aprobado' && previousStatus !== 'Aprobado' && orderData.project && orderData.total) {
-      try {
-        // Buscar el proyecto por nombre (ya que orderData.project contiene el nombre)
-        const projectsSnapshot = await db.collection('projects')
-          .where('name', '==', orderData.project)
-          .limit(1)
-          .get();
-
-        if (!projectsSnapshot.empty) {
-          const projectDoc = projectsSnapshot.docs[0];
-          const projectRef = db.collection('projects').doc(projectDoc.id);
-
-          await db.runTransaction(async (transaction) => {
-            const projectData = (await transaction.get(projectRef)).data() as Project;
-            const currentSpent = projectData.spent || 0;
-            const newSpent = currentSpent + orderData.total;
-
-            transaction.update(projectRef, {
-              spent: newSpent,
-            });
-
-            console.log(`✅ Project ${orderData.project} updated: ${currentSpent}€ → ${newSpent}€`);
-          });
-        } else {
-          console.warn(`⚠️ Project "${orderData.project}" not found when trying to update spent.`);
-        }
-      } catch (projectError) {
-        console.error("❌ Error updating project spent:", projectError);
-        // No fallar la aprobación si hay error actualizando el proyecto
-      }
-    }
-
     revalidatePath("/purchasing");
-    revalidatePath("/projects");
-    revalidatePath("/project-tracking");
     revalidatePath(`/approve/${id}`);
     return { success: true, message: "Estado del pedido actualizado." };
   } catch (error) {
@@ -263,3 +221,4 @@ export async function linkDeliveryNoteToPurchaseOrder(orderId: string, notes: De
         return { success: false, message: "No se pudo adjuntar el albarán en la base de datos." };
     }
 }
+

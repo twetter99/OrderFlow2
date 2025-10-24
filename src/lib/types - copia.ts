@@ -1,3 +1,5 @@
+
+
 import { Timestamp } from "firebase/firestore";
 
 export type Project = {
@@ -347,34 +349,4 @@ export type ReminderHistory = {
   sentAt: string | Timestamp;
   status: 'Éxito' | 'Fallido';
   details?: string;
-};
-
-// --- Tipos para el nuevo módulo de Gastos de Viaje ---
-
-export type GastoDetallado = {
-  id: string; // ID único para el gasto (ej. generado en el cliente)
-  fecha: string | Timestamp;
-  tipo: 'Alojamiento' | 'Combustible' | 'Peajes' | 'Dietas' | 'Transporte' | 'Otros';
-  descripcion: string;
-  importe: number;
-  url_ticket?: string; // URL al ticket/factura en Firebase Storage
-};
-
-export type InformeViaje = {
-  id: string;
-  codigo_informe: string; // Un número secuencial, ej: "VIAJE-2025-001"
-  proyecto_id: string; // ID del proyecto al que se imputa
-  proyecto_name: string; // Desnormalizado, como haces con las POs
-  tecnico_id: string; // ID del técnico que realiza el gasto
-  tecnico_name: string; // Desnormalizado
-  operador_id?: string; // Opcional: A qué operador fue a visitar
-  fecha_inicio: string | Timestamp;
-  fecha_fin: string | Timestamp;
-  descripcion_viaje: string;
-  gastos: GastoDetallado[]; // Array con todos los gastos
-  total_informe: number; // Suma de todos los gastos
-  estado: 'Pendiente de Aprobación' | 'Aprobado' | 'Rechazado';
-  notas_aprobacion?: string; // Razón de rechazo, etc.
-  aprobado_por?: string; // UID del admin que aprueba
-  fecha_aprobacion?: string | Timestamp;
 };

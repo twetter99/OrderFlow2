@@ -17,7 +17,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import type { Project, PurchaseOrder, InformeViaje } from "@/lib/types";
+import type { Project, PurchaseOrder } from "@/lib/types";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { formatCurrency } from "@/lib/utils";
@@ -25,7 +25,6 @@ import { formatCurrency } from "@/lib/utils";
 export default function ProjectTrackingPage() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [purchaseOrders, setPurchaseOrders] = useState<PurchaseOrder[]>([]);
-  const [travelReports, setTravelReports] = useState<InformeViaje[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('');
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
@@ -40,19 +39,8 @@ export default function ProjectTrackingPage() {
     });
 
     const unsubPurchaseOrders = onSnapshot(collection(db, "purchaseOrders"), (snapshot) => {
-      const ordersData = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      } as PurchaseOrder));
+      const ordersData = snapshot.docs.map(doc => doc.data() as PurchaseOrder);
       setPurchaseOrders(ordersData);
-    });
-
-    const unsubTravelReports = onSnapshot(collection(db, "travelReports"), (snapshot) => {
-      const reportsData = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data(),
-      }) as InformeViaje);
-      setTravelReports(reportsData);
     });
 
     Promise.all([new Promise(res => setTimeout(res, 500))]).then(() => {
@@ -62,7 +50,6 @@ export default function ProjectTrackingPage() {
     return () => {
       unsubProjects();
       unsubPurchaseOrders();
-      unsubTravelReports();
     };
   }, []);
 
@@ -74,7 +61,6 @@ export default function ProjectTrackingPage() {
       projectIdToNameMap.set(p.id, p.name);
     });
 
-    // Calcular gastos de purchase orders (lógica original)
     purchaseOrders.forEach(order => {
       if (order.project) {
         let projectKey: string | undefined;
@@ -92,18 +78,6 @@ export default function ProjectTrackingPage() {
       }
     });
 
-    // AÑADIR: Calcular gastos de travel reports aprobados
-    travelReports.forEach(report => {
-      if (report.proyecto_id && report.estado === 'Aprobado' && report.total_informe) {
-        const projectName = projectIdToNameMap.get(report.proyecto_id) || report.proyecto_name;
-        
-        if (projectName) {
-          const currentSpent = spentByProject.get(projectName) || 0;
-          spentByProject.set(projectName, currentSpent + report.total_informe);
-        }
-      }
-    });
-
     return projects
       .map(project => ({
         ...project,
@@ -113,7 +87,7 @@ export default function ProjectTrackingPage() {
         project.name.toLowerCase().includes(filter.toLowerCase()) ||
         (project.client && project.client.toLowerCase().includes(filter.toLowerCase()))
       );
-  }, [projects, purchaseOrders, travelReports, filter]);
+  }, [projects, purchaseOrders, filter]);
 
   const getProjectOrders = (projectName: string) => {
     const projectIdToNameMap = new Map<string, string>();
@@ -127,6 +101,7 @@ export default function ProjectTrackingPage() {
           const orderProjectName = projectIdToNameMap.get(order.project) || order.project;
           return orderProjectName === projectName;
       })
+      // MODIFICACIÓN: Añadido .sort() para ordenar por fecha descendente
       .sort((a, b) => {
         const dateA = a.date?.toDate ? a.date.toDate() : new Date(a.date || 0);
         const dateB = b.date?.toDate ? b.date.toDate() : new Date(b.date || 0);
@@ -228,7 +203,7 @@ export default function ProjectTrackingPage() {
                 </TableHeader>
                 <TableBody>
                   {selectedProjectOrders.map((order) => (
-                    <TableRow key={order.id || `${order.orderNumber}-${Math.random()}`}>
+                    <TableRow key={order.orderNumber}>
                       <TableCell>{formatDate(order.date)}</TableCell>
                       <TableCell className="font-medium">{order.orderNumber}</TableCell>
                       <TableCell>{order.status}</TableCell>
