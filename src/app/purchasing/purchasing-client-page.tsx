@@ -105,6 +105,9 @@ export function PurchasingClientPage() {
   const [users, setUsers] = useState<User[]>([]);
   const [locations, setLocations] = useState<Location[]>([]);
   const [loading, setLoading] = useState(true);
+  
+  // Ref para evitar abrir el modal múltiples veces desde URL
+  const orderParamHandled = React.useRef<string | null>(null);
 
   const [filters, setFilters] = useState({
     orderNumber: '',
@@ -257,19 +260,29 @@ export function PurchasingClientPage() {
   // Abrir detalle de orden específica cuando se pasa el parámetro "order"
   useEffect(() => {
     const orderParam = searchParams.get('order');
-    if (orderParam && purchaseOrders.length > 0) {
+    
+    // Solo procesar si hay un parámetro y no lo hemos procesado ya
+    if (orderParam && purchaseOrders.length > 0 && orderParamHandled.current !== orderParam) {
       // Buscar la orden por orderNumber o por id
       const foundOrder = purchaseOrders.find(
         po => po.orderNumber === orderParam || po.id === orderParam
       );
+      
       if (foundOrder) {
-        setSelectedOrder(foundOrder);
-        setIsModalOpen(true);
-        // Limpiar el parámetro de la URL para evitar que se reabra al navegar
-        router.replace('/purchasing', { scroll: false });
+        orderParamHandled.current = orderParam;
+        // Usar setTimeout para asegurar que el estado se actualiza después del render
+        setTimeout(() => {
+          setSelectedOrder(foundOrder);
+          setIsModalOpen(true);
+        }, 100);
       }
     }
-  }, [searchParams, purchaseOrders, router]);
+    
+    // Resetear el ref si no hay parámetro order
+    if (!orderParam) {
+      orderParamHandled.current = null;
+    }
+  }, [searchParams, purchaseOrders]);
 
   const handleFilterChange = (filterName: keyof typeof filters, value: string) => {
     setFilters(prev => ({ ...prev, [filterName]: value }));
