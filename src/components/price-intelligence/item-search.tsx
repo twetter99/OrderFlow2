@@ -194,17 +194,20 @@ export function ItemSearch({
         )}
       </div>
 
-      {/* Overlay para cerrar el dropdown - debe estar ANTES del dropdown */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 z-40" 
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-
       {/* Dropdown de resultados */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 z-50 mt-1 bg-background border rounded-lg shadow-lg max-h-[400px] overflow-y-auto overscroll-contain">
+        <>
+          {/* Overlay para cerrar - sin pointer-events en el área del dropdown */}
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setIsOpen(false)}
+            onWheel={(e) => e.stopPropagation()}
+          />
+          <div 
+            className="absolute top-full left-0 right-0 z-50 mt-1 bg-background border rounded-lg shadow-lg max-h-[400px] overflow-y-auto overscroll-contain"
+            onClick={(e) => e.stopPropagation()}
+            onMouseDown={(e) => e.stopPropagation()}
+          >
           {isLoading ? (
             <div className="p-4 text-center text-muted-foreground">
               <div className="flex items-center justify-center gap-2">
@@ -393,6 +396,7 @@ export function ItemSearch({
             </div>
           )}
         </div>
+        </>
       )}
 
       {/* Contexto seleccionado */}
