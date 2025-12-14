@@ -106,8 +106,6 @@ const navGroups = [
           { href: "/project-tracking", label: "Seguimiento y Control", icon: Activity },
           { href: "/price-intelligence", label: "Inteligencia de Precios", icon: TrendingUp },
           { href: "/reports", label: "Reportes", icon: BarChart3 },
-          { href: "/documentation", label: "Documentación", icon: FileText },
-          { href: "/ai-assistant", label: "Asistente IA", icon: Bot },
         ]
       }
     ]
