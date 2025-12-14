@@ -93,11 +93,16 @@ export function SupplierPerformanceReport() {
                                         </TableRow>
                                     </TableHeader>
                                     <TableBody>
-                                        {supplier.relatedPOs.map(po => (
+                                        {supplier.relatedPOs.map(po => {
+                                            const isCompleted = po.status === 'Recibida';
+                                            const href = isCompleted 
+                                                ? `/completed-orders?order=${po.orderNumber || po.id}`
+                                                : `/purchasing?order=${po.orderNumber || po.id}`;
+                                            return (
                                             <TableRow key={po.id}>
                                                 <TableCell>
                                                     <Link 
-                                                        href={`/purchasing?order=${po.orderNumber || po.id}`}
+                                                        href={href}
                                                         className="text-primary hover:underline flex items-center gap-1"
                                                     >
                                                         {po.orderNumber || po.id}
@@ -108,7 +113,8 @@ export function SupplierPerformanceReport() {
                                                 <TableCell><Badge variant="outline">{po.status}</Badge></TableCell>
                                                 <TableCell className="text-right">{formatCurrency(po.total)}</TableCell>
                                             </TableRow>
-                                        ))}
+                                            );
+                                        })}
                                     </TableBody>
                                 </Table>
                              ) : (

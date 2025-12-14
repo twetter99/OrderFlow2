@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import React, { useState, useMemo, useEffect, useRef } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   Table,
   TableBody,
@@ -79,7 +79,11 @@ export function CompletedOrdersClientPage({
   invoices: initialInvoices,
 }: CompletedOrdersClientPageProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { toast } = useToast();
+  
+  // Ref para evitar abrir el modal múltiples veces desde URL
+  const orderParamHandled = useRef<string | null>(null);
 
   const purchaseOrders = initialPurchaseOrders;
   const projects = initialProjects;
@@ -143,6 +147,33 @@ export function CompletedOrdersClientPage({
       return sortDescriptor.direction === 'descending' ? -cmp : cmp;
     });
   }, [purchaseOrders, projects, invoices, sortDescriptor, filters]);
+
+  // Abrir detalle de orden específica cuando se pasa el parámetro "order"
+  useEffect(() => {
+    const orderParam = searchParams.get('order');
+    
+    // Solo procesar si hay un parámetro y no lo hemos procesado ya
+    if (orderParam && purchaseOrders.length > 0 && orderParamHandled.current !== orderParam) {
+      // Buscar la orden por orderNumber o por id
+      const foundOrder = purchaseOrders.find(
+        po => po.orderNumber === orderParam || po.id === orderParam
+      );
+      
+      if (foundOrder) {
+        orderParamHandled.current = orderParam;
+        // Usar setTimeout para asegurar que el estado se actualiza después del render
+        setTimeout(() => {
+          setSelectedOrder(foundOrder);
+          setIsDetailsModalOpen(true);
+        }, 100);
+      }
+    }
+    
+    // Resetear el ref si no hay parámetro order
+    if (!orderParam) {
+      orderParamHandled.current = null;
+    }
+  }, [searchParams, purchaseOrders]);
 
   const handleFilterChange = (filterName: keyof typeof filters, value: string) => {
     setFilters(prev => ({ ...prev, [filterName]: value }));

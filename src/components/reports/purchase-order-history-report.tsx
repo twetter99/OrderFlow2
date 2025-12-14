@@ -53,11 +53,16 @@ export function PurchaseOrderHistoryReport() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {sortedOrders.map((order) => (
+              {sortedOrders.map((order) => {
+                const isCompleted = order.status === 'Recibida';
+                const href = isCompleted 
+                  ? `/completed-orders?order=${order.orderNumber || order.id}`
+                  : `/purchasing?order=${order.orderNumber || order.id}`;
+                return (
                 <TableRow key={order.id}>
                   <TableCell>
                     <Link 
-                      href={`/purchasing?order=${order.orderNumber || order.id}`}
+                      href={href}
                       className="text-primary hover:underline flex items-center gap-1 font-medium"
                     >
                       {order.orderNumber || order.id}
@@ -84,7 +89,8 @@ export function PurchaseOrderHistoryReport() {
                   </TableCell>
                   <TableCell className="text-right font-bold">{formatCurrency(order.total)}</TableCell>
                 </TableRow>
-              ))}
+              );
+              })}
             </TableBody>
           </Table>
         </CardContent>

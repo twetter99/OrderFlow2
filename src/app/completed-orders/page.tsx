@@ -1,5 +1,6 @@
 "use server";
 
+import { Suspense } from "react";
 import { unstable_noStore } from "next/cache";
 import { db } from "@/lib/firebase-admin";
 import type { PurchaseOrder, Supplier, Project, Location, InventoryItem, SupplierInvoice } from "@/lib/types";
@@ -71,13 +72,15 @@ export default async function CompletedOrdersPage() {
   );
 
   return (
-    <CompletedOrdersClientPage
-      purchaseOrders={purchaseOrders}
-      projects={projects}
-      suppliers={suppliers}
-      locations={locations}
-      inventory={inventory}
-      invoices={invoices}
-    />
+    <Suspense fallback={<div className="p-6">Cargando órdenes finalizadas...</div>}>
+      <CompletedOrdersClientPage
+        purchaseOrders={purchaseOrders}
+        projects={projects}
+        suppliers={suppliers}
+        locations={locations}
+        inventory={inventory}
+        invoices={invoices}
+      />
+    </Suspense>
   );
 }

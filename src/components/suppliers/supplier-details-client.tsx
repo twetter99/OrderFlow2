@@ -225,11 +225,16 @@ export function SupplierDetailsClient({ supplier, initialPurchaseOrders, invento
                         </TableRow>
                         </TableHeader>
                         <TableBody>
-                        {filteredOrders.map((order) => (
+                        {filteredOrders.map((order) => {
+                            const isCompleted = order.status === 'Recibida';
+                            const href = isCompleted 
+                                ? `/completed-orders?order=${order.orderNumber || order.id}`
+                                : `/purchasing?order=${order.orderNumber || order.id}`;
+                            return (
                             <TableRow key={order.id}>
                             <TableCell>
                                 <a 
-                                    href={`/purchasing?order=${order.orderNumber || order.id}`}
+                                    href={href}
                                     className="text-primary hover:underline flex items-center gap-1 font-mono"
                                 >
                                     {order.orderNumber || order.id}
@@ -260,7 +265,8 @@ export function SupplierDetailsClient({ supplier, initialPurchaseOrders, invento
                                 </DropdownMenu>
                             </TableCell>
                             </TableRow>
-                        ))}
+                        );
+                        })}
                         {filteredOrders.length === 0 && (
                             <TableRow>
                                 <TableCell colSpan={5} className="text-center h-24">No se encontraron órdenes con los filtros actuales.</TableCell>
