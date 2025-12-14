@@ -9,6 +9,8 @@ export interface PurchaseDetail {
   supplierId: string;
   supplierName: string;
   orderNumber: string;
+  orderId: string;
+  orderStatus: string;
   quantity: number;
   unitPrice: number;
   totalPrice: number;
@@ -65,6 +67,18 @@ export async function getPriceVariations(
 
     const snapshot = await query.get();
 
+    // Obtener todas las órdenes de compra para conocer su estado actual
+    const purchaseOrdersSnapshot = await db.collection("purchaseOrders").get();
+    const orderStatusMap = new Map<string, { status: string; id: string }>();
+    purchaseOrdersSnapshot.docs.forEach((doc) => {
+      const data = doc.data();
+      // Mapear por orderNumber y por id
+      if (data.orderNumber) {
+        orderStatusMap.set(data.orderNumber, { status: data.status || 'Desconocido', id: doc.id });
+      }
+      orderStatusMap.set(doc.id, { status: data.status || 'Desconocido', id: doc.id });
+    });
+
     // Agrupar por itemId
     const itemsMap = new Map<string, {
       itemId: string;
@@ -90,12 +104,18 @@ export async function getPriceVariations(
       const totalPrice = data.totalPrice || (unitPrice * quantity);
       const purchaseDate = data.date?.toDate ? data.date.toDate() : new Date(data.date);
 
+      // Obtener el estado de la orden
+      const orderRef = data.orderNumber || data.purchaseOrderId || "";
+      const orderInfo = orderStatusMap.get(orderRef) || { status: 'Desconocido', id: orderRef };
+
       const purchase: PurchaseDetail = {
         id: doc.id,
         date: purchaseDate,
         supplierId: data.supplierId || "",
         supplierName: data.supplierName || "Sin proveedor",
         orderNumber: data.orderNumber || data.purchaseOrderId || "-",
+        orderId: orderInfo.id,
+        orderStatus: orderInfo.status,
         quantity,
         unitPrice,
         totalPrice,

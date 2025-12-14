@@ -529,7 +529,11 @@ export function PriceVariationsClient({ initialData }: PriceVariationsClientProp
                                 className="p-0 h-auto"
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  window.open(`/purchasing?order=${purchase.orderNumber}`, "_blank");
+                                  const isCompleted = purchase.orderStatus === 'Recibida';
+                                  const url = isCompleted 
+                                    ? `/completed-orders?order=${purchase.orderNumber}`
+                                    : `/purchasing?order=${purchase.orderNumber}`;
+                                  window.open(url, "_blank");
                                 }}
                               >
                                 {purchase.orderNumber}
