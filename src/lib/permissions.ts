@@ -37,8 +37,7 @@ export const routePermissions = {
   // ANÁLISIS Y CONTROL
   '/project-tracking': 'project-tracking',
   '/reports': 'reports',
-  '/documentation': 'documentation',
-  '/ai-assistant': 'ai-assistant',
+  '/reports/price-variations': 'reports',
   '/price-intelligence': 'price-intelligence',
 
   // Páginas especiales sin permiso directo

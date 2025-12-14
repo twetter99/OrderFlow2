@@ -1,11 +1,14 @@
 
 "use client";
 
+import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectCostReport } from "@/components/reports/project-cost-report";
 import { InventoryAnalysisReport } from "@/components/reports/inventory-analysis-report";
 import { SupplierPerformanceReport } from "@/components/reports/supplier-performance-report";
 import { PurchaseOrderHistoryReport } from "@/components/reports/purchase-order-history-report";
+import { Button } from "@/components/ui/button";
+import { TrendingUp, ExternalLink } from "lucide-react";
 
 export default function ReportsPage() {
     return (
@@ -17,6 +20,13 @@ export default function ReportsPage() {
                     Analiza los datos clave de tu operación.
                 </p>
                 </div>
+                <Button asChild>
+                    <Link href="/reports/price-variations">
+                        <TrendingUp className="mr-2 h-4 w-4" />
+                        Variación de Precios
+                        <ExternalLink className="ml-2 h-3 w-3" />
+                    </Link>
+                </Button>
             </div>
 
             <Tabs defaultValue="project_costs" className="w-full">
