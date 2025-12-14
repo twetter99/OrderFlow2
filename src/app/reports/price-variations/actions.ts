@@ -52,8 +52,8 @@ export async function getPriceVariations(
   noStore();
 
   try {
-    let query = db.collection("inventory_history")
-      .where("type", "==", "purchase");
+    // Obtener todos los registros de inventory_history (son compras)
+    let query: FirebaseFirestore.Query = db.collection("inventory_history");
 
     // Filtrar por fecha si se proporciona
     if (startDate) {
