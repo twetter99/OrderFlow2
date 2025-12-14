@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingDown, TrendingUp, DollarSign, ShoppingCart, Package, Percent, Calendar, Activity } from "lucide-react";
+import { TrendingDown, TrendingUp, Euro, ShoppingCart, Package, Percent, Calendar, Activity } from "lucide-react";
 import type { PriceMetrics } from "@/lib/types";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
@@ -59,7 +59,7 @@ export function PriceMetricsCards({ metrics }: PriceMetricsCardsProps) {
       title: "Precio Promedio",
       value: formatCurrency(metrics.avgPrice),
       description: `Basado en ${metrics.totalPurchases} compras`,
-      icon: DollarSign,
+      icon: Euro,
       iconColor: "text-blue-600",
       bgColor: "bg-blue-50 dark:bg-blue-950/30",
     },

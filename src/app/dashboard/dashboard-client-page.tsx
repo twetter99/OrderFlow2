@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { StatsCard } from "@/components/dashboard/stats-card";
 import { ActiveProjectsList } from "@/components/dashboard/active-projects-list";
 import { RecentOrdersTable } from "@/components/dashboard/recent-orders-table";
-import { Package, FolderKanban, AlertTriangle, BadgeDollarSign } from 'lucide-react';
+import { Package, FolderKanban, AlertTriangle, BadgeEuro } from 'lucide-react';
 import type { Project, PurchaseOrder, InventoryItem, InventoryLocation } from '@/lib/types';
 
 interface DashboardClientPageProps {
@@ -88,7 +88,7 @@ export function DashboardClientPage({
         <StatsCard
           title="Pedidos Pendientes de Aprobación"
           value={formatCurrency(stats.pendingPOsValue)}
-          icon={BadgeDollarSign}
+          icon={BadgeEuro}
           description="Valor total de las órdenes de compra pendientes"
         />
       </div>
