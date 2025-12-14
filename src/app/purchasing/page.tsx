@@ -4,34 +4,69 @@ import { db } from "@/lib/firebase-admin";
 import type { PurchaseOrder, Supplier, InventoryItem, Project, User, Location } from "@/lib/types";
 import { PurchasingClientPageNew } from "@/components/purchasing/purchasing-client-page-new";
 
-// Helper para convertir Timestamps de Firestore
+// Helper para convertir Timestamps de Firestore a string
 function convertTimestamp(timestamp: any): string {
   if (!timestamp) return '';
-  if (timestamp._seconds) {
+  if (timestamp._seconds !== undefined) {
     return new Date(timestamp._seconds * 1000).toISOString();
   }
   if (timestamp.toDate) {
     return timestamp.toDate().toISOString();
   }
-  return timestamp;
+  if (typeof timestamp === 'string') return timestamp;
+  return '';
+}
+
+// Función recursiva para convertir todos los Timestamps en un objeto
+function sanitizeForClient(obj: any): any {
+  if (obj === null || obj === undefined) return obj;
+  
+  // Si es un Timestamp de Firestore
+  if (obj._seconds !== undefined && obj._nanoseconds !== undefined) {
+    return new Date(obj._seconds * 1000).toISOString();
+  }
+  
+  // Si tiene método toDate (Timestamp nativo)
+  if (typeof obj.toDate === 'function') {
+    return obj.toDate().toISOString();
+  }
+  
+  // Si es un array
+  if (Array.isArray(obj)) {
+    return obj.map(item => sanitizeForClient(item));
+  }
+  
+  // Si es un objeto plano
+  if (typeof obj === 'object') {
+    const sanitized: any = {};
+    for (const key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        sanitized[key] = sanitizeForClient(obj[key]);
+      }
+    }
+    return sanitized;
+  }
+  
+  // Primitivos
+  return obj;
 }
 
 function convertPurchaseOrder(doc: FirebaseFirestore.DocumentSnapshot): PurchaseOrder {
   const data = doc.data() as any;
-  return {
+  // Sanitizar todo el objeto recursivamente
+  const sanitized = sanitizeForClient({
     id: doc.id,
     ...data,
-    date: convertTimestamp(data.date),
-    estimatedDeliveryDate: convertTimestamp(data.estimatedDeliveryDate),
-    statusHistory: (data.statusHistory || []).map((entry: any) => ({
-      ...entry,
-      date: convertTimestamp(entry.date),
-    })),
-    deliveryNotes: (data.deliveryNotes || []).map((note: any) => ({
-      ...note,
-      uploadedAt: convertTimestamp(note.uploadedAt),
-    })),
-  };
+  });
+  return sanitized as PurchaseOrder;
+}
+
+function convertProject(doc: FirebaseFirestore.DocumentSnapshot): Project {
+  const data = doc.data() as any;
+  return sanitizeForClient({
+    id: doc.id,
+    ...data,
+  }) as Project;
 }
 
 async function getPurchasingData() {
@@ -54,11 +89,11 @@ async function getPurchasingData() {
   ]);
 
   const purchaseOrders = purchaseOrdersSnapshot.docs.map(convertPurchaseOrder);
-  const suppliers = suppliersSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Supplier[];
-  const inventory = inventorySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as InventoryItem[];
-  const projects = projectsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Project[];
-  const users = usersSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as User[];
-  const locations = locationsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Location[];
+  const suppliers = suppliersSnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as Supplier[];
+  const inventory = inventorySnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as InventoryItem[];
+  const projects = projectsSnapshot.docs.map(convertProject);
+  const users = usersSnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as User[];
+  const locations = locationsSnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as Location[];
 
   return {
     purchaseOrders,
@@ -74,7 +109,7 @@ export default async function PurchasingPage() {
   const data = await getPurchasingData();
   
   return (
-    <Suspense fallback={<div className="flex items-center justify-center h-64">Cargando...</div>}>
+    <Suspense fallback={<div className="flex items-center justify-center h-64">Cargando órdenes de compra...</div>}>
       <PurchasingClientPageNew {...data} />
     </Suspense>
   );

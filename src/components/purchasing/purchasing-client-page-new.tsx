@@ -240,27 +240,6 @@ export function PurchasingClientPageNew({
     }
   }, [searchParams, purchaseOrders, router]);
 
-  useEffect(() => {
-    const project = searchParams.get('project');
-    const supplier = searchParams.get('supplier');
-    const itemsStr = searchParams.get('items');
-    
-    if (project && supplier && itemsStr) {
-      try {
-        const items = JSON.parse(itemsStr) as PurchaseOrderItem[];
-        const newOrder: Partial<PurchaseOrder> = {
-          project,
-          supplier,
-          items,
-          status: 'Pendiente de Aprobación',
-        };
-        handleAddClick(newOrder);
-      } catch (error) {
-        console.error("Error parsing items from query params", error);
-      }
-    }
-  }, [searchParams]);
-
   const handleFilterChange = (filterName: keyof typeof filters, value: string) => {
     setFilters(prev => ({ ...prev, [filterName]: value }));
   };
