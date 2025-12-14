@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
+import Link from "next/link";
 import {
   Table,
   TableBody,
@@ -17,6 +18,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { MoreHorizontal, Eye, BarChart3 } from "lucide-react";
 import type { Project, PurchaseOrder, InformeViaje } from "@/lib/types";
 import { formatCurrency } from "@/lib/utils";
 
@@ -158,18 +167,40 @@ export function ProjectTrackingClientPage({
             <TableBody>
               {projectsWithSpent.map((project) => (
                 <TableRow key={project.id}>
-                  <TableCell className="font-medium">{project.name}</TableCell>
+                  <TableCell className="font-medium">
+                    <Link 
+                      href={`/project-tracking/${project.id}`}
+                      className="hover:text-primary hover:underline"
+                    >
+                      {project.name}
+                    </Link>
+                  </TableCell>
                   <TableCell>{project.client}</TableCell>
                   <TableCell className="text-right font-mono">{formatCurrency(project.spent)}</TableCell>
                   <TableCell className="text-center">
-                    {project.spent > 0 && (
-                      <button
-                        onClick={() => setSelectedProject(selectedProject === project.name ? null : project.name)}
-                        className="text-gray-500 hover:text-gray-700 text-xl font-bold"
-                      >
-                        ⋮
-                      </button>
-                    )}
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                          <MoreHorizontal className="h-4 w-4" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        {project.spent > 0 && (
+                          <DropdownMenuItem
+                            onClick={() => setSelectedProject(selectedProject === project.name ? null : project.name)}
+                          >
+                            <Eye className="mr-2 h-4 w-4" />
+                            Ver órdenes de compra
+                          </DropdownMenuItem>
+                        )}
+                        <DropdownMenuItem asChild>
+                          <Link href={`/project-tracking/${project.id}`}>
+                            <BarChart3 className="mr-2 h-4 w-4" />
+                            Informe de consumo
+                          </Link>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                   </TableCell>
                 </TableRow>
               ))}
