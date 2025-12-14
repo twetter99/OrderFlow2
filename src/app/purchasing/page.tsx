@@ -1,4 +1,5 @@
 import { unstable_noStore } from "next/cache";
+import { Suspense } from "react";
 import { db } from "@/lib/firebase-admin";
 import type { PurchaseOrder, Supplier, InventoryItem, Project, User, Location } from "@/lib/types";
 import { PurchasingClientPageNew } from "@/components/purchasing/purchasing-client-page-new";
@@ -72,5 +73,9 @@ async function getPurchasingData() {
 export default async function PurchasingPage() {
   const data = await getPurchasingData();
   
-  return <PurchasingClientPageNew {...data} />;
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center h-64">Cargando...</div>}>
+      <PurchasingClientPageNew {...data} />
+    </Suspense>
+  );
 }
