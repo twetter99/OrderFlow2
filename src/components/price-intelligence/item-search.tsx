@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -48,8 +48,26 @@ export function ItemSearch({
   const [isLoading, setIsLoading] = useState(false);
   const [recentSearches, setRecentSearches] = useState<SearchResult[]>([]);
   const debouncedQuery = useDebounce(query, 300);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const selectedItem = items.find(i => i.id === selectedItemId);
+
+  // Cerrar dropdown al hacer click fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   // Cargar búsquedas recientes del localStorage
   useEffect(() => {
@@ -168,7 +186,7 @@ export function ItemSearch({
   }, {} as Record<SearchResult['type'], SearchResult[]>);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full" ref={containerRef}>
       <div className="relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
@@ -196,17 +214,8 @@ export function ItemSearch({
 
       {/* Dropdown de resultados */}
       {isOpen && (
-        <>
-          {/* Overlay para cerrar - sin pointer-events en el área del dropdown */}
-          <div 
-            className="fixed inset-0 z-40" 
-            onClick={() => setIsOpen(false)}
-            onWheel={(e) => e.stopPropagation()}
-          />
           <div 
             className="absolute top-full left-0 right-0 z-50 mt-1 bg-background border rounded-lg shadow-lg max-h-[400px] overflow-y-auto overscroll-contain"
-            onClick={(e) => e.stopPropagation()}
-            onMouseDown={(e) => e.stopPropagation()}
           >
           {isLoading ? (
             <div className="p-4 text-center text-muted-foreground">
@@ -396,7 +405,6 @@ export function ItemSearch({
             </div>
           )}
         </div>
-        </>
       )}
 
       {/* Contexto seleccionado */}
