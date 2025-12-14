@@ -64,7 +64,9 @@ export function ProjectCostReport() {
       <Card>
         <CardHeader>
             <CardTitle>Informe de Costos de Proyectos</CardTitle>
-            <CardDescription>Análisis del presupuesto frente al gasto real de cada proyecto. Expande para ver las órdenes de compra asociadas.</CardDescription>
+            <CardDescription>
+              Análisis del presupuesto frente al gasto en Órdenes de Compra. No incluye Informes de Viaje.
+            </CardDescription>
         </CardHeader>
         <CardContent>
             <Accordion type="multiple" className="w-full">

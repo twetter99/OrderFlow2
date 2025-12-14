@@ -144,7 +144,7 @@ export function ProjectTrackingClientPage({
         <CardHeader>
           <CardTitle>Gastos por Proyecto</CardTitle>
           <CardDescription>
-            Busca y analiza los importes gastados en compras para cada proyecto.
+            Importe total gastado por proyecto. Incluye Órdenes de Compra + Informes de Viaje aprobados.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -160,7 +160,7 @@ export function ProjectTrackingClientPage({
               <TableRow>
                 <TableHead>Nombre del Proyecto</TableHead>
                 <TableHead>Cliente</TableHead>
-                <TableHead className="text-right">Importe Gastado en Compras</TableHead>
+                <TableHead className="text-right">Importe Total (OC + Viajes)</TableHead>
                 <TableHead className="w-12"></TableHead>
               </TableRow>
             </TableHeader>
