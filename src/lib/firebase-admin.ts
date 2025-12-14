@@ -19,10 +19,12 @@ const initializeFirebaseAdmin = (): admin.app.App => {
   const projectId = process.env.FIREBASE_PROJECT_ID;
   const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
   const privateKey = process.env.FIREBASE_PRIVATE_KEY;
+  const storageBucket = process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET;
   
   console.log("Firebase Admin SDK - Project ID loaded:", !!projectId);
   console.log("Firebase Admin SDK - Client Email loaded:", !!clientEmail);
   console.log("Firebase Admin SDK - Private Key loaded:", !!privateKey);
+  console.log("Firebase Admin SDK - Storage Bucket loaded:", !!storageBucket);
 
 
   if (!projectId || !clientEmail || !privateKey) {
@@ -43,9 +45,10 @@ const initializeFirebaseAdmin = (): admin.app.App => {
   } as admin.ServiceAccount;
 
   try {
-    // Initialize the app
+    // Initialize the app with Storage bucket
     const app = admin.initializeApp({
       credential: admin.credential.cert(credentials),
+      storageBucket: storageBucket || `${projectId}.appspot.com`,
     });
     console.log("Firebase Admin SDK inicializado correctamente.");
     return app;

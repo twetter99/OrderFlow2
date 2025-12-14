@@ -39,6 +39,7 @@ const modules = [
     { id: 'supplier-invoices', label: 'Gestión de Facturas' },
     { id: 'payments', label: 'Gestión de Pagos' },
     { id: 'project-tracking', label: 'Seguimiento y Control' },
+    { id: 'price-intelligence', label: 'Inteligencia de Precios' },
     { id: 'reports', label: 'Reportes' },
     { id: 'documentation', label: 'Documentación' },
     { id: 'ai-assistant', label: 'Asistente IA' },

@@ -35,6 +35,7 @@ import { ReceptionChecklist } from "@/components/receptions/reception-checklist"
 import { collection, onSnapshot, doc, writeBatch, Timestamp, getDocs, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { createPurchaseOrder, linkDeliveryNoteToPurchaseOrder } from "@/app/purchasing/actions";
+import { createInventoryHistoryFromOrder } from "@/app/price-intelligence/actions";
 import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { convertPurchaseOrderTimestamps } from "@/lib/utils";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -305,6 +306,13 @@ export default function ReceptionsPage() {
 
     try {
         await batch.commit();
+        
+        // 4. Crear historial de precios para inteligencia de precios
+        const itemsWithQuantity = receivedItems.filter(item => item.quantity > 0);
+        if (itemsWithQuantity.length > 0) {
+          await createInventoryHistoryFromOrder(orderId, itemsWithQuantity);
+        }
+        
         setIsChecklistOpen(false);
         setOrderForAttachment(orderId); // Trigger attachment dialog
         

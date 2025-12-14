@@ -34,6 +34,8 @@ import {
     PinOff,
     LogOut,
     Clock,
+    TrendingUp,
+    Database,
 } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
@@ -102,6 +104,7 @@ const navGroups = [
         icon: Bot,
         subItems: [
           { href: "/project-tracking", label: "Seguimiento y Control", icon: Activity },
+          { href: "/price-intelligence", label: "Inteligencia de Precios", icon: TrendingUp },
           { href: "/reports", label: "Reportes", icon: BarChart3 },
           { href: "/documentation", label: "Documentación", icon: FileText },
           { href: "/ai-assistant", label: "Asistente IA", icon: Bot },
@@ -217,16 +220,18 @@ export const SidebarNav = () => {
                 width={150} 
                 height={40}
                 priority
-                className="object-contain w-full h-full"
+                className="object-contain"
+                style={{ width: 'auto', height: 'auto' }}
               />
             ) : (
               <Image 
-                            src="/images/logo_icon_blanco.png"
+                src="/images/logo_icon_blanco.png"
                 alt="OrderFlow Icon" 
                 width={32} 
                 height={32}
                 priority
-                className="object-contain w-full h-full"
+                className="object-contain"
+                style={{ width: 'auto', height: 'auto' }}
               />
             )}
                         </div>

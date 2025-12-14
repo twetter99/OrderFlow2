@@ -378,3 +378,35 @@ export type InformeViaje = {
   aprobado_por?: string; // UID del admin que aprueba
   fecha_aprobacion?: string | Timestamp;
 };
+
+// --- Tipos para el módulo de Inteligencia de Precios ---
+
+export type InventoryHistoryEntry = {
+  id: string;
+  itemId: string;           // ID del artículo del inventario
+  itemSku: string;          // SKU del artículo (desnormalizado)
+  itemName: string;         // Nombre del artículo (desnormalizado)
+  supplierId: string;       // ID del proveedor
+  supplierName: string;     // Nombre del proveedor (desnormalizado)
+  purchaseOrderId: string;  // ID de la orden de compra
+  orderNumber: string;      // Número de orden (desnormalizado)
+  quantity: number;         // Cantidad comprada
+  unitPrice: number;        // Precio unitario en esa compra
+  totalPrice: number;       // Precio total (quantity * unitPrice)
+  unit: string;             // Unidad de medida
+  date: string | Timestamp; // Fecha de la compra/recepción
+  projectId?: string;       // ID del proyecto asociado (opcional)
+  projectName?: string;     // Nombre del proyecto (desnormalizado)
+};
+
+export type PriceMetrics = {
+  minPrice: number;
+  maxPrice: number;
+  avgPrice: number;
+  totalPurchases: number;
+  totalQuantity: number;
+  totalSpent: number;
+  priceVariation: number;   // Porcentaje de variación (max-min)/avg * 100
+  lastPrice: number;
+  lastPurchaseDate: string;
+};
