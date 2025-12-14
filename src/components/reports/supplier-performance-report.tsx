@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
     Table,
     TableBody,
@@ -12,7 +13,7 @@ import {
   } from "@/components/ui/table";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { getData } from "@/lib/data";
 import type { Supplier, PurchaseOrder } from "@/lib/types";
@@ -85,7 +86,7 @@ export function SupplierPerformanceReport() {
                                 <Table>
                                     <TableHeader>
                                         <TableRow>
-                                            <TableHead>ID Orden</TableHead>
+                                            <TableHead>Nº Orden</TableHead>
                                             <TableHead>Fecha</TableHead>
                                             <TableHead>Estado</TableHead>
                                             <TableHead className="text-right">Total</TableHead>
@@ -94,7 +95,15 @@ export function SupplierPerformanceReport() {
                                     <TableBody>
                                         {supplier.relatedPOs.map(po => (
                                             <TableRow key={po.id}>
-                                                <TableCell>{po.id}</TableCell>
+                                                <TableCell>
+                                                    <Link 
+                                                        href={`/purchasing?order=${po.orderNumber || po.id}`}
+                                                        className="text-primary hover:underline flex items-center gap-1"
+                                                    >
+                                                        {po.orderNumber || po.id}
+                                                        <ExternalLink className="h-3 w-3" />
+                                                    </Link>
+                                                </TableCell>
                                                 <TableCell>{new Date(po.date as string).toLocaleDateString()}</TableCell>
                                                 <TableCell><Badge variant="outline">{po.status}</Badge></TableCell>
                                                 <TableCell className="text-right">{formatCurrency(po.total)}</TableCell>

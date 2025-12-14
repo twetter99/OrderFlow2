@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { DateRange } from "react-day-picker";
 import { addDays, format, subDays } from "date-fns";
 import { es } from "date-fns/locale";
-import { Download, Calendar as CalendarIcon, History, Contact, Mail, Phone, Eye, MoreHorizontal } from "lucide-react";
+import { Download, Calendar as CalendarIcon, History, Contact, Mail, Phone, Eye, MoreHorizontal, ExternalLink } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -100,7 +100,7 @@ export function SupplierDetailsClient({ supplier, initialPurchaseOrders, invento
   };
   
   const handleExport = () => {
-    const headers = ["ID Orden", "Fecha", "Estado", "Total (€)"];
+    const headers = ["Nº Orden", "Fecha", "Estado", "Total (€)"];
     const rows = filteredOrders.map(order => [
       order.orderNumber,
       new Date(order.date as string).toLocaleDateString(),
@@ -217,7 +217,7 @@ export function SupplierDetailsClient({ supplier, initialPurchaseOrders, invento
                      <Table>
                         <TableHeader>
                         <TableRow>
-                            <TableHead>ID Orden</TableHead>
+                            <TableHead>Nº Orden</TableHead>
                             <TableHead>Fecha</TableHead>
                             <TableHead>Estado</TableHead>
                             <TableHead className="text-right">Total</TableHead>
@@ -227,7 +227,15 @@ export function SupplierDetailsClient({ supplier, initialPurchaseOrders, invento
                         <TableBody>
                         {filteredOrders.map((order) => (
                             <TableRow key={order.id}>
-                            <TableCell className="font-mono">{order.orderNumber}</TableCell>
+                            <TableCell>
+                                <a 
+                                    href={`/purchasing?order=${order.orderNumber || order.id}`}
+                                    className="text-primary hover:underline flex items-center gap-1 font-mono"
+                                >
+                                    {order.orderNumber || order.id}
+                                    <ExternalLink className="h-3 w-3" />
+                                </a>
+                            </TableCell>
                             <TableCell>{new Date(order.date as string).toLocaleDateString()}</TableCell>
                             <TableCell><Badge variant="outline">{order.status}</Badge></TableCell>
                             <TableCell className="text-right font-medium">{formatCurrency(order.total)}</TableCell>

@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
     Table,
     TableBody,
@@ -15,6 +16,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { cn } from "@/lib/utils";
 import { Progress } from "../ui/progress";
 import { Badge } from "../ui/badge";
+import { ExternalLink } from "lucide-react";
 import { getData } from "@/lib/data";
 import type { Project, PurchaseOrder } from "@/lib/types";
   
@@ -84,7 +86,7 @@ export function ProjectCostReport() {
                                 <Table>
                                     <TableHeader>
                                         <TableRow>
-                                            <TableHead>ID Orden</TableHead>
+                                            <TableHead>Nº Orden</TableHead>
                                             <TableHead>Estado</TableHead>
                                             <TableHead className="text-right">Total</TableHead>
                                         </TableRow>
@@ -92,7 +94,15 @@ export function ProjectCostReport() {
                                     <TableBody>
                                         {project.relatedPOs.map(po => (
                                             <TableRow key={po.id}>
-                                                <TableCell>{po.id}</TableCell>
+                                                <TableCell>
+                                                    <Link 
+                                                        href={`/purchasing?order=${po.orderNumber || po.id}`}
+                                                        className="text-primary hover:underline flex items-center gap-1"
+                                                    >
+                                                        {po.orderNumber || po.id}
+                                                        <ExternalLink className="h-3 w-3" />
+                                                    </Link>
+                                                </TableCell>
                                                 <TableCell><Badge variant="outline">{po.status}</Badge></TableCell>
                                                 <TableCell className="text-right">{formatCurrency(po.total)}</TableCell>
                                             </TableRow>

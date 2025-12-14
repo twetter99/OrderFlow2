@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
     Table,
     TableBody,
@@ -13,6 +14,7 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "../ui/badge";
 import { cn } from "@/lib/utils";
+import { ExternalLink } from "lucide-react";
 import { getData } from "@/lib/data";
 import type { PurchaseOrder } from "@/lib/types";
   
@@ -42,7 +44,7 @@ export function PurchaseOrderHistoryReport() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>ID Orden</TableHead>
+                <TableHead>Nº Orden</TableHead>
                 <TableHead>Fecha</TableHead>
                 <TableHead>Proveedor</TableHead>
                 <TableHead>Proyecto</TableHead>
@@ -53,7 +55,15 @@ export function PurchaseOrderHistoryReport() {
             <TableBody>
               {sortedOrders.map((order) => (
                 <TableRow key={order.id}>
-                  <TableCell className="font-medium">{order.id}</TableCell>
+                  <TableCell>
+                    <Link 
+                      href={`/purchasing?order=${order.orderNumber || order.id}`}
+                      className="text-primary hover:underline flex items-center gap-1 font-medium"
+                    >
+                      {order.orderNumber || order.id}
+                      <ExternalLink className="h-3 w-3" />
+                    </Link>
+                  </TableCell>
                   <TableCell>{new Date(order.date as string).toLocaleDateString()}</TableCell>
                   <TableCell>{order.supplier}</TableCell>
                   <TableCell>{order.project}</TableCell>
