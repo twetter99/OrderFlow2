@@ -254,6 +254,23 @@ export function PurchasingClientPage() {
     }
   }, [searchParams]);
 
+  // Abrir detalle de orden específica cuando se pasa el parámetro "order"
+  useEffect(() => {
+    const orderParam = searchParams.get('order');
+    if (orderParam && purchaseOrders.length > 0) {
+      // Buscar la orden por orderNumber o por id
+      const foundOrder = purchaseOrders.find(
+        po => po.orderNumber === orderParam || po.id === orderParam
+      );
+      if (foundOrder) {
+        setSelectedOrder(foundOrder);
+        setIsModalOpen(true);
+        // Limpiar el parámetro de la URL para evitar que se reabra al navegar
+        router.replace('/purchasing', { scroll: false });
+      }
+    }
+  }, [searchParams, purchaseOrders, router]);
+
   const handleFilterChange = (filterName: keyof typeof filters, value: string) => {
     setFilters(prev => ({ ...prev, [filterName]: value }));
   };
