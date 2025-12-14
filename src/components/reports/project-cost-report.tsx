@@ -39,11 +39,24 @@ export function ProjectCostReport() {
     const formatCurrency = (value: number) => new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(value);
 
     const projectsWithDetails = projects.map(p => {
-        const spent = p.spent || 0;
+        // Filtrar órdenes que coincidan por ID o por nombre del proyecto
+        const relatedPOs = purchaseOrders.filter(po => 
+            po.project === p.id || 
+            po.project === p.name || 
+            po.projectName === p.name
+        );
+        
+        // Calcular el gasto real sumando los totales de las órdenes relacionadas
+        // Solo contar órdenes que no estén rechazadas
+        const calculatedSpent = relatedPOs
+            .filter(po => po.status !== 'Rechazado')
+            .reduce((sum, po) => sum + (po.total || 0), 0);
+        
+        const spent = calculatedSpent || p.spent || 0;
         const budget = p.budget || 0;
         const variance = budget - spent;
-        const progress = budget > 0 ? Math.round((spent / budget) * 100) : 0;
-        const relatedPOs = purchaseOrders.filter(po => po.project === p.id);
+        const progress = budget > 0 ? Math.min(Math.round((spent / budget) * 100), 100) : 0;
+        
         return { ...p, variance, progress, relatedPOs, spent, budget };
     });
 
