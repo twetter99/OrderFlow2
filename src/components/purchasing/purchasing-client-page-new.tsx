@@ -226,6 +226,20 @@ export function PurchasingClientPageNew({
   const currentUser = users.find(u => u.uid === LOGGED_IN_USER_ID);
   const canApprove = currentUser?.role === 'Administrador';
 
+  // Manejar parámetro 'order' para abrir una orden específica
+  useEffect(() => {
+    const orderId = searchParams.get('order');
+    if (orderId) {
+      const order = purchaseOrders.find(o => o.id === orderId);
+      if (order) {
+        setSelectedOrder(order);
+        setIsModalOpen(true);
+        // Limpiar el parámetro de la URL sin recargar
+        router.replace('/purchasing', { scroll: false });
+      }
+    }
+  }, [searchParams, purchaseOrders, router]);
+
   useEffect(() => {
     const project = searchParams.get('project');
     const supplier = searchParams.get('supplier');
