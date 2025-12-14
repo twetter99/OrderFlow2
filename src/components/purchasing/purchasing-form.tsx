@@ -317,12 +317,12 @@ export function PurchasingForm({ order, onSave, onCancel, canApprove = false, su
                     <TableHeader>
                         <TableRow>
                             <TableHead className="w-[10%]">Tipo</TableHead>
-                            <TableHead className="w-[20%]">Familia</TableHead>
-                            <TableHead className="w-[20%]">Descripción</TableHead>
-                            <TableHead className="w-[15%]">Cantidad</TableHead>
-                            <TableHead className="w-[10%]">Unidad</TableHead>
-                            <TableHead className="w-[15%]">Precio Unitario (€)</TableHead>
-                            {!isReadOnly && <TableHead className="w-[10%] text-right"></TableHead>}
+                            <TableHead className="w-[15%] min-w-[120px]">Familia</TableHead>
+                            <TableHead className="w-[25%] min-w-[150px]">Descripción</TableHead>
+                            <TableHead className="w-[10%] min-w-[90px]">Cantidad</TableHead>
+                            <TableHead className="w-[8%] min-w-[70px]">Unidad</TableHead>
+                            <TableHead className="w-[12%] min-w-[130px]">Precio Unitario (€)</TableHead>
+                            {!isReadOnly && <TableHead className="w-[5%] min-w-[50px] text-right"></TableHead>}
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -419,42 +419,42 @@ export function PurchasingForm({ order, onSave, onCancel, canApprove = false, su
                                         )}
                                     />
                                 </TableCell>
-                                <TableCell>
+                                <TableCell className="min-w-[90px]">
                                       <FormField
                                         control={form.control}
                                         name={`items.${index}.quantity`}
                                         render={({ field }) => (
                                             <FormItem>
                                                 <FormControl>
-                                                    <Input type="number" {...field} onKeyDown={(e) => handleKeyDown(e, index, 'quantity')} onFocus={(e) => e.target.select()} disabled={isReadOnly}/>
+                                                    <Input type="number" className="min-w-[70px]" {...field} onKeyDown={(e) => handleKeyDown(e, index, 'quantity')} onFocus={(e) => e.target.select()} disabled={isReadOnly}/>
                                                 </FormControl>
                                                 <FormMessage />
                                             </FormItem>
                                         )}
                                     />
                                 </TableCell>
-                                <TableCell>
+                                <TableCell className="min-w-[70px]">
                                       <FormField
                                         control={form.control}
                                         name={`items.${index}.unit`}
                                         render={({ field }) => (
                                             <FormItem>
                                                 <FormControl>
-                                                    <Input placeholder="ud" {...field} onKeyDown={(e) => handleKeyDown(e, index, 'unit')} disabled={isReadOnly}/>
+                                                    <Input placeholder="ud" className="min-w-[60px]" {...field} onKeyDown={(e) => handleKeyDown(e, index, 'unit')} disabled={isReadOnly}/>
                                                 </FormControl>
                                                 <FormMessage />
                                             </FormItem>
                                         )}
                                     />
                                 </TableCell>
-                                <TableCell>
+                                <TableCell className="min-w-[130px]">
                                      <FormField
                                         control={form.control}
                                         name={`items.${index}.price`}
                                         render={({ field }) => (
                                             <FormItem>
                                                 <FormControl>
-                                                    <Input type="number" step="0.01" {...field} onKeyDown={(e) => handleKeyDown(e, index, 'price')} onFocus={(e) => e.target.select()} disabled={isReadOnly}/>
+                                                    <Input type="number" step="0.01" className="min-w-[100px]" {...field} onKeyDown={(e) => handleKeyDown(e, index, 'price')} onFocus={(e) => e.target.select()} disabled={isReadOnly}/>
                                                 </FormControl>
                                                 <FormMessage />
                                                 {!isReadOnly && watchedItems[index]?.type === 'Material' && (

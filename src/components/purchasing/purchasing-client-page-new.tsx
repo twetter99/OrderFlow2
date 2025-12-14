@@ -828,7 +828,7 @@ export function PurchasingClientPageNew({
           setSelectedOrder(null);
         }
       }}>
-        <DialogContent className="sm:max-w-5xl">
+        <DialogContent className="sm:max-w-7xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
                 {getModalTitle()}

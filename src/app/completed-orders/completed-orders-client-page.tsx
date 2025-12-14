@@ -450,7 +450,7 @@ export function CompletedOrdersClientPage({
         setIsDetailsModalOpen(isOpen);
         if (!isOpen) setSelectedOrder(null);
       }}>
-        <DialogContent className="sm:max-w-5xl">
+        <DialogContent className="sm:max-w-7xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Detalles del Pedido {selectedOrder?.orderNumber}</DialogTitle>
             <DialogDescription>
