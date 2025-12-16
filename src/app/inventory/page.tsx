@@ -1,5 +1,6 @@
 import { unstable_noStore } from "next/cache";
 import { db } from "@/lib/firebase-admin";
+import { sanitizeForClient } from "@/lib/utils";
 import type { InventoryItem, Supplier, Location, InventoryLocation } from "@/lib/types";
 import { InventoryClientPageNew } from "./inventory-client-page-new";
 
@@ -18,25 +19,21 @@ async function getInventoryData() {
     db.collection("inventoryLocations").get(),
   ]);
 
-  const inventory = inventorySnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data()
-  })) as InventoryItem[];
+  const inventory = inventorySnapshot.docs.map(doc => 
+    sanitizeForClient({ id: doc.id, ...doc.data() })
+  ) as InventoryItem[];
 
-  const suppliers = suppliersSnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data()
-  })) as Supplier[];
+  const suppliers = suppliersSnapshot.docs.map(doc => 
+    sanitizeForClient({ id: doc.id, ...doc.data() })
+  ) as Supplier[];
 
-  const locations = locationsSnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data()
-  })) as Location[];
+  const locations = locationsSnapshot.docs.map(doc => 
+    sanitizeForClient({ id: doc.id, ...doc.data() })
+  ) as Location[];
 
-  const inventoryLocations = inventoryLocationsSnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data()
-  })) as InventoryLocation[];
+  const inventoryLocations = inventoryLocationsSnapshot.docs.map(doc => 
+    sanitizeForClient({ id: doc.id, ...doc.data() })
+  ) as InventoryLocation[];
 
   return {
     inventory,

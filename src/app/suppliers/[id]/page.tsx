@@ -33,11 +33,11 @@ async function getSupplierDetails(id: string) {
         po => po.supplier === supplier.name
     );
     
-    const inventory = inventorySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as InventoryItem));
+    const inventory = inventorySnapshot.docs.map(doc => convertTimestampsToISO({ id: doc.id, ...doc.data() }) as InventoryItem);
     const projects = projectsSnapshot.docs.map(doc => convertTimestampsToISO({ id: doc.id, ...doc.data() }) as Project);
-    const locations = locationsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Location));
-    const users = usersSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as User));
-    const suppliers = suppliersSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Supplier));
+    const locations = locationsSnapshot.docs.map(doc => convertTimestampsToISO({ id: doc.id, ...doc.data() }) as Location);
+    const users = usersSnapshot.docs.map(doc => convertTimestampsToISO({ id: doc.id, ...doc.data() }) as User);
+    const suppliers = suppliersSnapshot.docs.map(doc => convertTimestampsToISO({ id: doc.id, ...doc.data() }) as Supplier);
 
     return { supplier, purchaseOrders: supplierPurchaseOrders, inventory, projects, locations, users, suppliers };
 }

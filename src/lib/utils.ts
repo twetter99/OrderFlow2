@@ -99,14 +99,31 @@ export function capitalize(text: string): string {
  * Recorre un objeto o array de forma recursiva y convierte cualquier
  * instancia de Timestamp de Firestore a una cadena de texto ISO.
  * Esto es crucial para pasar datos de Server Components a Client Components.
+ * Maneja tanto Timestamps del SDK cliente como del Admin SDK.
  * @param data El objeto o array a limpiar.
  * @returns El objeto o array limpio y serializable.
  */
 export const convertTimestampsToISO = (data: any): any => {
   if (!data) return data;
   
+  // Timestamp del SDK cliente
   if (data instanceof Timestamp) {
     return data.toDate().toISOString();
+  }
+  
+  // Timestamp del Admin SDK (tiene _seconds y _nanoseconds)
+  if (data._seconds !== undefined && data._nanoseconds !== undefined) {
+    return new Date(data._seconds * 1000).toISOString();
+  }
+  
+  // Objeto con método toDate (Timestamp nativo)
+  if (typeof data.toDate === 'function') {
+    return data.toDate().toISOString();
+  }
+  
+  // Date nativo
+  if (data instanceof Date) {
+    return data.toISOString();
   }
   
   if (Array.isArray(data)) {
@@ -126,6 +143,12 @@ export const convertTimestampsToISO = (data: any): any => {
   
   return data;
 };
+
+/**
+ * Alias para sanitizar datos de Firestore para Server Components.
+ * Útil para importar con un nombre más descriptivo.
+ */
+export const sanitizeForClient = convertTimestampsToISO;
 
 export const convertPurchaseOrderTimestamps = (orderData: any): PurchaseOrder => {
   if (!orderData) return orderData;
