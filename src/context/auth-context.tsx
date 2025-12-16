@@ -44,7 +44,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
        const userDoc = await getDoc(userDocRef);
 
        if (userDoc.exists()) {
-         await setDoc(userDocRef, { lastLoginAt: serverTimestamp() }, { merge: true });
+         // Intentar actualizar lastLoginAt, pero no fallar si no se puede
+         try {
+           await setDoc(userDocRef, { lastLoginAt: serverTimestamp() }, { merge: true });
+         } catch (updateError) {
+           console.warn("No se pudo actualizar lastLoginAt:", updateError);
+           // Continuar sin fallar - la lectura del usuario sí funcionó
+         }
          const userData = { uid: userDoc.id, ...userDoc.data() } as User;
          setUser(userData);
        } else {

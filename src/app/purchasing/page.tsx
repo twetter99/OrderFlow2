@@ -84,7 +84,7 @@ async function getPurchasingData() {
     db.collection("suppliers").get(),
     db.collection("inventory").get(),
     db.collection("projects").get(),
-    db.collection("users").get(),
+    db.collection("usuarios").get(),
     db.collection("locations").get(),
   ]);
 
@@ -92,7 +92,7 @@ async function getPurchasingData() {
   const suppliers = suppliersSnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as Supplier[];
   const inventory = inventorySnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as InventoryItem[];
   const projects = projectsSnapshot.docs.map(convertProject);
-  const users = usersSnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as User[];
+  const users = usersSnapshot.docs.map(doc => sanitizeForClient({ uid: doc.id, ...doc.data() })) as User[];
   const locations = locationsSnapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() })) as Location[];
 
   return {

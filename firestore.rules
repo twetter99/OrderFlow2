@@ -1,7 +1,136 @@
-# Firebase client configuration
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Función para verificar si el usuario está autenticado
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Función para verificar si el usuario es admin
+    function isAdmin() {
+      return isAuthenticated() && 
+        exists(/databases/$(database)/documents/usuarios/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/usuarios/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Reglas para la colección de usuarios
+    match /usuarios/{userId} {
+      // Los usuarios pueden leer su propio documento
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      // Los usuarios pueden actualizar su propio documento (para lastLoginAt)
+      allow update: if isAuthenticated() && request.auth.uid == userId;
+      // Solo admins pueden crear o eliminar usuarios
+      allow create, delete: if isAdmin();
+      // Admins pueden leer todos los usuarios
+      allow read: if isAdmin();
+    }
+    
+    // Reglas para la colección users (si también existe)
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Reglas para proyectos
+    match /projects/{projectId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para clientes
+    match /clients/{clientId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para operadores
+    match /operadores/{operadorId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para técnicos
+    match /technicians/{technicianId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para supervisores
+    match /supervisores/{supervisorId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para inventario
+    match /inventory/{itemId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para ubicaciones de inventario
+    match /inventoryLocations/{locationId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para ubicaciones
+    match /locations/{locationId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para proveedores
+    match /suppliers/{supplierId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para órdenes de compra
+    match /purchaseOrders/{orderId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para facturas de proveedores
+    match /supplierInvoices/{invoiceId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para notas de entrega
+    match /deliveryNotes/{noteId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para pagos
+    match /payments/{paymentId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para replanteos
+    match /replanteos/{replanteoId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para plantillas de instalación
+    match /installationTemplates/{templateId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Reglas para historial de inventario
+    match /inventory_history/{historyId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Regla general para cualquier otra colección (restringir por defecto)
+    match /{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}

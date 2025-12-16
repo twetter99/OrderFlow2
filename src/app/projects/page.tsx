@@ -18,8 +18,8 @@ async function getClients(): Promise<Client[]> {
 
 async function getUsers(): Promise<User[]> {
   noStore();
-  const snapshot = await db.collection("users").get();
-  return snapshot.docs.map(doc => sanitizeForClient({ id: doc.id, ...doc.data() }) as User);
+  const snapshot = await db.collection("usuarios").get();
+  return snapshot.docs.map(doc => sanitizeForClient({ uid: doc.id, ...doc.data() }) as User);
 }
 
 async function getOperadores(): Promise<Operador[]> {
