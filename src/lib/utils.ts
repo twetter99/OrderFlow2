@@ -1,6 +1,5 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { Timestamp } from "firebase/firestore"
 import type { PurchaseOrder } from "./types"
 
 export function cn(...inputs: ClassValue[]) {
@@ -106,19 +105,18 @@ export function capitalize(text: string): string {
 export const convertTimestampsToISO = (data: any): any => {
   if (!data) return data;
   
-  // Timestamp del SDK cliente
-  if (data instanceof Timestamp) {
-    return data.toDate().toISOString();
-  }
-  
   // Timestamp del Admin SDK (tiene _seconds y _nanoseconds)
   if (data._seconds !== undefined && data._nanoseconds !== undefined) {
     return new Date(data._seconds * 1000).toISOString();
   }
   
-  // Objeto con método toDate (Timestamp nativo)
+  // Objeto con método toDate (Timestamp nativo de ambos SDKs)
   if (typeof data.toDate === 'function') {
-    return data.toDate().toISOString();
+    try {
+      return data.toDate().toISOString();
+    } catch {
+      return null;
+    }
   }
   
   // Date nativo
