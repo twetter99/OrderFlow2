@@ -40,8 +40,11 @@ import { productFamilies } from "@/lib/data";
 const formSchema = z.object({
   orderNumber: z.string().optional(),
   date: z.date({ required_error: "La fecha de creación es obligatoria." }),
-  project: z.string().min(1, "El proyecto es obligatorio."),
-  supplier: z.string().min(1, "El proveedor es obligatorio."),
+  project: z.string().min(1, "El proyecto es obligatorio."), // Ahora es el ID del proyecto
+  projectName: z.string().optional(), // Nombre desnormalizado para display
+  supplier: z.string().min(1, "El proveedor es obligatorio."), // Nombre del proveedor (legacy)
+  supplierId: z.string().optional(), // ID del proveedor (optimizado)
+  supplierName: z.string().optional(), // Nombre desnormalizado
   deliveryLocationId: z.string().min(1, "Debes seleccionar un almacén de entrega."),
   estimatedDeliveryDate: z.date({ required_error: "La fecha de entrega es obligatoria." }),
   status: z.enum(["Pendiente de Aprobación", "Aprobada", "Enviada al Proveedor", "Recibida", "Recibida Parcialmente", "Rechazado"]),
@@ -114,7 +117,10 @@ export function PurchasingForm({ order, onSave, onCancel, canApprove = false, su
   const defaultValues = order
     ? { 
         project: order.project || "",
+        projectName: order.projectName || "",
         supplier: order.supplier || "",
+        supplierId: (order as any).supplierId || "",
+        supplierName: (order as any).supplierName || order.supplier || "",
         deliveryLocationId: order.deliveryLocationId || "",
         orderNumber: order.orderNumber || "",
         date: order.date ? new Date(order.date as any) : new Date(),
@@ -127,7 +133,10 @@ export function PurchasingForm({ order, onSave, onCancel, canApprove = false, su
        }
     : {
         project: "",
+        projectName: "",
         supplier: "",
+        supplierId: "",
+        supplierName: "",
         deliveryLocationId: "",
         orderNumber: "",
         date: new Date(),
@@ -211,6 +220,11 @@ export function PurchasingForm({ order, onSave, onCancel, canApprove = false, su
                       value={field.value}
                       onChange={(supplierName, supplierId) => {
                           field.onChange(supplierName);
+                          // OPTIMIZADO: Guardar también el ID y nombre del proveedor
+                          if (supplierId) {
+                            form.setValue('supplierId', supplierId);
+                            form.setValue('supplierName', supplierName);
+                          }
                       }}
                       onAddNew={() => { /* Implementar si es necesario */ }}
                       disabled={isReadOnly}
@@ -226,14 +240,27 @@ export function PurchasingForm({ order, onSave, onCancel, canApprove = false, su
             render={({ field }) => (
                 <FormItem>
                 <FormLabel>Proyecto</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isReadOnly}>
+                <Select 
+                  onValueChange={(projectId) => {
+                    field.onChange(projectId);
+                    // OPTIMIZADO: Guardar también el nombre del proyecto
+                    const selectedProject = projects.find(p => p.id === projectId);
+                    if (selectedProject) {
+                      form.setValue('projectName', selectedProject.name);
+                    }
+                  }} 
+                  defaultValue={field.value} 
+                  disabled={isReadOnly}
+                >
                     <FormControl>
                     <SelectTrigger>
-                        <SelectValue placeholder="Selecciona un proyecto" />
+                        <SelectValue placeholder="Selecciona un proyecto">
+                          {field.value ? projects.find(p => p.id === field.value)?.name || field.value : "Selecciona un proyecto"}
+                        </SelectValue>
                     </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                    {projects.map(p => <SelectItem key={p.id} value={p.name}>{p.name}</SelectItem>)}
+                    {projects.map(p => <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>)}
                     </SelectContent>
                 </Select>
                 <FormMessage />

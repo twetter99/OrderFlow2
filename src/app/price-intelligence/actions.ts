@@ -940,12 +940,19 @@ export async function createInventoryHistoryFromOrder(
       orderDate = new Date().toISOString();
     }
 
-    // Obtener ID del proveedor (SOLO LECTURA)
-    const suppliersSnapshot = await db.collection("suppliers")
-      .where("name", "==", order.supplier)
-      .limit(1)
-      .get();
-    const supplierId = suppliersSnapshot.empty ? '' : suppliersSnapshot.docs[0].id;
+    // Obtener ID del proveedor - OPTIMIZADO: usar supplierId si está disponible
+    let supplierId = '';
+    if (order.supplierId) {
+      // OPTIMIZADO: Usar ID directo si existe
+      supplierId = order.supplierId;
+    } else if (order.supplier) {
+      // FALLBACK: Buscar por nombre (datos legacy)
+      const suppliersSnapshot = await db.collection("suppliers")
+        .where("name", "==", order.supplier)
+        .limit(1)
+        .get();
+      supplierId = suppliersSnapshot.empty ? '' : suppliersSnapshot.docs[0].id;
+    }
 
     // Obtener nombre del proyecto (SOLO LECTURA)
     let projectName = order.projectName || '';

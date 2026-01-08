@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { db, admin } from "@/lib/firebase-admin";
 import { InformeViaje, GastoDetallado, Project, Technician } from "@/lib/types";
 import { sendTravelReportApprovalEmail } from "@/ai/flows/send-travel-approval-email";
@@ -129,6 +129,26 @@ export async function addTravelReport(data: Partial<InformeViaje>) {
     
     console.log(`✅ Email enviado correctamente para informe ${docRef.id}`);
     
+    // Actualizar travelPending en el proyecto
+    if (data.proyecto_id && totalInforme > 0) {
+      try {
+        const projectRef = db.collection("projects").doc(data.proyecto_id);
+        await db.runTransaction(async (transaction) => {
+          const projectDoc = await transaction.get(projectRef);
+          if (projectDoc.exists) {
+            const projectData = projectDoc.data() as Project;
+            const currentTravelPending = projectData.travelPending || 0;
+            transaction.update(projectRef, {
+              travelPending: currentTravelPending + totalInforme,
+            });
+            console.log(`✅ Proyecto ${data.proyecto_id}: travelPending +${totalInforme}€`);
+          }
+        });
+      } catch (projectError) {
+        console.error("❌ Error actualizando travelPending:", projectError);
+      }
+    }
+    
   } catch (emailError: any) {
     console.error(`❌ Error en proceso de email para informe ${docRef.id}. Rolling back...`, emailError);
     await db.collection("travelReports").doc(docRef.id).delete();
@@ -195,12 +215,18 @@ export async function approveTravelReport(id: string, adminUserId: string) {
           const projectData = projectDoc.data() as Project;
           const currentSpent = projectData.spent || 0;
           const newSpent = currentSpent + reportData.total_informe;
+          
+          // Actualizar también travelApproved y travelPending
+          const currentTravelApproved = projectData.travelApproved || 0;
+          const currentTravelPending = projectData.travelPending || 0;
 
           transaction.update(projectRef, {
             spent: newSpent,
+            travelApproved: currentTravelApproved + reportData.total_informe,
+            travelPending: Math.max(0, currentTravelPending - reportData.total_informe),
           });
 
-          console.log(`✅ Project ${reportData.proyecto_id} updated: ${currentSpent}€ → ${newSpent}€`);
+          console.log(`✅ Project ${reportData.proyecto_id} updated: spent ${currentSpent}€ → ${newSpent}€, travelApproved +${reportData.total_informe}€`);
         });
 
       } catch (projectError) {
@@ -214,6 +240,8 @@ export async function approveTravelReport(id: string, adminUserId: string) {
 
     revalidatePath("/travel-planning");
     revalidatePath("/projects");
+    revalidateTag("project-tracking");
+    revalidateTag(`project-${reportData.proyecto_id}`);
     
     return { 
       success: true, 

@@ -1,7 +1,15 @@
 "use server";
 
+import { revalidateTag } from "next/cache";
 import { db } from "@/lib/firebase-admin";
-import type { Project } from "@/lib/types";
+import type { Project, PurchaseOrder } from "@/lib/types";
+
+// Acción para forzar revalidación del caché
+export async function revalidateProjectTracking() {
+  revalidateTag("project-tracking");
+  revalidateTag("project-consumption");
+  return { success: true, revalidatedAt: new Date().toISOString() };
+}
 
 // Tipos para el informe de consumo
 export interface MaterialConsumption {
@@ -24,6 +32,35 @@ export interface MaterialConsumption {
   supplierCount: number;
 }
 
+// Tipo para órdenes pendientes de recibir
+export interface PendingOrderSummary {
+  id: string;
+  orderNumber: string;
+  date: string;
+  supplier: string;
+  status: string;
+  itemCount: number;
+  total: number;
+  estimatedDeliveryDate: string;
+}
+
+// Tipo para informes de viaje
+export interface TravelReportSummary {
+  id: string;
+  codigo_informe: string;
+  tecnico_name: string;
+  fecha_inicio: string;
+  fecha_fin: string;
+  descripcion_viaje: string;
+  estado: string;
+  total_informe: number;
+  gastos: {
+    tipo: string;
+    concepto: string;
+    importe: number;
+  }[];
+}
+
 export interface ProjectConsumptionData {
   project: {
     id: string;
@@ -36,10 +73,23 @@ export interface ProjectConsumptionData {
     endDate: string;
   };
   summary: {
-    totalSpent: number;
+    // Materiales
+    materialsReceived: number;      // Material recibido (inventory_history)
+    materialsCommitted: number;     // Material aprobado pero no recibido (purchaseOrders)
+    // Viajes
+    travelApproved: number;         // Viajes aprobados (gastado)
+    travelPending: number;          // Viajes pendientes de aprobación (comprometido)
+    // Totales
+    totalSpent: number;             // materialsReceived + travelApproved
+    totalCommitted: number;         // materialsCommitted + travelPending
+    totalProjected: number;         // totalSpent + totalCommitted
+    // Conteos
     uniqueItems: number;
     uniqueSuppliers: number;
     totalTransactions: number;
+    pendingOrdersCount: number;
+    travelReportsCount: number;
+    travelPendingCount: number;
   };
   materials: MaterialConsumption[];
   topByAmount: MaterialConsumption[]; // Top 10 por €
@@ -48,6 +98,9 @@ export interface ProjectConsumptionData {
     month: string;
     amount: number;
   }[];
+  pendingOrders: PendingOrderSummary[]; // Órdenes pendientes de recibir
+  travelReports: TravelReportSummary[]; // Informes de viaje (aprobados + pendientes)
+  cachedAt?: string; // Timestamp de caché
 }
 
 /**
@@ -202,7 +255,101 @@ export async function getProjectConsumption(
       .map(([month, amount]) => ({ month, amount }))
       .sort((a, b) => a.month.localeCompare(b.month));
     
-    // 7. Construir respuesta
+    // 7. Obtener órdenes pendientes de recibir (Aprobadas o Enviadas)
+    const pendingOrdersSnapshot = await db.collection("purchaseOrders")
+      .where("project", "==", projectId)
+      .get();
+    
+    // Filtrar solo las que están en estado Aprobada o Enviada al Proveedor
+    const pendingStatuses = ['Aprobada', 'Enviada al Proveedor'];
+    const pendingOrders: PendingOrderSummary[] = pendingOrdersSnapshot.docs
+      .filter(doc => {
+        const data = doc.data();
+        return pendingStatuses.includes(data.status);
+      })
+      .map(doc => {
+        const data = doc.data();
+        // Convertir fechas
+        let dateStr = '';
+        if (data.date?._seconds) {
+          dateStr = new Date(data.date._seconds * 1000).toISOString();
+        } else if (data.date?.toDate) {
+          dateStr = data.date.toDate().toISOString();
+        } else if (typeof data.date === 'string') {
+          dateStr = data.date;
+        }
+        
+        let estimatedDeliveryStr = '';
+        if (data.estimatedDeliveryDate?._seconds) {
+          estimatedDeliveryStr = new Date(data.estimatedDeliveryDate._seconds * 1000).toISOString();
+        } else if (data.estimatedDeliveryDate?.toDate) {
+          estimatedDeliveryStr = data.estimatedDeliveryDate.toDate().toISOString();
+        } else if (typeof data.estimatedDeliveryDate === 'string') {
+          estimatedDeliveryStr = data.estimatedDeliveryDate;
+        }
+        
+        return {
+          id: doc.id,
+          orderNumber: data.orderNumber || doc.id,
+          date: dateStr,
+          supplier: data.supplier || data.supplierName || '',
+          status: data.status,
+          itemCount: data.items?.length || 0,
+          total: data.total || 0,
+          estimatedDeliveryDate: estimatedDeliveryStr,
+        };
+      })
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // Más recientes primero
+    
+    const materialsCommitted = pendingOrders.reduce((sum, o) => sum + o.total, 0);
+    const materialsReceived = materials.reduce((sum, m) => sum + m.totalAmount, 0);
+    
+    // 8. Obtener informes de viaje para este proyecto
+    const travelReportsSnapshot = await db.collection("travelReports")
+      .where("proyecto_id", "==", projectId)
+      .get();
+    
+    const travelReports: TravelReportSummary[] = travelReportsSnapshot.docs.map(doc => {
+      const data = doc.data();
+      // Convertir fechas
+      const convertDate = (val: any) => {
+        if (!val) return '';
+        if (val._seconds !== undefined) return new Date(val._seconds * 1000).toISOString();
+        if (val.toDate) return val.toDate().toISOString();
+        return val;
+      };
+      
+      return {
+        id: doc.id,
+        codigo_informe: data.codigo_informe || doc.id,
+        tecnico_name: data.tecnico_name || '',
+        fecha_inicio: convertDate(data.fecha_inicio),
+        fecha_fin: convertDate(data.fecha_fin),
+        descripcion_viaje: data.descripcion_viaje || '',
+        estado: data.estado || '',
+        total_informe: data.total_informe || 0,
+        gastos: (data.gastos || []).map((g: any) => ({
+          tipo: g.tipo || '',
+          concepto: g.concepto || '',
+          importe: g.importe || 0,
+        })),
+      };
+    }).sort((a, b) => new Date(b.fecha_inicio).getTime() - new Date(a.fecha_inicio).getTime());
+    
+    // Calcular totales de viajes
+    const travelApproved = travelReports
+      .filter(r => r.estado === 'Aprobado')
+      .reduce((sum, r) => sum + r.total_informe, 0);
+    const travelPending = travelReports
+      .filter(r => r.estado === 'Pendiente de Aprobación')
+      .reduce((sum, r) => sum + r.total_informe, 0);
+    const travelPendingCount = travelReports.filter(r => r.estado === 'Pendiente de Aprobación').length;
+    
+    // Totales globales
+    const totalSpent = materialsReceived + travelApproved;
+    const totalCommitted = materialsCommitted + travelPending;
+    
+    // 9. Construir respuesta
     return {
       project: {
         id: projectId,
@@ -215,15 +362,30 @@ export async function getProjectConsumption(
         endDate: endDate || new Date().toISOString(),
       },
       summary: {
-        totalSpent: materials.reduce((sum, m) => sum + m.totalAmount, 0),
+        // Materiales
+        materialsReceived,
+        materialsCommitted,
+        // Viajes
+        travelApproved,
+        travelPending,
+        // Totales
+        totalSpent,
+        totalCommitted,
+        totalProjected: totalSpent + totalCommitted,
+        // Conteos
         uniqueItems: materials.length,
         uniqueSuppliers: allSuppliers.size,
         totalTransactions: filteredEntries.length,
+        pendingOrdersCount: pendingOrders.length,
+        travelReportsCount: travelReports.filter(r => r.estado === 'Aprobado').length,
+        travelPendingCount,
       },
       materials,
       topByAmount,
       topByQuantity,
       monthlyEvolution,
+      pendingOrders,
+      travelReports,
     };
   } catch (error) {
     console.error("Error getting project consumption:", error);

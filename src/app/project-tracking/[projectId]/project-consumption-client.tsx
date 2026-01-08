@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import * as XLSX from "xlsx";
 import {
   Table,
   TableBody,
@@ -41,12 +42,18 @@ import {
   FileDown,
   Search,
   BarChart3,
-  ShoppingCart
+  ShoppingCart,
+  Clock,
+  Car,
+  Plane,
+  RefreshCw
 } from "lucide-react";
 import { format, subMonths, startOfMonth, endOfMonth, startOfQuarter, endOfQuarter, startOfYear, endOfYear } from "date-fns";
 import { es } from "date-fns/locale";
 import type { ProjectConsumptionData, MaterialConsumption } from "../actions";
+import { revalidateProjectTracking } from "../actions";
 import { formatCurrency } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
 
 interface Props {
   data: ProjectConsumptionData;
@@ -54,10 +61,49 @@ interface Props {
 
 export function ProjectConsumptionClient({ data }: Props) {
   const router = useRouter();
+  const { toast } = useToast();
   const [filter, setFilter] = useState("");
   const [periodFilter, setPeriodFilter] = useState("all");
   const [sortBy, setSortBy] = useState<"amount" | "quantity" | "name">("amount");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  // Calcular tiempo desde última actualización
+  const getTimeSinceUpdate = useCallback(() => {
+    if (!data.cachedAt) return "";
+    const cached = new Date(data.cachedAt);
+    const now = new Date();
+    const diffMs = now.getTime() - cached.getTime();
+    const diffMins = Math.floor(diffMs / 60000);
+    
+    if (diffMins < 1) return "hace menos de 1 min";
+    if (diffMins === 1) return "hace 1 min";
+    if (diffMins < 60) return `hace ${diffMins} min`;
+    const diffHours = Math.floor(diffMins / 60);
+    if (diffHours === 1) return "hace 1 hora";
+    return `hace ${diffHours} horas`;
+  }, [data.cachedAt]);
+
+  // Función para forzar actualización
+  const handleRefresh = async () => {
+    setIsRefreshing(true);
+    try {
+      await revalidateProjectTracking();
+      toast({
+        title: "Datos actualizados",
+        description: "Refrescando desde Firestore...",
+      });
+      window.location.reload();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "No se pudieron actualizar los datos",
+        variant: "destructive",
+      });
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
 
   // Filtrar y ordenar materiales
   const filteredMaterials = useMemo(() => {
@@ -148,10 +194,112 @@ export function ProjectConsumptionClient({ data }: Props) {
     return sortDir === "desc" ? "↓" : "↑";
   };
 
-  // Calcular porcentaje respecto al budget si existe
+  // Calcular porcentaje respecto al budget si existe (usando total proyectado)
   const budgetPercentage = data.project.budget && data.project.budget > 0
-    ? (data.summary.totalSpent / data.project.budget) * 100
+    ? (data.summary.totalProjected / data.project.budget) * 100
     : null;
+
+  // Función para exportar a Excel
+  const handleExportExcel = useCallback(() => {
+    const workbook = XLSX.utils.book_new();
+    
+    // Hoja 1: Resumen
+    const resumenData = [
+      ["INFORME DE CONSUMO - PROYECTO"],
+      [],
+      ["Proyecto:", data.project.name],
+      ["Cliente:", data.project.client || "-"],
+      ["Presupuesto:", data.project.budget ? `${data.project.budget.toFixed(2)} €` : "No definido"],
+      [],
+      ["RESUMEN DE GASTOS"],
+      [],
+      ["Concepto", "Importe", "Detalle"],
+      ["Materiales Recibidos", `${data.summary.materialsReceived.toFixed(2)} €`, `${data.summary.uniqueItems} artículos`],
+      ["Materiales Pendientes", `${data.summary.materialsCommitted.toFixed(2)} €`, `${data.summary.pendingOrdersCount} órdenes`],
+      ["Viajes Aprobados", `${data.summary.travelApproved.toFixed(2)} €`, `${data.summary.travelReportsCount} informes`],
+      ["Viajes Pendientes", `${data.summary.travelPending.toFixed(2)} €`, `${data.summary.travelPendingCount} informes`],
+      [],
+      ["TOTALES"],
+      ["Total Gastado", `${data.summary.totalSpent.toFixed(2)} €`, "Materiales + Viajes aprobados"],
+      ["Total Comprometido", `${data.summary.totalCommitted.toFixed(2)} €`, "Pendiente de recepción/aprobación"],
+      ["Total Proyectado", `${data.summary.totalProjected.toFixed(2)} €`, "Gastado + Comprometido"],
+      [],
+      budgetPercentage !== null ? ["% Presupuesto", `${budgetPercentage.toFixed(1)}%`, ""] : [],
+    ].filter(row => row.length > 0);
+    
+    const wsResumen = XLSX.utils.aoa_to_sheet(resumenData);
+    wsResumen["!cols"] = [{ wch: 25 }, { wch: 20 }, { wch: 35 }];
+    XLSX.utils.book_append_sheet(workbook, wsResumen, "Resumen");
+    
+    // Hoja 2: Materiales
+    const materialesHeader = ["Artículo", "SKU", "Cantidad", "Compras", "Importe Total", "Precio Medio", "Precio Mín", "Precio Máx", "Última Compra", "Proveedor", "Nº Proveedores"];
+    const materialesData = data.materials.map(m => [
+      m.itemName,
+      m.itemSku,
+      m.totalQuantity,
+      m.transactionCount,
+      m.totalAmount,
+      m.avgPrice,
+      m.minPrice,
+      m.maxPrice,
+      m.lastPurchase.date ? format(new Date(m.lastPurchase.date), "dd/MM/yyyy", { locale: es }) : "-",
+      m.lastPurchase.supplier,
+      m.supplierCount,
+    ]);
+    const wsMateriales = XLSX.utils.aoa_to_sheet([materialesHeader, ...materialesData]);
+    wsMateriales["!cols"] = [{ wch: 35 }, { wch: 15 }, { wch: 12 }, { wch: 10 }, { wch: 15 }, { wch: 12 }, { wch: 12 }, { wch: 12 }, { wch: 12 }, { wch: 25 }, { wch: 12 }];
+    XLSX.utils.book_append_sheet(workbook, wsMateriales, "Materiales");
+    
+    // Hoja 3: Órdenes Pendientes
+    if (data.pendingOrders && data.pendingOrders.length > 0) {
+      const ordenesHeader = ["Nº Orden", "Fecha", "Proveedor", "Estado", "Items", "Total"];
+      const ordenesData = data.pendingOrders.map(o => [
+        o.orderNumber,
+        o.date ? format(new Date(o.date), "dd/MM/yyyy", { locale: es }) : "-",
+        o.supplier,
+        o.status,
+        o.itemCount,
+        o.total,
+      ]);
+      const wsOrdenes = XLSX.utils.aoa_to_sheet([ordenesHeader, ...ordenesData]);
+      wsOrdenes["!cols"] = [{ wch: 20 }, { wch: 12 }, { wch: 30 }, { wch: 20 }, { wch: 8 }, { wch: 15 }];
+      XLSX.utils.book_append_sheet(workbook, wsOrdenes, "Órdenes Pendientes");
+    }
+    
+    // Hoja 4: Viajes
+    if (data.travelReports && data.travelReports.length > 0) {
+      const viajesHeader = ["Código", "Técnico", "Fecha Inicio", "Fecha Fin", "Descripción", "Estado", "Total"];
+      const viajesData = data.travelReports.map(v => [
+        v.codigo_informe,
+        v.tecnico_name,
+        v.fecha_inicio ? format(new Date(v.fecha_inicio), "dd/MM/yyyy", { locale: es }) : "-",
+        v.fecha_fin ? format(new Date(v.fecha_fin), "dd/MM/yyyy", { locale: es }) : "-",
+        v.descripcion_viaje || "-",
+        v.estado,
+        v.total_informe,
+      ]);
+      const wsViajes = XLSX.utils.aoa_to_sheet([viajesHeader, ...viajesData]);
+      wsViajes["!cols"] = [{ wch: 20 }, { wch: 25 }, { wch: 12 }, { wch: 12 }, { wch: 40 }, { wch: 20 }, { wch: 12 }];
+      XLSX.utils.book_append_sheet(workbook, wsViajes, "Viajes");
+    }
+    
+    // Hoja 5: Evolución Mensual
+    if (data.monthlyEvolution && data.monthlyEvolution.length > 0) {
+      const evolucionHeader = ["Mes", "Importe"];
+      const evolucionData = data.monthlyEvolution.map(m => {
+        const [year, monthNum] = m.month.split("-");
+        const monthName = format(new Date(parseInt(year), parseInt(monthNum) - 1), "MMMM yyyy", { locale: es });
+        return [monthName, m.amount];
+      });
+      const wsEvolucion = XLSX.utils.aoa_to_sheet([evolucionHeader, ...evolucionData]);
+      wsEvolucion["!cols"] = [{ wch: 20 }, { wch: 15 }];
+      XLSX.utils.book_append_sheet(workbook, wsEvolucion, "Evolución Mensual");
+    }
+    
+    // Generar y descargar el archivo
+    const fileName = `Consumo_${data.project.name.replace(/[^a-zA-Z0-9]/g, "_")}_${format(new Date(), "yyyyMMdd")}.xlsx`;
+    XLSX.writeFile(workbook, fileName);
+  }, [data, budgetPercentage]);
 
   return (
     <div className="flex flex-col gap-6">
@@ -173,6 +321,20 @@ export function ProjectConsumptionClient({ data }: Props) {
           </div>
         </div>
         <div className="flex items-center gap-2">
+          {data.cachedAt && (
+            <span className="text-xs text-muted-foreground">
+              {getTimeSinceUpdate()}
+            </span>
+          )}
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={handleRefresh}
+            disabled={isRefreshing}
+          >
+            <RefreshCw className={`h-4 w-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+            {isRefreshing ? '...' : 'Actualizar'}
+          </Button>
           <Select value={periodFilter} onValueChange={handlePeriodChange}>
             <SelectTrigger className="w-[180px]">
               <Calendar className="h-4 w-4 mr-2" />
@@ -186,57 +348,93 @@ export function ProjectConsumptionClient({ data }: Props) {
               <SelectItem value="last3months">Últimos 3 meses</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm" onClick={handleExportExcel}>
             <FileDown className="h-4 w-4 mr-2" />
             Exportar
           </Button>
         </div>
       </div>
 
-      {/* KPIs Summary */}
-      <div className="grid gap-4 md:grid-cols-4">
+      {/* KPIs Summary - Desglosado por Materiales y Viajes */}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {/* Fila 1: Materiales */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Gastado</CardTitle>
-            <Euro className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">📦 Materiales Recibidos</CardTitle>
+            <Package className="h-4 w-4 text-green-600" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatCurrency(data.summary.totalSpent)}</div>
+            <div className="text-2xl font-bold text-green-600">{formatCurrency(data.summary.materialsReceived)}</div>
+            <p className="text-xs text-muted-foreground">{data.summary.uniqueItems} artículos</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">📦 Materiales Pendientes</CardTitle>
+            <Clock className="h-4 w-4 text-orange-500" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-orange-500">{formatCurrency(data.summary.materialsCommitted)}</div>
+            <p className="text-xs text-muted-foreground">{data.summary.pendingOrdersCount} órdenes</p>
+          </CardContent>
+        </Card>
+        {/* Fila 2: Viajes */}
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">🚗 Viajes Aprobados</CardTitle>
+            <Car className="h-4 w-4 text-blue-600" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-blue-600">{formatCurrency(data.summary.travelApproved)}</div>
+            <p className="text-xs text-muted-foreground">{data.summary.travelReportsCount} informes</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">🚗 Viajes Pendientes</CardTitle>
+            <Plane className="h-4 w-4 text-cyan-500" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-cyan-500">{formatCurrency(data.summary.travelPending)}</div>
+            <p className="text-xs text-muted-foreground">{data.summary.travelPendingCount} informes</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Totales consolidados */}
+      <div className="grid gap-4 md:grid-cols-3">
+        <Card className="border-green-200 bg-green-50/50">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">💚 Total Gastado</CardTitle>
+            <Euro className="h-4 w-4 text-green-700" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-green-700">{formatCurrency(data.summary.totalSpent)}</div>
+            <p className="text-xs text-muted-foreground">Materiales + Viajes aprobados</p>
+          </CardContent>
+        </Card>
+        <Card className="border-orange-200 bg-orange-50/50">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">💛 Total Comprometido</CardTitle>
+            <TrendingUp className="h-4 w-4 text-orange-600" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-orange-600">{formatCurrency(data.summary.totalCommitted)}</div>
+            <p className="text-xs text-muted-foreground">Pendiente de recepción/aprobación</p>
+          </CardContent>
+        </Card>
+        <Card className="border-primary/50 bg-primary/5">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">📊 Total Proyectado</CardTitle>
+            <Receipt className="h-4 w-4 text-primary" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-primary">{formatCurrency(data.summary.totalProjected)}</div>
             {budgetPercentage !== null && (
-              <p className={`text-xs ${budgetPercentage > 100 ? "text-red-500" : "text-muted-foreground"}`}>
+              <p className={`text-xs ${budgetPercentage > 100 ? "text-red-500 font-semibold" : budgetPercentage > 80 ? "text-orange-500" : "text-muted-foreground"}`}>
                 {budgetPercentage.toFixed(1)}% del presupuesto ({formatCurrency(data.project.budget!)})
               </p>
             )}
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Artículos Únicos</CardTitle>
-            <Package className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{data.summary.uniqueItems}</div>
-            <p className="text-xs text-muted-foreground">materiales diferentes</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Proveedores</CardTitle>
-            <Building2 className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{data.summary.uniqueSuppliers}</div>
-            <p className="text-xs text-muted-foreground">proveedores usados</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Transacciones</CardTitle>
-            <Receipt className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{data.summary.totalTransactions}</div>
-            <p className="text-xs text-muted-foreground">compras registradas</p>
           </CardContent>
         </Card>
       </div>
@@ -247,6 +445,14 @@ export function ProjectConsumptionClient({ data }: Props) {
           <TabsTrigger value="materials" className="flex items-center gap-2">
             <Package className="h-4 w-4" />
             Materiales ({data.materials.length})
+          </TabsTrigger>
+          <TabsTrigger value="pending" className="flex items-center gap-2">
+            <Clock className="h-4 w-4" />
+            Pendiente ({data.pendingOrders?.length || 0})
+          </TabsTrigger>
+          <TabsTrigger value="travel" className="flex items-center gap-2">
+            <Car className="h-4 w-4" />
+            Viajes ({data.travelReports?.length || 0})
           </TabsTrigger>
           <TabsTrigger value="top-amount" className="flex items-center gap-2">
             <Euro className="h-4 w-4" />
@@ -525,6 +731,174 @@ export function ProjectConsumptionClient({ data }: Props) {
                       <span className="font-medium">Total acumulado:</span>
                       <span className="font-mono font-bold text-lg">
                         {formatCurrency(data.monthlyEvolution.reduce((sum, m) => sum + m.amount, 0))}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Tab: Pendiente de Recibir */}
+        <TabsContent value="pending">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Clock className="h-5 w-5 text-orange-500" />
+                Órdenes Pendientes de Recibir
+              </CardTitle>
+              <CardDescription>
+                Material comprometido (aprobado o enviado) aún no recibido en almacén
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {!data.pendingOrders || data.pendingOrders.length === 0 ? (
+                <div className="text-center py-8 text-muted-foreground">
+                  <Package className="h-12 w-12 mx-auto mb-3 opacity-50" />
+                  <p>No hay órdenes pendientes de recibir para este proyecto</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Nº Orden</TableHead>
+                        <TableHead>Fecha</TableHead>
+                        <TableHead>Proveedor</TableHead>
+                        <TableHead>Estado</TableHead>
+                        <TableHead className="text-center">Items</TableHead>
+                        <TableHead className="text-right">Total</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {data.pendingOrders.map((order) => (
+                        <TableRow key={order.id}>
+                          <TableCell className="font-medium">
+                            {order.orderNumber}
+                          </TableCell>
+                          <TableCell>
+                            {order.date ? format(new Date(order.date), "dd/MM/yyyy", { locale: es }) : "-"}
+                          </TableCell>
+                          <TableCell>{order.supplier}</TableCell>
+                          <TableCell>
+                            <Badge 
+                              variant={order.status === "Enviada al Proveedor" ? "default" : "secondary"}
+                              className={order.status === "Enviada al Proveedor" ? "bg-blue-500" : "bg-green-500"}
+                            >
+                              {order.status === "Enviada al Proveedor" ? "Enviada" : "Aprobada"}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-center">{order.itemCount}</TableCell>
+                          <TableCell className="text-right font-mono font-medium">
+                            {formatCurrency(order.total)}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                  
+                  <div className="pt-4 border-t">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">
+                        {data.pendingOrders.length} orden{data.pendingOrders.length !== 1 ? "es" : ""} pendiente{data.pendingOrders.length !== 1 ? "s" : ""}
+                      </span>
+                      <div className="text-right">
+                        <span className="text-sm text-muted-foreground mr-2">Total comprometido:</span>
+                        <span className="font-mono font-bold text-lg text-orange-600">
+                          {formatCurrency(data.summary.materialsCommitted || 0)}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Tab: Viajes */}
+        <TabsContent value="travel">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Car className="h-5 w-5 text-blue-500" />
+                Informes de Viaje
+              </CardTitle>
+              <CardDescription>
+                Viajes y desplazamientos imputados al proyecto
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {!data.travelReports || data.travelReports.length === 0 ? (
+                <div className="text-center py-8 text-muted-foreground">
+                  <Car className="h-12 w-12 mx-auto mb-3 opacity-50" />
+                  <p>No hay informes de viaje para este proyecto</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Código</TableHead>
+                        <TableHead>Técnico</TableHead>
+                        <TableHead>Fechas</TableHead>
+                        <TableHead>Descripción</TableHead>
+                        <TableHead>Estado</TableHead>
+                        <TableHead className="text-right">Total</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {data.travelReports.map((report) => (
+                        <TableRow key={report.id}>
+                          <TableCell className="font-medium font-mono">
+                            {report.codigo_informe}
+                          </TableCell>
+                          <TableCell>{report.tecnico_name}</TableCell>
+                          <TableCell>
+                            <div className="text-sm">
+                              {report.fecha_inicio ? format(new Date(report.fecha_inicio), "dd/MM/yy", { locale: es }) : "-"}
+                              {report.fecha_fin && report.fecha_inicio !== report.fecha_fin && (
+                                <> → {format(new Date(report.fecha_fin), "dd/MM/yy", { locale: es })}</>
+                              )}
+                            </div>
+                          </TableCell>
+                          <TableCell className="max-w-[200px] truncate" title={report.descripcion_viaje}>
+                            {report.descripcion_viaje || "-"}
+                          </TableCell>
+                          <TableCell>
+                            <Badge 
+                              variant={report.estado === "Aprobado" ? "default" : "secondary"}
+                              className={
+                                report.estado === "Aprobado" 
+                                  ? "bg-green-500" 
+                                  : report.estado === "Rechazado"
+                                  ? "bg-red-500"
+                                  : "bg-yellow-500"
+                              }
+                            >
+                              {report.estado === "Pendiente de Aprobación" ? "Pendiente" : report.estado}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-right font-mono font-medium">
+                            {formatCurrency(report.total_informe)}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                  
+                  <div className="pt-4 border-t grid grid-cols-2 gap-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">Viajes aprobados:</span>
+                      <span className="font-mono font-bold text-green-600">
+                        {formatCurrency(data.summary.travelApproved)}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">Viajes pendientes:</span>
+                      <span className="font-mono font-bold text-yellow-600">
+                        {formatCurrency(data.summary.travelPending)}
                       </span>
                     </div>
                   </div>

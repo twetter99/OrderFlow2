@@ -42,7 +42,7 @@ async function getTravelReports() {
   return reports;
 }
 
-// Serializar proyectos
+// Serializar proyectos - solo campos necesarios
 async function getProjects() {
   noStore();
   const snapshot = await db.collection("projects").orderBy("name", "asc").get();
@@ -51,24 +51,41 @@ async function getProjects() {
     const data = doc.data();
     return {
       id: doc.id,
-      ...data,
-      // Asegurarnos de que las fechas sean strings
-      startDate: serializeTimestamp(data.startDate),
-      endDate: serializeTimestamp(data.endDate),
+      codigo_proyecto: data.codigo_proyecto || '',
+      name: data.name || '',
+      clientId: data.clientId || '',
+      client: data.client || '',
+      status: data.status || 'Planificado',
+      startDate: serializeTimestamp(data.startDate) || '',
+      endDate: serializeTimestamp(data.endDate) || '',
+      budget: data.budget,
+      spent: data.spent,
+      centro_coste: data.centro_coste || '',
+      numero_vehiculos: data.numero_vehiculos || 0,
+      tipo_flota: data.tipo_flota || 'otros',
+      localizacion_base: data.localizacion_base || { direccion: '', ciudad: '', provincia: '', coordenadas: { lat: 0, lng: 0 } },
     } as Project;
   });
 
   return projects;
 }
 
-// Serializar técnicos (no tienen timestamps, pero por consistencia)
+// Serializar técnicos - solo campos necesarios
 async function getTechnicians() {
   noStore();
   const snapshot = await db.collection("technicians").orderBy("name", "asc").get();
-  return snapshot.docs.map(doc => ({ 
-    id: doc.id, 
-    ...doc.data() 
-  } as Technician));
+  return snapshot.docs.map(doc => {
+    const data = doc.data();
+    return { 
+      id: doc.id, 
+      name: data.name || '',
+      specialty: data.specialty || '',
+      category: data.category || '',
+      phone: data.phone || '',
+      notes: data.notes || '',
+      rates: data.rates || {},
+    } as Technician;
+  });
 }
 
 export default async function TravelPlanningPage() {

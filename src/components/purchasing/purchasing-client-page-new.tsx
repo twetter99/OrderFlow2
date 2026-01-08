@@ -110,8 +110,8 @@ export function PurchasingClientPageNew({
   const searchParams = useSearchParams();
   const { user, loading: authLoading } = useAuth();
 
-  // Use initial data from props
-  const purchaseOrders = initialPurchaseOrders;
+  // OPTIMIZACIÓN: Estado local para actualizaciones instantáneas
+  const [purchaseOrders, setPurchaseOrders] = useState<PurchaseOrder[]>(initialPurchaseOrders);
   const suppliers = initialSuppliers;
   const inventory = initialInventory;
   const projects = initialProjects;
@@ -343,7 +343,19 @@ export function PurchasingClientPageNew({
     const result = await updatePurchaseOrderStatus(id, newStatus);
     if (result.success) {
       toast({ title: 'Estado Actualizado', description: result.message });
-      router.refresh();
+      // OPTIMIZACIÓN: Actualizar estado local en lugar de router.refresh()
+      setPurchaseOrders(prev => prev.map(order => 
+        order.id === id 
+          ? { 
+              ...order, 
+              status: newStatus,
+              statusHistory: [
+                ...(order.statusHistory || []),
+                { status: newStatus, date: new Date().toISOString(), comment: `Estado cambiado a ${newStatus}` }
+              ]
+            }
+          : order
+      ));
     } else {
       toast({ variant: 'destructive', title: 'Error', description: result.message });
     }
@@ -379,18 +391,41 @@ export function PurchasingClientPageNew({
   };
 
   const handleSave = async (values: any) => {
-    const result = selectedOrder && 'id' in selectedOrder
+    const isEditing = selectedOrder && 'id' in selectedOrder;
+    const result = isEditing
       ? await updatePurchaseOrder(selectedOrder.id as string, values)
       : await addPurchaseOrder(values);
       
     if (result.success) {
       toast({ 
-          title: result.warning ? "Operación con Advertencia" : (selectedOrder && 'id' in selectedOrder ? "Pedido actualizado" : "Pedido creado"),
+          title: result.warning ? "Operación con Advertencia" : (isEditing ? "Pedido actualizado" : "Pedido creado"),
           description: result.message,
           variant: result.warning ? "default" : "success",
       });
       setIsModalOpen(false);
-      router.refresh();
+      
+      // OPTIMIZACIÓN: Actualizar estado local en lugar de router.refresh()
+      if (isEditing) {
+        // Actualizar orden existente
+        setPurchaseOrders(prev => prev.map(order => 
+          order.id === selectedOrder.id 
+            ? { ...order, ...values, projectName: values.projectName || order.projectName }
+            : order
+        ));
+      } else if (result.id) {
+        // Añadir nueva orden al estado local
+        const newOrder: PurchaseOrder = {
+          ...values,
+          id: result.id,
+          date: new Date().toISOString(),
+          statusHistory: [{
+            status: values.status || 'Pendiente de Aprobación',
+            date: new Date().toISOString(),
+            comment: 'Pedido creado'
+          }]
+        };
+        setPurchaseOrders(prev => [newOrder, ...prev]);
+      }
     } else {
       toast({ variant: "destructive", title: "Error", description: result.message });
     }
@@ -400,15 +435,22 @@ export function PurchasingClientPageNew({
     let result;
     if (orderToDelete) {
         result = await deletePurchaseOrder(orderToDelete.id);
+        if (result.success) {
+          // OPTIMIZACIÓN: Eliminar del estado local
+          setPurchaseOrders(prev => prev.filter(order => order.id !== orderToDelete.id));
+        }
     } else if (selectedRowIds.length > 0) {
         result = await deleteMultiplePurchaseOrders(selectedRowIds);
+        if (result.success) {
+          // OPTIMIZACIÓN: Eliminar múltiples del estado local
+          setPurchaseOrders(prev => prev.filter(order => !selectedRowIds.includes(order.id)));
+        }
     } else {
         return;
     }
 
     if (result.success) {
         toast({ variant: "success", title: "Eliminación exitosa", description: result.message });
-        router.refresh();
     } else {
         toast({ variant: "destructive", title: "Error", description: result.message });
     }
@@ -481,7 +523,19 @@ export function PurchasingClientPageNew({
         const result = await updatePurchaseOrderStatus(id, status);
         if (result.success) {
           toast({ title: 'Pedido Aprobado', description: result.message });
-          router.refresh();
+          // OPTIMIZACIÓN: Actualizar estado local en lugar de router.refresh()
+          setPurchaseOrders(prev => prev.map(order => 
+            order.id === id 
+              ? { 
+                  ...order, 
+                  status: status,
+                  statusHistory: [
+                    ...(order.statusHistory || []),
+                    { status: status, date: new Date().toISOString(), comment: `Estado cambiado a ${status}` }
+                  ]
+                }
+              : order
+          ));
         } else {
           toast({ variant: 'destructive', title: 'Error', description: result.message });
         }

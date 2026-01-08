@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { db, admin } from "@/lib/firebase-admin"; // Use admin SDK for backend actions
 import type { PurchaseOrder, StatusHistoryEntry, DeliveryNoteAttachment, Project } from "@/lib/types";
 import { sendApprovalEmail } from "@/ai/flows/send-approval-email";
@@ -20,14 +20,25 @@ export async function addPurchaseOrder(orderData: Partial<PurchaseOrder>) {
   const newOrderNumber = await getNextOrderNumber();
   const orderDate = new Date();
   
-  // Fetch project name using Admin SDK
-  let projectName = 'No especificado';
-  if (orderData.project) {
+  // Fetch project name using Admin SDK - OPTIMIZADO: usar ID directo si está disponible
+  let projectName = orderData.projectName || 'No especificado';
+  let projectId = orderData.project || '';
+  
+  if (orderData.project && !orderData.projectName) {
     try {
-        const projectsSnapshot = await db.collection('projects').where('name', '==', orderData.project).limit(1).get();
-        if (!projectsSnapshot.empty) {
-            const projectDoc = projectsSnapshot.docs[0];
+        // OPTIMIZADO: Consulta directa por ID (más rápido que where)
+        const projectDoc = await db.collection('projects').doc(orderData.project).get();
+        if (projectDoc.exists) {
             projectName = (projectDoc.data() as Project).name;
+            projectId = projectDoc.id;
+        } else {
+            // FALLBACK: Si el project es un nombre (datos legacy), buscar por nombre
+            const projectsSnapshot = await db.collection('projects').where('name', '==', orderData.project).limit(1).get();
+            if (!projectsSnapshot.empty) {
+                const legacyProjectDoc = projectsSnapshot.docs[0];
+                projectName = (legacyProjectDoc.data() as Project).name;
+                projectId = legacyProjectDoc.id;
+            }
         }
     } catch (e) {
         console.error("Could not fetch project name for email.", e);
@@ -44,7 +55,11 @@ export async function addPurchaseOrder(orderData: Partial<PurchaseOrder>) {
     docRef = await db.collection("purchaseOrders").add({
       ...orderData,
       orderNumber: newOrderNumber,
+      project: projectId, // Guardar siempre el ID del proyecto
       projectName: projectName,
+      // Guardar supplier info normalizada si viene del nuevo frontend
+      ...(orderData.supplierId && { supplierId: orderData.supplierId }),
+      ...(orderData.supplierName && { supplierName: orderData.supplierName }),
       date: admin.firestore.Timestamp.fromDate(orderDate),
       estimatedDeliveryDate: admin.firestore.Timestamp.fromDate(new Date(orderData.estimatedDeliveryDate as string)),
       statusHistory: [historyEntry]
@@ -171,30 +186,43 @@ export async function updatePurchaseOrderStatus(id: string, status: PurchaseOrde
       statusHistory: admin.firestore.FieldValue.arrayUnion(newHistoryEntry)
     });
 
-    // ✅ NUEVA LÓGICA: Actualizar el spent del proyecto cuando se aprueba
-    if (status === 'Aprobado' && previousStatus !== 'Aprobado' && orderData.project && orderData.total) {
+    // ✅ OPTIMIZADO: Actualizar el spent del proyecto cuando se aprueba
+    if (status === 'Aprobada' && previousStatus !== 'Aprobada' && orderData.project && orderData.total) {
       try {
-        // Buscar el proyecto por nombre (ya que orderData.project contiene el nombre)
-        const projectsSnapshot = await db.collection('projects')
-          .where('name', '==', orderData.project)
-          .limit(1)
-          .get();
+        // OPTIMIZADO: Intentar consulta directa por ID primero
+        let projectRef = db.collection('projects').doc(orderData.project);
+        let projectDoc = await projectRef.get();
+        
+        // FALLBACK: Si no existe con ese ID, puede ser un nombre (datos legacy)
+        if (!projectDoc.exists) {
+          const projectsSnapshot = await db.collection('projects')
+            .where('name', '==', orderData.project)
+            .limit(1)
+            .get();
+          
+          if (!projectsSnapshot.empty) {
+            projectDoc = projectsSnapshot.docs[0];
+            projectRef = db.collection('projects').doc(projectDoc.id);
+          }
+        }
 
-        if (!projectsSnapshot.empty) {
-          const projectDoc = projectsSnapshot.docs[0];
-          const projectRef = db.collection('projects').doc(projectDoc.id);
-
+        if (projectDoc.exists) {
           await db.runTransaction(async (transaction) => {
             const projectData = (await transaction.get(projectRef)).data() as Project;
             const currentSpent = projectData.spent || 0;
             const newSpent = currentSpent + orderData.total;
+            const currentMaterialsCommitted = projectData.materialsCommitted || 0;
 
             transaction.update(projectRef, {
               spent: newSpent,
+              materialsCommitted: currentMaterialsCommitted + orderData.total,
             });
 
-            console.log(`✅ Project ${orderData.project} updated: ${currentSpent}€ → ${newSpent}€`);
+            console.log(`✅ Project ${orderData.project} updated: spent ${currentSpent}€ → ${newSpent}€, materialsCommitted +${orderData.total}€`);
           });
+          
+          revalidateTag("project-tracking");
+          revalidateTag(`project-${projectDoc.id}`);
         } else {
           console.warn(`⚠️ Project "${orderData.project}" not found when trying to update spent.`);
         }

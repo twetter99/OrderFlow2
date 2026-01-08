@@ -24,6 +24,11 @@ export type Project = {
     provincia: string;
     coordenadas: { lat: number; lng: number };
   };
+  // Campos pre-calculados para seguimiento de costes
+  materialsReceived?: number;   // Total materiales recibidos (desde inventory_history)
+  materialsCommitted?: number;  // Total materiales comprometidos (órdenes aprobadas/enviadas)
+  travelApproved?: number;      // Total viajes aprobados
+  travelPending?: number;       // Total viajes pendientes de aprobación
 };
 
 export type InventoryItem = {
@@ -77,7 +82,9 @@ export type PurchaseOrder = {
   orderNumber?: string;
   project: string; // ID del proyecto
   projectName?: string; // Nombre del proyecto (desnormalizado)
-  supplier: string;
+  supplier: string; // Nombre del proveedor (legacy, para compatibilidad)
+  supplierId?: string; // ID del proveedor (optimizado)
+  supplierName?: string; // Nombre del proveedor (desnormalizado)
   deliveryLocationId: string;
   status: 'Pendiente de Aprobación' | 'Aprobada' | 'Enviada al Proveedor' | 'Recibida' | 'Recibida Parcialmente' | 'Rechazado';
   date: string | Timestamp;
