@@ -1,7 +1,12 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import * as XLSX from "xlsx";
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
 import {
   Table,
   TableBody,
@@ -20,7 +25,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { MoreHorizontal, PlusCircle, Trash2, Edit, Boxes, PackagePlus, ArrowUpDown, ArrowUp, ArrowDown, Loader2 } from "lucide-react";
+import { MoreHorizontal, PlusCircle, Trash2, Edit, Boxes, PackagePlus, ArrowUpDown, ArrowUp, ArrowDown, Loader2, FileDown, FileText } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -318,6 +323,207 @@ export function InventoryClientPageNew({
 
   const formatCurrency = (value: number) => new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(value);
 
+  // Función para exportar a Excel
+  const handleExportExcel = useCallback(() => {
+    const workbook = XLSX.utils.book_new();
+    const supplierMap = new Map(suppliers.map(s => [s.id, s.name]));
+    
+    // Calcular resumen
+    const totalItems = inventory.length;
+    const simpleItems = inventory.filter(i => i.type === 'simple').length;
+    const compositeItems = inventory.filter(i => i.type === 'composite').length;
+    const serviceItems = inventory.filter(i => i.type === 'service').length;
+    const totalStockValue = inventory
+      .filter(i => i.type !== 'service')
+      .reduce((sum, item) => sum + (getItemTotalStock(item.id) * item.unitCost), 0);
+    const itemsBelowThreshold = inventory.filter(item => {
+      if (item.type === 'service' || !item.minThreshold) return false;
+      return getItemTotalStock(item.id) < item.minThreshold;
+    }).length;
+
+    // Hoja 1: Resumen
+    const resumenData = [
+      ["INVENTARIO - RESUMEN"],
+      [],
+      ["Fecha de exportación:", format(new Date(), "dd/MM/yyyy HH:mm", { locale: es })],
+      [],
+      ["ESTADÍSTICAS"],
+      [],
+      ["Concepto", "Cantidad"],
+      ["Total Artículos", totalItems],
+      ["Artículos Simples", simpleItems],
+      ["Kits/Compuestos", compositeItems],
+      ["Servicios", serviceItems],
+      [],
+      ["VALORACIÓN"],
+      [],
+      ["Valor Total Inventario", `${totalStockValue.toFixed(2)} €`],
+      ["Artículos bajo mínimo", itemsBelowThreshold],
+    ];
+    
+    const wsResumen = XLSX.utils.aoa_to_sheet(resumenData);
+    wsResumen["!cols"] = [{ wch: 25 }, { wch: 20 }];
+    XLSX.utils.book_append_sheet(workbook, wsResumen, "Resumen");
+    
+    // Hoja 2: Inventario completo
+    const inventarioHeader = ["SKU", "Nombre", "Tipo", "Proveedores", "Stock Total", "Costo Unitario", "Valor Stock", "Unidad", "Umbral Mínimo", "Código Proveedor", "Familia", "Observaciones"];
+    const inventarioData = sortedInventory.map(item => {
+      const itemSuppliers = item.suppliers
+        ?.map(supplierId => supplierMap.get(supplierId))
+        .filter(Boolean)
+        .join(', ') || '';
+      const stock = item.type !== 'service' ? getItemTotalStock(item.id) : 0;
+      const stockValue = stock * item.unitCost;
+      
+      return [
+        item.sku,
+        item.name,
+        item.type === 'simple' ? 'Simple' : item.type === 'composite' ? 'Kit' : 'Servicio',
+        itemSuppliers,
+        item.type !== 'service' ? stock : 'N/A',
+        item.unitCost,
+        item.type !== 'service' ? stockValue : 'N/A',
+        item.unit || 'ud',
+        item.minThreshold || '-',
+        item.supplierProductCode || '-',
+        item.family || '-',
+        item.observations || '-',
+      ];
+    });
+    
+    const wsInventario = XLSX.utils.aoa_to_sheet([inventarioHeader, ...inventarioData]);
+    wsInventario["!cols"] = [
+      { wch: 15 }, // SKU
+      { wch: 35 }, // Nombre
+      { wch: 10 }, // Tipo
+      { wch: 30 }, // Proveedores
+      { wch: 12 }, // Stock
+      { wch: 14 }, // Costo
+      { wch: 14 }, // Valor Stock
+      { wch: 8 },  // Unidad
+      { wch: 14 }, // Umbral
+      { wch: 18 }, // Código Proveedor
+      { wch: 15 }, // Familia
+      { wch: 30 }, // Observaciones
+    ];
+    XLSX.utils.book_append_sheet(workbook, wsInventario, "Inventario");
+    
+    // Hoja 3: Stock por ubicación
+    const locationMap = new Map(locations.map(l => [l.id, l.name]));
+    const stockPorUbicacionHeader = ["SKU", "Nombre", "Ubicación", "Cantidad"];
+    const stockPorUbicacionData: any[][] = [];
+    
+    inventory.forEach(item => {
+      if (item.type === 'service') return;
+      const itemLocations = inventoryLocations.filter(il => il.itemId === item.id);
+      itemLocations.forEach(il => {
+        if (il.quantity > 0) {
+          stockPorUbicacionData.push([
+            item.sku,
+            item.name,
+            locationMap.get(il.locationId) || il.locationId,
+            il.quantity,
+          ]);
+        }
+      });
+    });
+    
+    if (stockPorUbicacionData.length > 0) {
+      const wsStockUbicacion = XLSX.utils.aoa_to_sheet([stockPorUbicacionHeader, ...stockPorUbicacionData]);
+      wsStockUbicacion["!cols"] = [{ wch: 15 }, { wch: 35 }, { wch: 25 }, { wch: 12 }];
+      XLSX.utils.book_append_sheet(workbook, wsStockUbicacion, "Stock por Ubicación");
+    }
+    
+    // Generar y descargar el archivo
+    const fileName = `Inventario_${format(new Date(), "yyyyMMdd_HHmm")}.xlsx`;
+    XLSX.writeFile(workbook, fileName);
+  }, [inventory, suppliers, locations, inventoryLocations, sortedInventory, getItemTotalStock]);
+
+  // Función para exportar PDF plantilla de conteo
+  const handleExportPDFConteo = useCallback(() => {
+    const doc = new jsPDF('landscape', 'mm', 'a4');
+    const supplierMap = new Map(suppliers.map(s => [s.id, s.name]));
+    const locationMap = new Map(locations.map(l => [l.id, l.name]));
+    
+    // Título y cabecera
+    doc.setFontSize(18);
+    doc.text("PLANTILLA DE CONTEO DE INVENTARIO", 148, 15, { align: 'center' });
+    
+    doc.setFontSize(10);
+    doc.text(`Fecha: ${format(new Date(), "dd/MM/yyyy", { locale: es })}`, 14, 25);
+    doc.text(`Total artículos: ${sortedInventory.filter(i => i.type !== 'service').length}`, 14, 30);
+    doc.text("Realizado por: _______________________", 200, 25);
+    doc.text("Firma: _______________________", 200, 30);
+    
+    // Preparar datos para la tabla
+    const tableData = sortedInventory
+      .filter(item => item.type !== 'service')
+      .map(item => {
+        const stock = getItemTotalStock(item.id);
+        const itemLocs = inventoryLocations
+          .filter(il => il.itemId === item.id && il.quantity > 0)
+          .map(il => locationMap.get(il.locationId) || '-')
+          .join(', ') || '-';
+        
+        return [
+          item.sku,
+          item.name.length > 40 ? item.name.substring(0, 37) + '...' : item.name,
+          itemLocs.length > 25 ? itemLocs.substring(0, 22) + '...' : itemLocs,
+          stock.toString(),
+          '', // Conteo real (vacío para escribir)
+          '', // Diferencia (vacío para escribir)
+        ];
+      });
+    
+    // Generar tabla
+    autoTable(doc, {
+      startY: 38,
+      head: [['SKU', 'Nombre', 'Ubicación', 'Stock Sistema', 'Conteo Real', 'Diferencia']],
+      body: tableData,
+      theme: 'grid',
+      headStyles: { 
+        fillColor: [41, 128, 185],
+        textColor: 255,
+        fontStyle: 'bold',
+        halign: 'center',
+      },
+      columnStyles: {
+        0: { cellWidth: 30 },  // SKU
+        1: { cellWidth: 80 },  // Nombre
+        2: { cellWidth: 50 },  // Ubicación
+        3: { cellWidth: 30, halign: 'center' },  // Stock Sistema
+        4: { cellWidth: 30, halign: 'center' },  // Conteo Real
+        5: { cellWidth: 30, halign: 'center' },  // Diferencia
+      },
+      styles: {
+        fontSize: 9,
+        cellPadding: 3,
+      },
+      alternateRowStyles: {
+        fillColor: [245, 245, 245],
+      },
+      didDrawPage: (data) => {
+        // Pie de página con número de página
+        const pageCount = doc.getNumberOfPages();
+        doc.setFontSize(8);
+        doc.text(
+          `Página ${data.pageNumber} de ${pageCount}`,
+          data.settings.margin.left,
+          doc.internal.pageSize.height - 10
+        );
+        doc.text(
+          `Generado: ${format(new Date(), "dd/MM/yyyy HH:mm", { locale: es })}`,
+          doc.internal.pageSize.width - 60,
+          doc.internal.pageSize.height - 10
+        );
+      },
+    });
+    
+    // Descargar el PDF
+    const fileName = `Conteo_Inventario_${format(new Date(), "yyyyMMdd")}.pdf`;
+    doc.save(fileName);
+  }, [sortedInventory, suppliers, locations, inventoryLocations, getItemTotalStock]);
+
   if (authLoading) {
     return (
       <div className="flex h-[80vh] w-full items-center justify-center">
@@ -352,10 +558,32 @@ export function InventoryClientPageNew({
                       Eliminar ({selectedRowIds.length})
                   </Button>
               ) : (
-                  <Button onClick={handleAddClick}>
-                      <PlusCircle className="mr-2 h-4 w-4" />
-                      Añadir Artículo
-                  </Button>
+                  <div className="flex items-center gap-2">
+                      <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                              <Button variant="outline">
+                                  <FileDown className="mr-2 h-4 w-4" />
+                                  Exportar
+                              </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Formato de exportación</DropdownMenuLabel>
+                              <DropdownMenuSeparator />
+                              <DropdownMenuItem onClick={handleExportExcel}>
+                                  <FileDown className="mr-2 h-4 w-4" />
+                                  Excel (.xlsx)
+                              </DropdownMenuItem>
+                              <DropdownMenuItem onClick={handleExportPDFConteo}>
+                                  <FileText className="mr-2 h-4 w-4" />
+                                  PDF Plantilla Conteo
+                              </DropdownMenuItem>
+                          </DropdownMenuContent>
+                      </DropdownMenu>
+                      <Button onClick={handleAddClick}>
+                          <PlusCircle className="mr-2 h-4 w-4" />
+                          Añadir Artículo
+                      </Button>
+                  </div>
               )}
           </div>
         </CardHeader>
