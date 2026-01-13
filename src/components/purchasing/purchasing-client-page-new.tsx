@@ -404,27 +404,17 @@ export function PurchasingClientPageNew({
       });
       setIsModalOpen(false);
       
-      // OPTIMIZACIÓN: Actualizar estado local en lugar de router.refresh()
+      // Actualizar estado local para ediciones, refresh para nuevas órdenes
       if (isEditing) {
-        // Actualizar orden existente
+        // Actualizar orden existente en estado local
         setPurchaseOrders(prev => prev.map(order => 
           order.id === selectedOrder.id 
             ? { ...order, ...values, projectName: values.projectName || order.projectName }
             : order
         ));
-      } else if (result.id) {
-        // Añadir nueva orden al estado local
-        const newOrder: PurchaseOrder = {
-          ...values,
-          id: result.id,
-          date: new Date().toISOString(),
-          statusHistory: [{
-            status: values.status || 'Pendiente de Aprobación',
-            date: new Date().toISOString(),
-            comment: 'Pedido creado'
-          }]
-        };
-        setPurchaseOrders(prev => [newOrder, ...prev]);
+      } else {
+        // Nueva orden: recargar del servidor para obtener el orderNumber generado
+        router.refresh();
       }
     } else {
       toast({ variant: "destructive", title: "Error", description: result.message });
