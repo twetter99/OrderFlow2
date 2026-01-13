@@ -12,6 +12,7 @@ import {onSchedule} from "firebase-functions/v2/scheduler";
 import {onRequest} from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
 import * as admin from "firebase-admin";
+import {GoogleAuth} from "google-auth-library";
 
 // Inicializar Firebase Admin
 admin.initializeApp();
@@ -19,17 +20,48 @@ admin.initializeApp();
 // Configuración global
 setGlobalOptions({ maxInstances: 10, region: "europe-west1" });
 
-// ID del proyecto Firebase (se obtiene automáticamente)
-const PROJECT_ID = process.env.GCLOUD_PROJECT || process.env.GCP_PROJECT;
+// ID del proyecto Firebase
+const PROJECT_ID = "orderflow-pxtw9";
 
 // Bucket donde se guardarán los backups
-const BACKUP_BUCKET = `gs://orderflow-pxtw9-backups`;
+const BACKUP_BUCKET = "gs://orderflow-pxtw9-backups";
+
+/**
+ * Función auxiliar para exportar Firestore usando la API REST
+ */
+async function exportFirestore(backupPath: string): Promise<string> {
+  const auth = new GoogleAuth({
+    scopes: ["https://www.googleapis.com/auth/datastore"],
+  });
+  
+  const client = await auth.getClient();
+  const accessToken = await client.getAccessToken();
+  
+  const url = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default):exportDocuments`;
+  
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${accessToken.token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      outputUriPrefix: backupPath,
+    }),
+  });
+  
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Export failed: ${response.status} - ${errorText}`);
+  }
+  
+  const result = await response.json();
+  return result.name || "Operation started";
+}
 
 /**
  * Backup automático semanal de Firestore
  * Se ejecuta todos los domingos a las 3:00 AM (hora de Madrid)
- * 
- * Cron: "0 3 * * 0" = minuto 0, hora 3, cualquier día del mes, cualquier mes, domingo
  */
 export const scheduledFirestoreBackup = onSchedule(
   {
@@ -38,40 +70,25 @@ export const scheduledFirestoreBackup = onSchedule(
     retryCount: 3,
     memory: "256MiB",
   },
-  async (event) => {
+  async () => {
     const timestamp = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
     const backupPath = `${BACKUP_BUCKET}/automatic/${timestamp}`;
 
     logger.info(`🔄 Iniciando backup automático de Firestore a: ${backupPath}`);
 
     try {
-      const client = new admin.firestore.v1.FirestoreAdminClient();
-
-      const databaseName = client.databasePath(PROJECT_ID!, "(default)");
-
-      const [operation] = await client.exportDocuments({
-        name: databaseName,
-        outputUriPrefix: backupPath,
-        // Si quieres exportar solo colecciones específicas, descomenta:
-        // collectionIds: ["clients", "projects", "purchaseOrders", "inventory", "suppliers"],
-      });
-
-      logger.info(`✅ Backup iniciado correctamente. Operación: ${operation.name}`);
-      
-      // El backup se ejecuta de forma asíncrona, aquí solo verificamos que se inició
-      return;
+      const operationName = await exportFirestore(backupPath);
+      logger.info(`✅ Backup iniciado correctamente. Operación: ${operationName}`);
     } catch (error) {
       logger.error("❌ Error al realizar backup de Firestore:", error);
-      throw error; // Re-lanzar para que Cloud Functions marque la ejecución como fallida
+      throw error;
     }
   }
 );
 
 /**
  * Backup manual de Firestore (llamable vía HTTP)
- * Útil para hacer backups antes de cambios importantes
- * 
- * URL: https://europe-west1-{PROJECT_ID}.cloudfunctions.net/manualFirestoreBackup
+ * URL: https://europe-west1-orderflow-pxtw9.cloudfunctions.net/manualFirestoreBackup
  */
 export const manualFirestoreBackup = onRequest(
   { 
@@ -79,13 +96,11 @@ export const manualFirestoreBackup = onRequest(
     memory: "256MiB",
   },
   async (req, res) => {
-    // Verificar que sea una petición POST
     if (req.method !== "POST") {
       res.status(405).send("Método no permitido. Usa POST.");
       return;
     }
 
-    // Verificación básica de autorización (puedes mejorarla con tokens)
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
       res.status(401).send("No autorizado. Incluye un header Authorization.");
@@ -98,21 +113,13 @@ export const manualFirestoreBackup = onRequest(
     logger.info(`🔄 Iniciando backup MANUAL de Firestore a: ${backupPath}`);
 
     try {
-      const client = new admin.firestore.v1.FirestoreAdminClient();
-      const databaseName = client.databasePath(PROJECT_ID!, "(default)");
-
-      const [operation] = await client.exportDocuments({
-        name: databaseName,
-        outputUriPrefix: backupPath,
-      });
-
-      logger.info(`✅ Backup manual iniciado. Operación: ${operation.name}`);
+      const operationName = await exportFirestore(backupPath);
       
       res.status(200).json({
         success: true,
         message: "Backup iniciado correctamente",
         backupPath: backupPath,
-        operationName: operation.name,
+        operationName: operationName,
       });
     } catch (error) {
       logger.error("❌ Error al realizar backup manual:", error);
