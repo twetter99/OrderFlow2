@@ -13,6 +13,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { Globe } from "lucide-react";
 import type { Supplier } from "@/lib/types";
 
 const formSchema = z.object({
@@ -22,6 +24,7 @@ const formSchema = z.object({
   phone: z.string().min(1, "El teléfono es obligatorio."),
   deliveryRating: z.coerce.number().min(0).max(5, "La calificación debe estar entre 0 y 5."),
   qualityRating: z.coerce.number().min(0).max(5, "La calificación debe estar entre 0 y 5."),
+  isInternational: z.boolean().optional(),
 });
 
 type SupplierFormValues = z.infer<typeof formSchema>;
@@ -42,6 +45,7 @@ export function SupplierForm({ supplier, onSave, onCancel }: SupplierFormProps) 
         phone: "",
         deliveryRating: 4.0,
         qualityRating: 4.0,
+        isInternational: false,
       };
 
   const form = useForm<SupplierFormValues>({
@@ -138,6 +142,30 @@ export function SupplierForm({ supplier, onSave, onCancel }: SupplierFormProps) 
             )}
           />
         </div>
+
+        <FormField
+          control={form.control}
+          name="isInternational"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+              <div className="space-y-0.5">
+                <FormLabel className="text-base flex items-center gap-2">
+                  <Globe className="h-4 w-4" />
+                  Proveedor Internacional
+                </FormLabel>
+                <p className="text-sm text-muted-foreground">
+                  Las órdenes de compra se generarán en inglés
+                </p>
+              </div>
+              <FormControl>
+                <Switch
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+            </FormItem>
+          )}
+        />
 
         <div className="flex justify-end gap-2 pt-4">
           <Button type="button" variant="ghost" onClick={onCancel}>

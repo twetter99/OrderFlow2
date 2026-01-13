@@ -110,6 +110,7 @@ export type Supplier = {
   phone: string;
   deliveryRating: number;
   qualityRating: number;
+  isInternational?: boolean; // Si es true, las órdenes de compra se generan en inglés
 };
 
 export type Client = {
