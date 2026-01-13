@@ -23,8 +23,7 @@ setGlobalOptions({ maxInstances: 10, region: "europe-west1" });
 const PROJECT_ID = process.env.GCLOUD_PROJECT || process.env.GCP_PROJECT;
 
 // Bucket donde se guardarán los backups
-// IMPORTANTE: Debes crear este bucket en Google Cloud Storage
-const BACKUP_BUCKET = `gs://${PROJECT_ID}-backups`;
+const BACKUP_BUCKET = `gs://orderflow-pxtw9-backups`;
 
 /**
  * Backup automático semanal de Firestore
