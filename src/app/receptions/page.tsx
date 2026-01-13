@@ -1,25 +1,47 @@
-"use server";
-
 import { unstable_noStore } from "next/cache";
 import { db } from "@/lib/firebase-admin";
 import type { PurchaseOrder, Location } from "@/lib/types";
 import { ReceptionsClientPage } from "./receptions-client-page";
 
-function convertTimestamps(obj: any): any {
-  if (!obj) return obj;
+// Función robusta para convertir Timestamps de Firestore a ISO strings
+function sanitizeForClient(obj: any): any {
+  if (obj === null || obj === undefined) return obj;
+  
+  // Timestamp del Admin SDK (tiene _seconds y _nanoseconds)
   if (obj._seconds !== undefined && obj._nanoseconds !== undefined) {
     return new Date(obj._seconds * 1000).toISOString();
   }
-  if (typeof obj === 'object') {
-    if (Array.isArray(obj)) {
-      return obj.map(convertTimestamps);
+  
+  // Objeto con método toDate (Timestamp nativo de ambos SDKs)
+  if (typeof obj.toDate === 'function') {
+    try {
+      return obj.toDate().toISOString();
+    } catch {
+      return null;
     }
-    const converted: any = {};
-    for (const key in obj) {
-      converted[key] = convertTimestamps(obj[key]);
-    }
-    return converted;
   }
+  
+  // Date nativo
+  if (obj instanceof Date) {
+    return obj.toISOString();
+  }
+  
+  // Arrays
+  if (Array.isArray(obj)) {
+    return obj.map(item => sanitizeForClient(item));
+  }
+  
+  // Objetos planos
+  if (typeof obj === 'object') {
+    const sanitized: any = {};
+    for (const key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        sanitized[key] = sanitizeForClient(obj[key]);
+      }
+    }
+    return sanitized;
+  }
+  
   return obj;
 }
 
@@ -33,13 +55,12 @@ export default async function ReceptionsPage() {
   ]);
 
   const purchaseOrders: PurchaseOrder[] = purchaseOrdersSnapshot.docs.map(doc => 
-    convertTimestamps({ id: doc.id, ...doc.data() }) as PurchaseOrder
+    sanitizeForClient({ id: doc.id, ...doc.data() }) as PurchaseOrder
   );
 
-  const locations: Location[] = locationsSnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data(),
-  } as Location));
+  const locations: Location[] = locationsSnapshot.docs.map(doc => 
+    sanitizeForClient({ id: doc.id, ...doc.data() }) as Location
+  );
 
   return (
     <ReceptionsClientPage
