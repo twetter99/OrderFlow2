@@ -122,7 +122,7 @@ export async function confirmReception(
         const backorderData: any = {
           supplier: originalOrder.supplier,
           supplierId: originalOrder.supplierId,
-          projectId: originalOrder.projectId,
+          project: originalOrder.project,
           projectName: originalOrder.projectName,
           status: 'Enviada al Proveedor',
           originalOrderId: orderId,
