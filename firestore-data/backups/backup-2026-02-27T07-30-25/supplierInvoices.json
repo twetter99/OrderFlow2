@@ -1,0 +1,28 @@
+{
+  "Phcdwt1ddUJkZY0haalu": {
+    "supplierId": "GMdSRxEPPazc1GxxKCGV",
+    "purchaseOrderIds": [
+      "0LZ30SuFDjnPEoWQ7j8L"
+    ],
+    "invoiceNumber": "N/A",
+    "emissionDate": {
+      "_seconds": 1754258400,
+      "_nanoseconds": 0
+    },
+    "dueDate": {
+      "_seconds": 1754258400,
+      "_nanoseconds": 0
+    },
+    "status": "Pagada",
+    "notes": "Importacion  no lleva IVA no tiene factura",
+    "totalAmountDifference": 0,
+    "bases": [
+      {
+        "baseAmount": 97,
+        "vatRate": 0
+      }
+    ],
+    "vatAmount": 0,
+    "totalAmount": 97
+  }
+}

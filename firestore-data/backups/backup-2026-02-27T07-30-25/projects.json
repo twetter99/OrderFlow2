@@ -1,0 +1,445 @@
+{
+  "24R398TLZYTaSYkWd6Xr": {
+    "name": "PLACAS BORNEROS T-MOBILITAT",
+    "clientId": "Ut9GVQinZSrn436ZqQZO",
+    "status": "En Progreso",
+    "operador_ids": [
+      "iYhk56fDm1VAazv8OgDb"
+    ],
+    "equipo_tecnico_ids": [
+      "i30OVbWEGCdnPw7fO6R9"
+    ],
+    "centro_coste": "62-PLAC-25",
+    "startDate": {
+      "_seconds": 1755801523,
+      "_nanoseconds": 399000000
+    },
+    "endDate": {
+      "_seconds": 1781647200,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "travelPending": 0,
+    "travelApproved": 0,
+    "spent": 481.4652,
+    "materialsCommitted": 0,
+    "materialsReceived": 2216.8444
+  },
+  "2FoQeuKeR45tYHToS48A": {
+    "name": "VISION360 Pruebas",
+    "clientId": "I9MjLCgIpBxfMfTRzXbT",
+    "status": "En Progreso",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "21-VISI-25",
+    "startDate": {
+      "_seconds": 1765872185,
+      "_nanoseconds": 776000000
+    },
+    "endDate": {
+      "_seconds": 1912802400,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "createdAt": {
+      "_seconds": 1765872229,
+      "_nanoseconds": 6000000
+    },
+    "travelPending": 0,
+    "travelApproved": 0,
+    "materialsReceived": 287,
+    "spent": 2017.0700000000002,
+    "materialsCommitted": 1755.2100000000003
+  },
+  "3H8kNlHFkBF0325GDJv1": {
+    "name": "COCENTRO-RUIZ",
+    "clientId": "teKXqf8XpEdNQoCLOFPF",
+    "status": "En Progreso",
+    "operador_ids": [
+      "pjlhlB7mt0NkuQbfdtLB"
+    ],
+    "equipo_tecnico_ids": [
+      "M93YsnzNtboajpouSmvZ"
+    ],
+    "centro_coste": "95-COCE-25",
+    "startDate": {
+      "_seconds": 1761755290,
+      "_nanoseconds": 4000000
+    },
+    "endDate": {
+      "_seconds": 1765753200,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "travelPending": 887.5,
+    "travelApproved": 394,
+    "materialsReceived": 2569.275,
+    "spent": 476.85,
+    "materialsCommitted": 82.85
+  },
+  "BCHRmRaxNAj8bNl36Tiz": {
+    "name": "Herramientas",
+    "clientId": "I9MjLCgIpBxfMfTRzXbT",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "31-HERR-26",
+    "endDate": {
+      "_seconds": 1992207600,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "createdAt": {
+      "_seconds": 1770971546,
+      "_nanoseconds": 474000000
+    },
+    "startDate": {
+      "_seconds": 1770971514,
+      "_nanoseconds": 0
+    },
+    "status": "En Progreso",
+    "updatedAt": {
+      "_seconds": 1770971561,
+      "_nanoseconds": 178000000
+    },
+    "spent": 19.174,
+    "materialsCommitted": 19.174
+  },
+  "EVX8pfd8ryjxpasTBFGY": {
+    "name": "Diputacion de Vizcaya",
+    "clientId": "vDvw2EY4RR7Dy6zGLloE",
+    "status": "En Progreso",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "32-DIPU-26",
+    "startDate": {
+      "_seconds": 1767222000,
+      "_nanoseconds": 0
+    },
+    "endDate": {
+      "_seconds": 1804633200,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "createdAt": {
+      "_seconds": 1768308164,
+      "_nanoseconds": 547000000
+    },
+    "spent": 495,
+    "materialsCommitted": 495
+  },
+  "L9dNV9KxV9KE3HBVL6dW": {
+    "name": "PRUEBAS",
+    "clientId": "07ctn8AIL0Z6BY3npBkI",
+    "status": "Planificado",
+    "operador_ids": [
+      "8YnhzFnJmC2FHmWx0DCl"
+    ],
+    "equipo_tecnico_ids": [
+      "M93YsnzNtboajpouSmvZ"
+    ],
+    "centro_coste": "26-PRUE-25",
+    "startDate": {
+      "_seconds": 1754454644,
+      "_nanoseconds": 636000000
+    },
+    "endDate": {
+      "_seconds": 1762902000,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "spent": 0,
+    "travelPending": 0,
+    "travelApproved": 0,
+    "materialsCommitted": 0,
+    "materialsReceived": 0
+  },
+  "OEVZ73jdj9OUTIfDwdhs": {
+    "name": "LURRALDEBUS",
+    "clientId": "VKKZ5p6MSipyb7kJmRRp",
+    "status": "En Progreso",
+    "operador_ids": [
+      "pxO2TtzuppUl4QAYtHGA",
+      "zG9yNhzs3E34EjHcYwot"
+    ],
+    "equipo_tecnico_ids": [
+      "6i7NeNPVz7nGAy6LHbav"
+    ],
+    "centro_coste": "88-LURR-25",
+    "startDate": {
+      "_seconds": 1752950950,
+      "_nanoseconds": 262000000
+    },
+    "endDate": {
+      "_seconds": 1761429600,
+      "_nanoseconds": 0
+    },
+    "client": "Gertek",
+    "spent": 1301,
+    "travelPending": 3182.66,
+    "travelApproved": 1301,
+    "materialsCommitted": 24.425000000000004,
+    "materialsReceived": 12416.310750000006
+  },
+  "OqGsmh5EgpvukCEuREhU": {
+    "name": "Afluencia360",
+    "clientId": "Ep7KqR6y9hNbnFVOJ61I",
+    "status": "En Progreso",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "97-AFLU-25",
+    "startDate": {
+      "_seconds": 1763543173,
+      "_nanoseconds": 963000000
+    },
+    "endDate": {
+      "_seconds": 1920841200,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "travelPending": 0,
+    "travelApproved": 0,
+    "materialsReceived": 1147.79,
+    "spent": 1162.56,
+    "materialsCommitted": 84.56
+  },
+  "PCjn4k5LRx3pqGlhBOMQ": {
+    "name": "EUSKOTREN - Router",
+    "clientId": "8MJH6jAuuUESda9po08t",
+    "status": "En Progreso",
+    "operador_ids": [
+      "782keYBZCoin9PCj4pcL"
+    ],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "05-EUSK-25",
+    "startDate": {
+      "_seconds": 1763543096,
+      "_nanoseconds": 419000000
+    },
+    "endDate": {
+      "_seconds": 1784066400,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "spent": 0,
+    "margen_previsto": 0,
+    "travelPending": 0,
+    "travelApproved": 0,
+    "materialsCommitted": 0,
+    "materialsReceived": 1601.6
+  },
+  "PF92tWuFmu3YfIIMWziu": {
+    "name": "PAPERCAST LTD",
+    "clientId": "I9MjLCgIpBxfMfTRzXbT",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "72-PAPE-26",
+    "budget": 0,
+    "margen_previsto": 0,
+    "createdAt": {
+      "_seconds": 1769771976,
+      "_nanoseconds": 578000000
+    },
+    "endDate": {
+      "_seconds": 1769771891,
+      "_nanoseconds": 0
+    },
+    "startDate": {
+      "_seconds": 1769771891,
+      "_nanoseconds": 0
+    },
+    "status": "En Progreso",
+    "updatedAt": {
+      "_seconds": 1769771992,
+      "_nanoseconds": 81000000
+    },
+    "spent": 27.66,
+    "materialsCommitted": 5.010000000000002,
+    "materialsReceived": 22.65
+  },
+  "RggOivu7IT5tI5IHEuiS": {
+    "name": "MONBUS IVECOS DIC 25",
+    "clientId": "PRcMkvXjP3YP47Rc85yY",
+    "status": "En Progreso",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [
+      "iNqCFwDMMU8luLo6xq3v",
+      "M93YsnzNtboajpouSmvZ"
+    ],
+    "centro_coste": "74-MONB-25",
+    "startDate": {
+      "_seconds": 1764671431,
+      "_nanoseconds": 86000000
+    },
+    "endDate": {
+      "_seconds": 1767481200,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "spent": 0,
+    "margen_previsto": 0,
+    "travelApproved": 0,
+    "materialsCommitted": 0,
+    "materialsReceived": 0,
+    "travelPending": 3749.6799999999994
+  },
+  "Ry8oJSx5zf07trlFZdVq": {
+    "name": "Stock - Almacen",
+    "clientId": "I9MjLCgIpBxfMfTRzXbT",
+    "status": "Planificado",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "21-STOC-26",
+    "startDate": {
+      "_seconds": 1768462485,
+      "_nanoseconds": 921000000
+    },
+    "endDate": {
+      "_seconds": 1894662000,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "createdAt": {
+      "_seconds": 1768462520,
+      "_nanoseconds": 359000000
+    },
+    "spent": 4730.34,
+    "materialsCommitted": 3332.84,
+    "materialsReceived": 1397.5
+  },
+  "WFeagNGv6Q8KS9z36fSi": {
+    "name": "INTERBUS 32 COCENTRO ",
+    "clientId": "xxVFKzuCDFMwHLVhUqd7",
+    "status": "En Progreso",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [
+      "M93YsnzNtboajpouSmvZ"
+    ],
+    "centro_coste": "39-INTE-25",
+    "startDate": {
+      "_seconds": 1764671533,
+      "_nanoseconds": 68000000
+    },
+    "endDate": {
+      "_seconds": 1797721200,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "margen_previsto": 0,
+    "travelApproved": 0,
+    "spent": 1453.038,
+    "materialsCommitted": 783.4570000000001,
+    "materialsReceived": 5331.981,
+    "travelPending": 326
+  },
+  "asM7IR9rg9I8rvwgmmdm": {
+    "name": "INTERBUS-5 Buses (El Gato-HJC)",
+    "clientId": "teKXqf8XpEdNQoCLOFPF",
+    "status": "En Progreso",
+    "operador_ids": [
+      "Sd8efyNgzVhT1xFWtY3Z",
+      "Na2MVG7tBQa3wgOxZ2RL"
+    ],
+    "equipo_tecnico_ids": [
+      "M93YsnzNtboajpouSmvZ"
+    ],
+    "centro_coste": "51-INTE-25",
+    "startDate": {
+      "_seconds": 1756205294,
+      "_nanoseconds": 432000000
+    },
+    "endDate": {
+      "_seconds": 1759183200,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "spent": 0,
+    "margen_previsto": 0,
+    "travelPending": 0,
+    "travelApproved": 0,
+    "materialsCommitted": 0,
+    "materialsReceived": 1658.4499999999998
+  },
+  "cMPqRznjKMTxz4142NsG": {
+    "name": "COCENTRO AUTOPERIFERIA",
+    "clientId": "teKXqf8XpEdNQoCLOFPF",
+    "status": "Planificado",
+    "operador_ids": [],
+    "equipo_tecnico_ids": [],
+    "centro_coste": "30-COCE-25",
+    "startDate": {
+      "_seconds": 1755513413,
+      "_nanoseconds": 407000000
+    },
+    "endDate": {
+      "_seconds": 1755513413,
+      "_nanoseconds": 407000000
+    },
+    "budget": 0,
+    "spent": 0,
+    "margen_previsto": 0,
+    "travelPending": 0,
+    "travelApproved": 0,
+    "materialsCommitted": 41.7,
+    "materialsReceived": 2903.375
+  },
+  "gjeuUubhqeiQ7iauOqsM": {
+    "operador_ids": [],
+    "startDate": {
+      "_seconds": 1759142060,
+      "_nanoseconds": 138000000
+    },
+    "spent": 0,
+    "status": "En Progreso",
+    "centro_coste": "92-MERC-25",
+    "margen_previsto": 0,
+    "budget": 0,
+    "name": "MERCEDES - EMT MALAGA",
+    "endDate": {
+      "_seconds": 1777500000,
+      "_nanoseconds": 0
+    },
+    "clientId": "hKu5Bkb0A2353TzGaJ8k",
+    "equipo_tecnico_ids": [
+      "M93YsnzNtboajpouSmvZ"
+    ],
+    "travelApproved": 0,
+    "materialsCommitted": 1824,
+    "materialsReceived": 11355.45,
+    "travelPending": 495
+  },
+  "uusagLvumKSninl3j8Lc": {
+    "name": "MERCEDES RUIZ ",
+    "clientId": "fhyO15AOP7E1lNNxX6qM",
+    "status": "En Progreso",
+    "operador_ids": [
+      "pjlhlB7mt0NkuQbfdtLB"
+    ],
+    "equipo_tecnico_ids": [
+      "M93YsnzNtboajpouSmvZ"
+    ],
+    "centro_coste": "32-MERC-25",
+    "startDate": {
+      "_seconds": 1764755964,
+      "_nanoseconds": 251000000
+    },
+    "endDate": {
+      "_seconds": 1769727600,
+      "_nanoseconds": 0
+    },
+    "budget": 0,
+    "spent": 0,
+    "margen_previsto": 0,
+    "travelApproved": 0,
+    "materialsCommitted": 0,
+    "materialsReceived": 929.3699999999999,
+    "travelPending": 380
+  }
+}

@@ -39,6 +39,7 @@ export const routePermissions = {
   '/reports': 'reports',
   '/reports/price-variations': 'reports',
   '/price-intelligence': 'price-intelligence',
+  '/inventory-analytics': 'inventory-analytics',
 
   // Páginas especiales sin permiso directo
   '/unauthorized': null, 

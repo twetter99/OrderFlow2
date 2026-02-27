@@ -1,0 +1,44 @@
+{
+  "2AIq2GQJWq83jZfq0BY1": {
+    "name": "Ramon Ekialde",
+    "description": "es el material que lleva ramon en la furgoneta",
+    "type": "mobile",
+    "street": "",
+    "number": "",
+    "postalCode": "",
+    "city": "",
+    "province": "",
+    "technicianId": "M93YsnzNtboajpouSmvZ"
+  },
+  "9ypthR96FOXLJEGbytNL": {
+    "name": "Almacen Donosti",
+    "description": "Almacen en Oficina",
+    "type": "physical",
+    "street": "Pº Mikeletegui 56",
+    "number": "Pl 3 Of 314",
+    "postalCode": "20",
+    "city": "Donosti/San Sebastian",
+    "province": "Guipuzcoa"
+  },
+  "LiVtxlF0dpyMRIsxUCgH": {
+    "name": "Almacen Madrid",
+    "description": "Almacen de Madrid",
+    "type": "physical",
+    "street": "Moreras,1",
+    "number": "Nave 66",
+    "postalCode": "28350",
+    "city": "Ciempozuelos",
+    "province": "Madrid"
+  },
+  "SB7Uj8MQcKhlSK67GVxA": {
+    "name": "Recogida Alm. Proveedor",
+    "description": "",
+    "type": "mobile",
+    "street": "",
+    "number": "",
+    "postalCode": "",
+    "city": "",
+    "province": "",
+    "technicianId": "knit48NSlFGir6Y0vx12"
+  }
+}

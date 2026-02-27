@@ -105,6 +105,7 @@ const navGroups = [
         subItems: [
           { href: "/project-tracking", label: "Seguimiento y Control", icon: Activity },
           { href: "/price-intelligence", label: "Inteligencia de Precios", icon: TrendingUp },
+          { href: "/inventory-analytics", label: "Análisis de Inventario", icon: Database },
           { href: "/reports", label: "Reportes", icon: BarChart3 },
         ]
       }

@@ -1,0 +1,6392 @@
+{
+  "08PznI0rD43jll1MX2lV": {
+    "type": "simple",
+    "sku": "WI-A0272",
+    "name": "Fusible plano mini Naranja 5A",
+    "supplierProductCode": "C0389",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "components": [],
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "GMdSRxEPPazc1GxxKCGV"
+    ]
+  },
+  "08seYH5EkOE9lVb81LYR": {
+    "type": "simple",
+    "sku": "WI-A0229",
+    "name": "Terminales SuperSeal  Macho 0,5-1,5 mm",
+    "supplierProductCode": "C01032",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "097LOUnDT3yOhZCpynqd": {
+    "type": "simple",
+    "sku": "WI-A0279",
+    "name": "Fusible plano mini Verde/Azul 35A",
+    "supplierProductCode": "C01133",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "0BKuNCwyacSRXzNMUwou": {
+    "type": "simple",
+    "sku": "WI-A0275",
+    "name": "Fusible plano mini Azul 15A",
+    "supplierProductCode": "C01137",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "0KBsZauF5DoCn9eLLdiK": {
+    "type": "simple",
+    "sku": "WI-A0118",
+    "name": "BRIDA NEGRA 160X4,8MM",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "0LIYwSNGUKsiAYAP6EcN": {
+    "type": "simple",
+    "sku": "WI-A0038",
+    "name": "Cable Automoción 1mm Azul",
+    "supplierProductCode": "CO1086",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "0VqMaLfVT79AiEnc8DaN": {
+    "type": "simple",
+    "sku": "WI-A0084",
+    "name": "WAGO PUENTE 6 POLOS PARA BORNA 2,5MM 2002-406",
+    "supplierProductCode": "6600728106",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 1,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "0YaoqKC4QUYaTgveZfRE": {
+    "type": "simple",
+    "sku": "WI-A0297",
+    "name": "Funda Termoretractil HFT en bobinas negro 13 mm",
+    "supplierProductCode": "C00599",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2512,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "0dhnZdBCXHiaeKQpxNK0": {
+    "type": "simple",
+    "sku": "WI-A0086",
+    "name": "WAGO MARC TOP JOB CENTRAL POR METRO 2009-110",
+    "supplierProductCode": "6600728241",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "unitCost": 101.19,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "16JdCoLu0DaqXLbPopdq": {
+    "type": "simple",
+    "sku": "WI-A0299",
+    "name": "Tubo coarrugado Poliamida 10mm/12.7 mm",
+    "supplierProductCode": "C00984",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 0.4686
+  },
+  "17L8FnZf1xLcdrk6WmCp": {
+    "type": "simple",
+    "sku": "WI-A0089",
+    "name": "WAGO BORNA TOPJOBS 4COND 2,5 GRIS 2002-1401",
+    "supplierProductCode": "6600730013",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.76,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "1EpqwthYm5TlQwY17tFu": {
+    "type": "simple",
+    "sku": "WI-A0179",
+    "name": "Conector Fastom multi-vias nylon Hembra 4",
+    "supplierProductCode": "C00748",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.31,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "1FMLjsb1G0v9bt1AZSbe": {
+    "type": "simple",
+    "sku": "WI-A0370",
+    "name": "Latiguillo LMR200 Cable Coaxial FME M- FME H (10 M)",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 10.84,
+    "suppliers": [
+      "23mWv6W3Gjxt7Dng4WMT"
+    ],
+    "components": [],
+    "createdAt": "2026-01-19T08:49:33.204Z"
+  },
+  "1J5oWBhdJUzN6H6Mz1bB": {
+    "type": "simple",
+    "sku": "WI-A0274",
+    "name": "Fusible plano mini Rojo  10 A",
+    "supplierProductCode": "C01138",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "components": [],
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "GMdSRxEPPazc1GxxKCGV"
+    ]
+  },
+  "1KJejK2tFliQuix1INJo": {
+    "type": "simple",
+    "sku": "WI-A0009",
+    "name": "CONECTOR HEMBRA 10V MINIFIT",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.32,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": [],
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "family": "Conectores",
+    "isImport": false,
+    "supplierProductCode": "prueba"
+  },
+  "1Q3e1sE2ETFrpESykTZY": {
+    "type": "simple",
+    "sku": "WI-A0168",
+    "name": "Conector Molex Minifit Jr Hembra 6",
+    "supplierProductCode": "C00183",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.8,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "1fE0MMgo3RivH94ALmdz": {
+    "type": "simple",
+    "sku": "WI-A0288",
+    "name": "Fusible plano Estándar Verde/Azul 35A",
+    "supplierProductCode": "C01141",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "1mheDbjwVHALt2f17qla": {
+    "type": "simple",
+    "sku": "WI-A0052",
+    "name": "Cable Automoción 2 mm Verde",
+    "supplierProductCode": "CO1065",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.47,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "26S6MkObpcnrY9W1VFmU": {
+    "type": "simple",
+    "sku": "WI-A0310",
+    "name": "Tubo coarrugado Poliamida Abierto  29 mm",
+    "supplierProductCode": "C00344",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.4058,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "29bAHeKjKPTnevSU5sr5": {
+    "type": "simple",
+    "sku": "WI-A0016",
+    "name": "CONECTOR 9140161701",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 6.136,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "2YD6OqEvEtDNDAYODsve": {
+    "type": "simple",
+    "sku": "WI-A0095",
+    "name": "WAGO PUENTE 2 POLOS PARA BORNA 2,5MM 2002-402",
+    "supplierProductCode": "6600728102",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.21,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "2vxqH6wjcXaQrh8EPH7g": {
+    "type": "simple",
+    "sku": "WI-A0230",
+    "name": "Terminal FASTON Aislado Rojo Hembra 0.5-1.5 mm",
+    "supplierProductCode": "C00682",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 5.13,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "2xcXS4T3Z0IXTMnsIliX": {
+    "type": "simple",
+    "sku": "WI-A0106",
+    "name": "Conectores mat-n-lok Macho (Porta Machos) - 4 vias",
+    "supplierProductCode": "CO1027",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": "0.57",
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "33Ns6NaiiNrJrtjQoHLz": {
+    "type": "simple",
+    "sku": "WI-A0232",
+    "name": "Terminal FASTON Aislado Amarillo  Hembra 2.5-6 mm",
+    "supplierProductCode": "C00674",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 7.2,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "3BigyNWMwYUINt90Wbz2": {
+    "type": "simple",
+    "sku": "WI-A0337",
+    "name": "Triple MODBUS CO2 temperature and humidity sensor with signalling traffic LEDs ref. NBB-MICO2TH32",
+    "supplierProductCode": "NBB-MICO2TH32",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 138.94,
+    "suppliers": [
+      "KBIfDFtWTPcOlccIbK8s"
+    ],
+    "components": []
+  },
+  "3DOZLz6qcwNRo0qCkHug": {
+    "type": "simple",
+    "sku": "WI-A0379",
+    "name": "CABLE VGA MACHO-MACHO 15MTS",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:20:41.678Z"
+  },
+  "3I0Kw4xYqYmwSeuYXpd4": {
+    "type": "simple",
+    "sku": "WI-A0172",
+    "name": "Conector Molex Minifit Jr Hembra 16",
+    "supplierProductCode": "C00187",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.01,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "3Vhy9X0gA6c4bh2VuWld": {
+    "type": "simple",
+    "sku": "WI-A0123",
+    "name": "BRIDA NEGRA 300X3,5 MM",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "3bCDmHBmomHhNDnDx1Sr": {
+    "type": "simple",
+    "sku": "WI-A0019",
+    "name": "TERMINAL HEMBRA 09150006206",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 1,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "3chYfGrDtaWRDdCYYy6w": {
+    "type": "simple",
+    "sku": "WI-A0109",
+    "name": "Terminal TIMER 2,8 (Pulsadores)",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 50,
+    "isImport": false,
+    "components": [],
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "eWTI0Q0xxWTj8CAj4aAM"
+    ],
+    "supplierProductCode": "ZZ7706/S",
+    "unitCost": 0.08,
+    "updatedAt": "2026-02-12T09:21:33.448Z"
+  },
+  "3d7cYV6dePpH960oFwvH": {
+    "type": "simple",
+    "sku": "WI-A0224",
+    "name": "Terminales FASTON con retén Macho 6,3 mm",
+    "supplierProductCode": "C00667",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0643,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "4QjgEE5jEE4mHZ3CIh8p": {
+    "type": "simple",
+    "sku": "WI-A0235",
+    "name": "Terminal FASTON Aislado Amarillo  Macho 2.5-6 mm",
+    "supplierProductCode": "C00620",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 5.65,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "4iwnZVJQl4v50AEzgje3": {
+    "type": "simple",
+    "sku": "WI-A0341",
+    "name": "AMPLIFICADOR 12/24V 2X25W CON PREVIO",
+    "supplierProductCode": "S2088",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 99,
+    "suppliers": [
+      "eWTI0Q0xxWTj8CAj4aAM"
+    ],
+    "components": []
+  },
+  "56e8IdAUJozHk6wkYQUl": {
+    "type": "simple",
+    "sku": "WI-A0276",
+    "name": "Fusible plano mini Amarillo 20A",
+    "supplierProductCode": "C01136",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "5Kvi3BUDUTDeDA34ftzk": {
+    "type": "simple",
+    "sku": "WI-A0365",
+    "name": "10 inches HD Color Display for 360° Bird view system use",
+    "supplierProductCode": "HD100293DC",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-01-13T10:36:07.043Z",
+    "isImport": false,
+    "unitCost": 145.71,
+    "updatedAt": "2026-01-13T10:37:55.669Z"
+  },
+  "5cjjgumGEv5E2ARPkwZw": {
+    "type": "simple",
+    "sku": "WI-A0114",
+    "name": "Marco de acoplamiento Han-Modular para 4 módulos flotantes, A-D",
+    "supplierProductCode": "9140161701",
+    "family": "Harting",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": true,
+    "unitCost": 8.715,
+    "suppliers": [
+      "Fzfhg03VV67mcpBY74Nu",
+      "3RljzUKSxT5ArHYSNKEF",
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "5ePHNZtfvp1zoG4uaUbi": {
+    "type": "simple",
+    "sku": "WI-A0166",
+    "name": "Conector Molex Minifit Jr Hembra 2",
+    "supplierProductCode": "C00181",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.73,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "5nRBX7nS6igurkE1HSZf": {
+    "type": "simple",
+    "sku": "WI-A0317",
+    "name": "212310 - TELEVES UTP CAT-6 L.H.",
+    "supplierProductCode": "509021",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 305,
+    "isImport": false,
+    "unitCost": 0.35,
+    "suppliers": [
+      "zp8VelQPJnqyOPkYrNp1"
+    ],
+    "components": []
+  },
+  "5qOz3wRKYc7obdBE7P1I": {
+    "type": "simple",
+    "sku": "WI-A0268",
+    "name": "Terminal puntera Hueca 6 mm",
+    "supplierProductCode": "C00297",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0461,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "68mFof8Xf4GN5FGwcWhZ": {
+    "type": "simple",
+    "sku": "WI-A0181",
+    "name": "Conector Fastom multi-vias nylon Hembra 8",
+    "supplierProductCode": "C00746",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.45,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "6AhdahsBaCUq4xMwBuXu": {
+    "type": "simple",
+    "sku": "WI-A0177",
+    "name": "Conector Fastom multi-vias nylon Hembra 2",
+    "supplierProductCode": "C00750",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.19,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "6Bh0KVjwHH3KohvOnSyk": {
+    "type": "simple",
+    "sku": "WI-A0199",
+    "name": "Conectores  Mat-n-Lok Macho 9",
+    "supplierProductCode": "C01024",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.59,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "6af2fpuD4DxiFbVxMFnF": {
+    "type": "simple",
+    "sku": "WI-A0373",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 9.46,
+    "suppliers": [
+      "23mWv6W3Gjxt7Dng4WMT"
+    ],
+    "components": [],
+    "createdAt": "2026-01-19T08:53:31.570Z",
+    "name": "Latiguillo LMR200 Cable Coaxial RP-SMA H- RP-SMA M (10 M)",
+    "updatedAt": "2026-01-19T09:00:36.574Z"
+  },
+  "6wW6bVQpvqYmYzKG8kHZ": {
+    "type": "simple",
+    "sku": "WI-A0304",
+    "supplierProductCode": "C00350",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.509,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "name": "Tubo coarrugado Poliamida Abierto  8.5 mm"
+  },
+  "78TlMzJWp0sABVnHqWCz": {
+    "type": "simple",
+    "sku": "WI-A0148",
+    "name": "Pasabridas con adhesivo 3M Blanco 21x21 mm",
+    "supplierProductCode": "C00450",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0818,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "7AWRijyo5ZvPpEniacgg": {
+    "type": "simple",
+    "sku": "WI-A0138",
+    "name": "Funda macarrón PVC flexible negro 14 mm",
+    "supplierProductCode": "C00164",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.337,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "7DrxhHFB9BESpkhqLnkx": {
+    "type": "simple",
+    "sku": "WI-A0070",
+    "name": "Conector FME enchufe macho recto crimpados para conducto 50Ω",
+    "supplierProductCode": "FME1121B4-ND3G-5-50",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 1.81,
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "7Y6KyempfQfOzAWJDOky": {
+    "type": "simple",
+    "sku": "WI-A0163",
+    "name": "Conector Molex Minifit Jr Macho 12",
+    "supplierProductCode": "C00179",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.95,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "7h3wy53Sxez5Eb9SEtQW": {
+    "type": "simple",
+    "sku": "WI-A0377",
+    "name": "CABLE VGA MACHO-HEMBRA 1 MTS",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:19:15.332Z"
+  },
+  "7rX3wqXIVBiokLk9x8pR": {
+    "type": "simple",
+    "sku": "WI-A0006",
+    "name": "TERMINAL MOLEX AWG16 MINIFIT",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.1,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "84FcPUcy3Ne8PLAMsgxS": {
+    "type": "simple",
+    "sku": "WI-A0047",
+    "name": "Cable Automoción 2 mm Azul",
+    "supplierProductCode": "CO1071",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.47,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "85hpkFz5QoaJkoKX13kb": {
+    "type": "simple",
+    "sku": "WI-A0380",
+    "name": "CABLE VGA MACHO-HEMBRA 2 MTS",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:21:09.264Z"
+  },
+  "8FzXovNIZnaBgBRIVG8Y": {
+    "type": "simple",
+    "sku": "WI-A0300",
+    "name": "Tubo coarrugado Poliamida 13mm/15.8 mm",
+    "supplierProductCode": "C00983",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 0.7134
+  },
+  "8RogzIDGk8j00CR6gflT": {
+    "type": "simple",
+    "sku": "WI-A0193",
+    "name": "Conectores  Mat-n-Lok hembra 12",
+    "supplierProductCode": "C01019",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.94,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "8S8CMv3tDfP7A3xPTYri": {
+    "type": "simple",
+    "sku": "WI-A0374",
+    "name": "Cable USB azul de USB A a USB Micro B, con USB 2.0",
+    "supplierProductCode": "S/N",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 5.99,
+    "components": [],
+    "createdAt": "2026-01-19T09:26:15.074Z",
+    "suppliers": [
+      "ungaQdkkW3uelQjDyc3k",
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "updatedAt": "2026-01-22T07:54:15.585Z"
+  },
+  "8aPLFzxOla0bdbu1WfG1": {
+    "type": "simple",
+    "sku": "WI-A0075",
+    "name": "WAGO PUENTE 8 POLOS PARA BORNA 2,5MM 2002-408",
+    "supplierProductCode": "6600728108",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 1.32,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "8nBSk27eBWLq1RVOeaPR": {
+    "type": "simple",
+    "sku": "WI-A0078",
+    "name": "WAGO PUENTE 4 POLOS PARA BORNA 2,5MM 2002-404",
+    "supplierProductCode": "6600728104",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.58,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "9QKBCSCaOyC4KoCyy0Vr": {
+    "type": "simple",
+    "sku": "WI-A0076",
+    "name": "WAGO PUENTE CONTIGUO 11 VIAS 2002-481",
+    "supplierProductCode": "6600728113",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.89,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "9QlpupPUlJ3yUYpEOV3U": {
+    "type": "simple",
+    "sku": "WI-A0154",
+    "name": "Auxiliar jack de 3,5mm, Macho de Audio",
+    "supplierProductCode": "S/N",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": 0.01,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "components": []
+  },
+  "9XTqrom04t1SrvRNFzlZ": {
+    "type": "simple",
+    "sku": "WI-A0139",
+    "name": "Funda macarrón PVC flexible negro 16 mm",
+    "supplierProductCode": "C00165",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.3868,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "9g4y9s6We0tXnzr5zkye": {
+    "type": "simple",
+    "sku": "WI-A0242",
+    "name": "Terminal Anilla Aislado Azul 1 a 2.5 mm 8 mm",
+    "supplierProductCode": "C01123",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.11,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "AyPgEtSy8n43KadFE6Lj": {
+    "type": "simple",
+    "sku": "WI-A0113",
+    "name": "Conector D Han Multi Module, 1,5 A (DIN)",
+    "supplierProductCode": "9140044512",
+    "family": "Harting",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": true,
+    "unitCost": 7.845000000000001,
+    "suppliers": [
+      "Fzfhg03VV67mcpBY74Nu",
+      "8ApKd4hqikx63v3YNTO4",
+      "3RljzUKSxT5ArHYSNKEF"
+    ],
+    "components": []
+  },
+  "BDICDe88uA37jbKyaCTX": {
+    "type": "simple",
+    "sku": "WI-A0287",
+    "name": "Fusible plano Estándar Verde 30A",
+    "supplierProductCode": "C01142",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "BGP3guF6kSezKaKrch2b": {
+    "type": "simple",
+    "sku": "WI-A0027",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": [],
+    "isImport": false,
+    "supplierProductCode": "",
+    "name": "PASAMUROS NEGRO 12-22MM",
+    "family": "",
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "unitCost": 0.254,
+    "updatedAt": "2026-02-17T08:29:51.719Z"
+  },
+  "BLQeupL6UOjKCWeU4eaY": {
+    "type": "simple",
+    "sku": "WI-A0324",
+    "name": "TUBO TERMORETRACTIL MINICAJAS 9.5/4.8 5MTS",
+    "supplierProductCode": "13005370",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 10.572,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "family": "Tubos"
+  },
+  "BNJY0kZ6rYfgIf9QqKax": {
+    "type": "simple",
+    "sku": "WI-A0330",
+    "name": "HERRAJE EN L-Bornero Lurraldebus ",
+    "supplierProductCode": "S/N",
+    "family": "Herrajes",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 3.02,
+    "suppliers": [
+      "IxjqG63AlORCSZwJvrAA"
+    ],
+    "components": []
+  },
+  "BRhT5Ap9F957YPINCjWQ": {
+    "type": "simple",
+    "sku": "WI-A0064",
+    "name": "Cable Automoción 4 mm Blanco",
+    "supplierProductCode": "CO0803",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 50,
+    "unitCost": 0.81,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "Bi1bDIkRagBKNtwST5eH": {
+    "type": "simple",
+    "sku": "WI-A0402",
+    "name": "Alicate De Corte Lateral 125",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 19.174,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": [],
+    "createdAt": "2026-02-18T08:46:52.213Z"
+  },
+  "CFWwk27xsyMpyYGMYGxc": {
+    "type": "simple",
+    "sku": "WI-A0283",
+    "name": "Fusible plano Estándar Rojo 10A",
+    "supplierProductCode": "C01146",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "COor2PC8b0YIM3uz30K3": {
+    "type": "simple",
+    "sku": "WI-A0003",
+    "name": "ADAPTADOR RJ45-RJ45 H-H APANTALLADO CAT6 FTP",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 4.4,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "supplierProductCode": "S/N",
+    "family": "Conectores"
+  },
+  "CVnyblLOI3oB4UkPv1Az": {
+    "type": "simple",
+    "sku": "WI-A0326",
+    "name": "Mts. Manguera 3G1 negro",
+    "supplierProductCode": "",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.5022,
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "CWb9YiFX8tghGdFQZ2CM": {
+    "type": "simple",
+    "sku": "WI-A0378",
+    "name": "CABLE VGA MACHO-HEMBRA 10 MTS",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:20:20.794Z"
+  },
+  "Cck63Ntxx8JqOxii8zYm": {
+    "type": "simple",
+    "sku": "WI-A0111",
+    "name": "Conector A hembra para módulo Han DDD, 0,14 - 2,5 mm²",
+    "supplierProductCode": "9140173101",
+    "family": "Harting",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": true,
+    "unitCost": 5.595,
+    "suppliers": [
+      "3RljzUKSxT5ArHYSNKEF",
+      "Fzfhg03VV67mcpBY74Nu",
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "DABoiKrjqg42WX07DNS8": {
+    "type": "simple",
+    "sku": "WI-A0254",
+    "name": "Terminal de Horquilla AisladosAmarillo 2.5 a 6 mm 5mm/6mm",
+    "supplierProductCode": "C00229",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.15,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "DH0ezSckp5fXSqjQT40Z": {
+    "type": "simple",
+    "sku": "WI-A0320",
+    "name": "Fusible plano mini 3A Pack 100 und",
+    "supplierProductCode": "S/N",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "components": []
+  },
+  "DI6pwakO6s0bUELPqPQp": {
+    "type": "simple",
+    "sku": "WI-A0135",
+    "name": "Funda macarrón PVC flexible negro 8 mm",
+    "supplierProductCode": "C00705",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1983,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "DX7l4vh4BcxlrFlulRp6": {
+    "type": "simple",
+    "sku": "WI-A0389",
+    "name": "Base para Relé Finder",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:32:35.489Z"
+  },
+  "DbZ2oIfnpvBHc0d2DDje": {
+    "type": "simple",
+    "sku": "WI-A0356",
+    "name": "CA-130 Megáfono de coche para anuncios y publicidad función de reproducción 25 W",
+    "supplierProductCode": "",
+    "unit": "ud",
+    "observations": "https://www.mediawavestore.es/seguridad-y-emergencia/6662-ca-130-megafono-de-coche-para-anuncios-y-publicidad-funcion-de-reproduccion-de-25-w-8435524554227.html?utm_source=chatgpt.com",
+    "minThreshold": 0,
+    "isImport": false,
+    "components": [],
+    "createdAt": "2025-12-16T08:06:01.130Z",
+    "suppliers": [
+      "DaeiSRBaN1iWjaTXKzKB"
+    ],
+    "unitCost": 12.57,
+    "family": "Equipos",
+    "updatedAt": "2025-12-16T08:09:45.889Z"
+  },
+  "DhLnMfPktdaB7W54UkIX": {
+    "type": "simple",
+    "sku": "WI-A0173",
+    "name": "Conector 2 vías SUPERSEAL 2,8 estanco Hembra",
+    "supplierProductCode": "C00360",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.93,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "E9lj4jIwxHBwy9mtakPp": {
+    "type": "simple",
+    "sku": "WI-A0088",
+    "name": "WAGO TIRA ADHESIVA 20MM PLATA (ROLLO 20M) 210-873",
+    "supplierProductCode": "6600720095",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 43.76,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "EKSJr0B30fxaCZxzCC98": {
+    "type": "simple",
+    "sku": "WI-A0319",
+    "name": "2RCA Cable macho a hembra AUX RCA Jack ",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 3,
+    "components": [],
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV",
+      "8ApKd4hqikx63v3YNTO4"
+    ]
+  },
+  "EuOCzeurJXwvzoijEAxX": {
+    "type": "simple",
+    "sku": "WI-A0060",
+    "name": "Cable Automoción 2.5 mm Gris",
+    "supplierProductCode": "CO0869",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 200,
+    "unitCost": 0.61,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "F8zMSOG4Wetm6xcqKBM0": {
+    "type": "simple",
+    "sku": "WI-A0098",
+    "supplierProductCode": "ZOSI1080P",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 21.99,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": [],
+    "name": "Cámara de Vigilancia Exterior para DVR Kit Cámaras de Seguridad, 20M"
+  },
+  "FAUjIsAdIbhVR4xrphF3": {
+    "type": "simple",
+    "sku": "WI-A0246",
+    "name": "Terminal Anilla Aislado Amarillo 2.5 a 6 mm  8 mm",
+    "supplierProductCode": "C01127",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.13,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "FI7XBzEyjHRB94ITShiW": {
+    "type": "simple",
+    "sku": "WI-A0210",
+    "name": "Conector Superseal 1 a 6 vias Macho 2",
+    "supplierProductCode": "C01041",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.36,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "FIhLtgnrvPxjmrLCkDNI": {
+    "type": "simple",
+    "sku": "WI-A0302",
+    "name": "Tubo coarrugado Poliamida 17mm/21mm",
+    "supplierProductCode": "C00981",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 1.0228
+  },
+  "FQzQUODt75sHVjdZCk03": {
+    "type": "simple",
+    "sku": "WI-A0157",
+    "name": "Conector Molex Minifit Jr Macho terminal",
+    "supplierProductCode": "C00174",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "FW1tzyA7gat52V7Nljzq": {
+    "type": "simple",
+    "sku": "WI-A0175",
+    "name": "Conector 2 vías SUPERSEAL 2,8 estanco M. +H.",
+    "supplierProductCode": "C00358",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 3.9
+  },
+  "FWDTcDsHeZ0PhGFB2lzY": {
+    "type": "simple",
+    "sku": "WI-A0051",
+    "name": "Cable Automoción 2mm Rojo",
+    "supplierProductCode": "CO1068",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 200,
+    "unitCost": 0.47,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "FcaGTdOEjKwhIbigOjEk": {
+    "type": "simple",
+    "sku": "WI-A0323",
+    "name": "Herraje en L para Ant. Wifi-Lurraldebus",
+    "supplierProductCode": "",
+    "family": "Herrajes",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "IxjqG63AlORCSZwJvrAA"
+    ],
+    "components": []
+  },
+  "Fe63tKPanx3ldqBrbJOu": {
+    "type": "simple",
+    "sku": "WI-A0322",
+    "name": "Herraje Omega T-Mobilitat",
+    "supplierProductCode": "",
+    "family": "Herrajes",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "IxjqG63AlORCSZwJvrAA"
+    ],
+    "components": []
+  },
+  "FtirhcU258zqZnEN3R7j": {
+    "type": "simple",
+    "sku": "WI-A0077",
+    "name": "WAGO BORNA 2,5MM PUSHIN GRIS 2002-1201",
+    "supplierProductCode": "6600730011",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.47,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "FwEVJ9ZTUBBRCyP6YCi2": {
+    "type": "simple",
+    "sku": "WI-A0171",
+    "name": "Conector Molex Minifit Jr Hembra 12",
+    "supplierProductCode": "C00186",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.95,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "G1C8bbEOmExwzgA3TeRr": {
+    "type": "simple",
+    "sku": "WI-A0119",
+    "name": "BRIDA NEGRA 200 x 3,5",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "G6B0QDhNkKK6C2y9iPGN": {
+    "type": "simple",
+    "sku": "WI-A0187",
+    "name": "Conector Faston multi-vias nylon macho 8",
+    "supplierProductCode": "C00993",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.45,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "GFBN6whk6BiKCCEMLjem": {
+    "type": "simple",
+    "sku": "WI-A0159",
+    "name": "Conector Molex Minifit Jr Macho 4",
+    "supplierProductCode": "C00182",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.77,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "GMebENPTS3vjkjk5XKzM": {
+    "type": "simple",
+    "sku": "WI-A0029",
+    "name": "TERMINAL TORN. 10,5 CABLE 1,5-4",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.1,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [
+      "tc3UfMXI53uXBMbinTmL"
+    ],
+    "supplierProductCode": "S/N",
+    "family": "Terminales"
+  },
+  "GUk1m1torCUldLEkH9Ge": {
+    "type": "simple",
+    "sku": "WI-A0069",
+    "name": "Pines para validadoras Contacto; macho; RCY,SM,YL; bronce fosfórico; estaneado; 3A; 2,5mm",
+    "supplierProductCode": "SYM-001T-P0.6(N)",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.0622,
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "GVWAqBWNQqhXdGoXcVpd": {
+    "type": "simple",
+    "sku": "WI-A0200",
+    "name": "Conectores  Mat-n-Lok Macho 12",
+    "supplierProductCode": "C01025",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.68,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "GasSFAnz6mJPSDQj489P": {
+    "type": "simple",
+    "sku": "WI-A0339",
+    "name": "SWITCH POE-SWR612GM-SOLAR (12-port)",
+    "supplierProductCode": "SWR612GM",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 159,
+    "suppliers": [
+      "vhPKIEYV93pjeDS2tOnb"
+    ],
+    "components": []
+  },
+  "Gjd1oDjcLoOO4hL0GJyW": {
+    "type": "simple",
+    "sku": "WI-A0238",
+    "name": "Terminal Anilla Aislado Rojo  0.5 a 1.5 mm  10 mm",
+    "supplierProductCode": "C01130",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.11,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "GrwrLZ8ZzjCjHVpZFDqA": {
+    "type": "simple",
+    "name": "Terminal puntera Hueca 1.5 mm",
+    "supplierProductCode": "C00299",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0385,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "sku": "WI-A0266",
+    "updatedAt": "2026-01-12T14:18:14.775Z"
+  },
+  "Gu3K73OvJbpfyX2SjznV": {
+    "type": "simple",
+    "sku": "WI-A0161",
+    "name": "Conector Molex Minifit Jr Macho 8",
+    "supplierProductCode": "C00177",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.83,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "H1hTZL8FqPB9JvF6UflQ": {
+    "type": "simple",
+    "sku": "WI-A0012",
+    "name": "CARCASA SUB-D 9V TORNILLO",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.5306,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "H2MO0ZOmp6Vo54Dz3NKM": {
+    "type": "simple",
+    "sku": "WI-A0144",
+    "name": "Pasacables PVC con ranura 19,5 mm (13,9 x10,5 mm)",
+    "supplierProductCode": "GM-1410",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.148,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "H8QLdoQS66aslb7XZRZp": {
+    "type": "simple",
+    "sku": "WI-A0046",
+    "name": "Cable Automoción 1.5 mm Azul",
+    "supplierProductCode": "CO1073",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.374,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "HB2VnlHfqayoPiSy4Uxw": {
+    "type": "simple",
+    "sku": "WI-A0367",
+    "name": "[FC-F3DP02] FootfallCam Package (FootfallCam 3D Pro2 (2026) (2+2 demo package))",
+    "supplierProductCode": "FC – F3DP04",
+    "family": "Afluencia360",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 958,
+    "suppliers": [
+      "TROYf4uDRUlfupkHBGhn"
+    ],
+    "components": [],
+    "createdAt": "2026-01-14T10:35:58.671Z"
+  },
+  "HRQyP2qmCWLxL7I45GH8": {
+    "type": "simple",
+    "sku": "WI-A0372",
+    "name": "Latiguillo LMR200 Cable Coaxial RP-SMA H- RP-SMA M (5 M)",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 8.6,
+    "suppliers": [
+      "23mWv6W3Gjxt7Dng4WMT"
+    ],
+    "components": [],
+    "createdAt": "2026-01-19T08:52:48.737Z"
+  },
+  "HUF7jJvzIq0R15Jj0qeP": {
+    "type": "simple",
+    "sku": "WI-A0262",
+    "name": "Terminal de Anilla serie GS Cobre  1 mm 8 mm",
+    "supplierProductCode": "C00923",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "HdE7aSUsQVCxsM0KuWK6": {
+    "type": "simple",
+    "sku": "WI-A0063",
+    "name": "Cable Automoción 4 mm Negro",
+    "supplierProductCode": "CO0804",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 50,
+    "unitCost": 0.81,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "HmL7JVq8Xh6esbgxQ1Pf": {
+    "type": "simple",
+    "sku": "WI-A0261",
+    "name": "Terminal de Anilla serie GS Cobre  1 mm 6 mm",
+    "supplierProductCode": "C00922",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "HrDAyZ4sPTP92lWREIH7": {
+    "type": "simple",
+    "sku": "WI-A0247",
+    "name": "Terminal Anilla Aislado Amarillo 2.5 a 6 mm  6 mm",
+    "supplierProductCode": "C01126",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.13,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "HzPGrWD9q2QTHnX9eqzL": {
+    "type": "simple",
+    "sku": "WI-A0396",
+    "name": "FHD 360°AROUND-VIEW SYSTEM Controller, with WiFi+GPS+4G+Built in AI",
+    "supplierProductCode": "BV060A18CVWG4 Plus",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-02-11T09:59:29.078Z"
+  },
+  "IMLkCmAkKIALK3AabawI": {
+    "type": "simple",
+    "sku": "WI-A0298",
+    "name": "Tubo coarrugado Poliamida 8.5 mm/ 11.6 mm",
+    "supplierProductCode": "C00985",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 0.509
+  },
+  "IZznHqU1zXFDJ5gFEKkJ": {
+    "family": "Borneros Wago",
+    "isImport": false,
+    "name": "WAGO MODULO VACIO TIPO 2 S.2002 2P 10,4MM 2002-810",
+    "components": [],
+    "minThreshold": 0,
+    "observations": "",
+    "supplierProductCode": "",
+    "sku": "WI-A0360",
+    "createdAt": "2026-01-07T11:32:57.411Z",
+    "type": "simple",
+    "unitCost": 1.33,
+    "unit": "ud",
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ]
+  },
+  "IfVqHryPff0slNsVchuE": {
+    "type": "simple",
+    "name": "T/FASTON M. 6,3/1-2,5 CLICK SUELTO DORADO",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.04,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [],
+    "supplierProductCode": "",
+    "family": "",
+    "sku": "WI-A0249",
+    "updatedAt": "2026-01-12T14:40:53.244Z"
+  },
+  "JBgTrLCeSXgENRDd9vAB": {
+    "type": "simple",
+    "sku": "WI-A0176",
+    "name": "Conector Fastom multi-vias nylon Hembra 1",
+    "supplierProductCode": "C00751",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.15,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "JBuhkI59aNA2vTD0Sloz": {
+    "type": "simple",
+    "sku": "WI-A0017",
+    "name": "CONECTOR 17P HEMBRA 09140173101",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 4.589,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "JDPsLXcnbkQbIBxSrxPc": {
+    "type": "simple",
+    "sku": "WI-A0334",
+    "name": "Señalizador Unex numero Mediano 1812-5(100 unds)",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.24,
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "JDSKSZscRT5JcKBegDf1": {
+    "type": "simple",
+    "sku": "WI-A0057",
+    "name": "Cable Automoción 2.5mm Amarillo",
+    "supplierProductCode": "CO0873",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 198,
+    "unitCost": 0.61,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "JQit8hu4N1YkXzGEuir2": {
+    "type": "simple",
+    "sku": "WI-A0225",
+    "name": "Terminales FASTON con retén Macho 9,6 mm",
+    "supplierProductCode": "C00424",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.37,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "JSOEnImm1GWWonmzeuQg": {
+    "type": "simple",
+    "sku": "WI-A0219",
+    "name": "Terminales FASTON con retén Hembra 4,8 mm",
+    "supplierProductCode": "C00220",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0466,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "JeifZcSsS67dvgmKOHmE": {
+    "type": "simple",
+    "sku": "WI-A0004",
+    "name": "T/H MINIFIT CABLE 18AWG (0.75-1mm) bobina",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.2,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "JwlESXOSAJVfcPwnycx2": {
+    "type": "simple",
+    "sku": "WI-A0050",
+    "name": "Cable Automoción 2 mm Amarillo",
+    "supplierProductCode": "CO1068",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.47,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "K00ytKSVrjzOvMI5XIts": {
+    "type": "simple",
+    "sku": "WI-A0121",
+    "name": "BRIDA NEGRA 203X4,8 mm",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "KGtvfapiU8ekz3ozyi1l": {
+    "type": "simple",
+    "sku": "WI-A0227",
+    "name": "Terminales MAT-N-Lok Macho 0,5-1,5 mm",
+    "supplierProductCode": "C01013",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "Kl74zJEql63AodkZW0Sp": {
+    "type": "simple",
+    "sku": "WI-A0269",
+    "name": "Terminal puntera Hueca 10 mm",
+    "supplierProductCode": "C00296",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0461,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "Kmmrup1WWC7OyKIAyg8i": {
+    "type": "simple",
+    "sku": "WI-A0169",
+    "name": "Conector Molex Minifit Jr Hembra 8",
+    "supplierProductCode": "C00184",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.83,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "KuPw8RTj4UUZUV514vbm": {
+    "type": "simple",
+    "sku": "WI-A0381",
+    "name": "CABLE VGA MACHO-HEMBRA 3 MTS",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:22:39.255Z"
+  },
+  "L1cIrIEztf67hELJvr3B": {
+    "type": "simple",
+    "sku": "WI-A0141",
+    "supplierProductCode": "RSB-16",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.148,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "name": "Pasacables Nylon empotrable 15,9 mm (11,1 X18,3 mm)"
+  },
+  "L9fYjyfMwvFYiXXyksWi": {
+    "type": "simple",
+    "sku": "WI-A0142",
+    "supplierProductCode": "RSB-22",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.148,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "name": "Pasacables Nylon empotrable 22,2 mm (14,3x23,8mm)"
+  },
+  "LM1ZCbtBDLTJ4p5wNO8r": {
+    "type": "simple",
+    "name": "Terminal de Anilla serie GS Cobre  1 mm 5 mm",
+    "supplierProductCode": "C00921",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "sku": "WI-A0260"
+  },
+  "LRBFs2Q70r6tABCz3Gsd": {
+    "type": "simple",
+    "name": "TERMINAL FMS HEMBRA ",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.38,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "supplierProductCode": "S/N",
+    "family": "Terminales",
+    "isImport": false,
+    "sku": "WI-A0305",
+    "updatedAt": "2026-01-12T14:36:13.289Z"
+  },
+  "LhNrJULXXrxBlKLoIp3s": {
+    "type": "simple",
+    "sku": "WI-A0388",
+    "name": "Prolongador Cable audio Jack 3,5 Hembra-Macho",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:31:49.546Z"
+  },
+  "LloI8wN7QvmbO2gOjPsJ": {
+    "type": "simple",
+    "sku": "WI-A0253",
+    "name": "MARCO PARA INTERRUPTOR",
+    "supplierProductCode": "I353.021",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.858,
+    "suppliers": [
+      "eWTI0Q0xxWTj8CAj4aAM"
+    ],
+    "components": [],
+    "createdAt": "2026-01-12T16:45:48.281Z"
+  },
+  "LoirIQB3Pb30b2oFYmnq": {
+    "type": "simple",
+    "sku": "WI-A0267",
+    "name": "Terminal puntera Hueca 2.5 mm",
+    "supplierProductCode": "C00298",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0395,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "LxE1zqNqyIhsOUnq3nR5": {
+    "type": "simple",
+    "sku": "WI-A0231",
+    "name": "Terminal FASTON Aislado Azul  Hembra 1-2.5 mm",
+    "supplierProductCode": "C00679",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 6.99,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "MGH6Pd2ML4L1ywW5YhvK": {
+    "type": "simple",
+    "sku": "WI-A0035",
+    "name": "Cable Automoción 1mm Blanco",
+    "supplierProductCode": "CO1091",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "MY1pwnkK0orzP9ndPOVa": {
+    "type": "simple",
+    "sku": "WI-A0347",
+    "name": "WAGO PUENTE 10 VIAS (IMPARES) 2002-479/011-000",
+    "supplierProductCode": "6600728296",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.82,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "Mdquu69tSONnu55G8Hqg": {
+    "type": "simple",
+    "sku": "WI-A0099",
+    "name": "ANT. DISCO GPS+WIFI DUAL+ 790-960/1710-2700 CABLES 5M",
+    "supplierProductCode": "CA01-1524035M/5",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 80.25,
+    "components": [],
+    "isImport": false,
+    "suppliers": [
+      "XiY3tGGOV51BmUPNlPA9",
+      "23mWv6W3Gjxt7Dng4WMT"
+    ],
+    "updatedAt": "2026-01-19T08:45:40.014Z"
+  },
+  "MnxBYCq37TT6faN3tHax": {
+    "type": "simple",
+    "sku": "WI-A0273",
+    "name": "Fusible plano mini Marrón  7.5A",
+    "supplierProductCode": "C01139",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "components": [],
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "GMdSRxEPPazc1GxxKCGV"
+    ]
+  },
+  "N4bBf72BnAFSbPG2xDDd": {
+    "type": "simple",
+    "sku": "WI-A0045",
+    "name": "Cable Automoción 1.5 mm Gris",
+    "supplierProductCode": "CO1074",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.374,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "N5sy4PjUlcZkHq4aK8JQ": {
+    "type": "simple",
+    "name": "CONERTOR FMS 2 VIAS",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 3.96,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [],
+    "supplierProductCode": "",
+    "family": "",
+    "sku": "WI-A0250",
+    "updatedAt": "2026-01-12T14:41:23.372Z"
+  },
+  "NJNhth5jgXuvb0z0x4lx": {
+    "type": "simple",
+    "sku": "WI-A0259",
+    "name": "Terminal de Anilla serie GS Cobre  1 mm 4 mm",
+    "supplierProductCode": "C00920",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "NN7xJxkZFuBBiaGzpK2z": {
+    "type": "simple",
+    "sku": "WI-A0346",
+    "name": "PULSADOR CAMARA C/FA",
+    "supplierProductCode": "I14.00.006",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 10.26,
+    "suppliers": [
+      "eWTI0Q0xxWTj8CAj4aAM"
+    ],
+    "components": []
+  },
+  "NZXJBNEreb4lB95bHUve": {
+    "type": "simple",
+    "sku": "WI-A0160",
+    "name": "Conector Molex Minifit Jr Macho 6",
+    "supplierProductCode": "C0176",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.8,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "NpGZUvMzD9v3YB2UDv1V": {
+    "type": "simple",
+    "sku": "WI-A0307",
+    "name": "Tubo coarrugado Poliamida Abierto  14 mm",
+    "supplierProductCode": "C00347",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.9082,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "NydliZuZ9XYVJlsshASo": {
+    "type": "simple",
+    "sku": "WI-A0223",
+    "name": "Terminales FASTON con retén Macho 4,8 mm",
+    "supplierProductCode": "C00226",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0588,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "O297Zq8RcEJvv98Lieqf": {
+    "type": "simple",
+    "sku": "WI-A0125",
+    "name": "Conector M8 macho PIN: 4 recto con cables enchufe 1m PVC",
+    "supplierProductCode": "21348000481010",
+    "family": "Harting",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": "9.68",
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "O5eF7vGUWDnBL1sHRU15": {
+    "type": "simple",
+    "sku": "WI-A0053",
+    "name": "Cable Automoción 2mm Gris",
+    "supplierProductCode": "CO1062",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 200,
+    "unitCost": 0.47,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "OGyfGLz0NSImR0dMlRwb": {
+    "type": "simple",
+    "sku": "WI-A0282",
+    "name": "Fusible plano Estándar Marrón 7.5A",
+    "supplierProductCode": "C01147",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "OPoubPxKkjszlZLmgt5t": {
+    "type": "simple",
+    "sku": "WI-A0117",
+    "name": "BRIDA NEGRA 120X2,5MM",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "OayE8st0l6oVj2CRxi5Z": {
+    "type": "simple",
+    "sku": "WI-A0184",
+    "name": "Conector Faston multi-vias nylon macho 3",
+    "supplierProductCode": "C00990",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.3,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ObUSR8DfQpam3GH9NILC": {
+    "type": "simple",
+    "sku": "WI-A0149",
+    "name": "Pasabridas con adhesivo 3M Negro 21x21 mm",
+    "supplierProductCode": "C00249",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0818,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "OdZ6fxAu4abbOorEgREr": {
+    "type": "simple",
+    "sku": "WI-A0208",
+    "name": "Conector Superseal 1 a 6 vias Hembra 6",
+    "supplierProductCode": "C01033",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.9,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "Oey3QGkh2ExsswZCr0Ws": {
+    "type": "simple",
+    "sku": "WI-A0056",
+    "name": "Cable Automoción 2.5mm Blanco",
+    "supplierProductCode": "CO0874",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 200,
+    "unitCost": 0.61,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "OmTK9fATW6mmQ41Itk8R": {
+    "type": "simple",
+    "sku": "WI-A0091",
+    "name": "WAGO BORNA C/PORTAFUS S.2002 2 CDTORS GR 2002-1681",
+    "supplierProductCode": "9990047212",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 1.66,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "Op4OvGbV32Tyf6ARmL8G": {
+    "type": "simple",
+    "sku": "WI-A0015",
+    "name": "CONECTOR 4P HEMBRA 09140044512",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 6.422,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "Ozr1w9ywlwfdGToDz3WQ": {
+    "type": "simple",
+    "sku": "WI-A0382",
+    "name": "CABLE VGA MACHO-HEMBRA 5 MTS",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:23:25.707Z"
+  },
+  "P0YAwhUVMhN8bO2pZCtm": {
+    "type": "simple",
+    "sku": "WI-A0401",
+    "name": "4Pin Extension Cable between AHD Camera and 360° AVM Controller, 15M",
+    "supplierProductCode": "28#15m",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-02-11T10:11:27.641Z"
+  },
+  "PCzjdN0GpE7ydchhVFkX": {
+    "type": "simple",
+    "sku": "WI-A0312",
+    "name": "Mts. perfil Omega 35x7,5mm perforado galvanizado GAESTOPAS F-224A-G",
+    "supplierProductCode": "S/N",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": 1.2625,
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "PLKwktsLlpW9oVvCKToY": {
+    "type": "simple",
+    "sku": "WI-A0197",
+    "name": "Conectores  Mat-n-Lok Macho 4",
+    "supplierProductCode": "C01027",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.52,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "PXAdKTxzdARth2sJjFEN": {
+    "type": "simple",
+    "sku": "WI-A0315",
+    "name": " Adaptador de montaje -Juego de 5 PCB DIN",
+    "supplierProductCode": "S/N",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 2.79,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "components": []
+  },
+  "PiTW3bh1kM6STEU24ZQb": {
+    "type": "simple",
+    "sku": "WI-A0220",
+    "name": "Terminales FASTON con retén Hembra 6,3 mm",
+    "supplierProductCode": "C00663",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0531,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "Pq01HYL52IxpCtIonALt": {
+    "type": "simple",
+    "sku": "WI-A0134",
+    "name": "Cables FLRY-B Bi- Colores Naranja/Verde 1 mm",
+    "supplierProductCode": "C00290",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2306,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "QPZIPycTc94wcTnW9JdT": {
+    "type": "simple",
+    "sku": "WI-A0314",
+    "name": "Fusible plano mini 2 A",
+    "supplierProductCode": "S/N",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.6,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV",
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "QYYJEJIdo8aBprzRjzaX": {
+    "type": "simple",
+    "sku": "WI-A0011",
+    "name": "CONECTOR HEMBRA SUB-D 9 SOLDAR",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.28,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "QrFmFV1X9n83rGZTS0UI": {
+    "type": "simple",
+    "sku": "WI-A0162",
+    "name": "Conector Molex Minifit Jr Macho 10",
+    "supplierProductCode": "C00178",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.86,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "R2ewPxPeB0N2tnREQ2SM": {
+    "type": "simple",
+    "sku": "WI-A0293",
+    "name": "Funda Termoretractil HFT en bobinas negro 4.5 mm",
+    "supplierProductCode": "C00596",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1522,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "R8A1vOQBHlulMKcHFd1Q": {
+    "type": "simple",
+    "sku": "WI-A0366",
+    "name": "Dedicated Server Hosting Fee - 4GB (1 year)",
+    "supplierProductCode": "R04HSTFEE",
+    "family": "Papercast",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 495,
+    "suppliers": [
+      "lFJjbbrDxem7jycu0eXv"
+    ],
+    "components": [],
+    "createdAt": "2026-01-13T12:45:38.818Z"
+  },
+  "RRjp7XjZceX8TuQgUVIc": {
+    "type": "simple",
+    "sku": "WI-A0195",
+    "name": "Conectores  Mat-n-Lok Macho 2",
+    "supplierProductCode": "C01029",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.34,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "RjWuw5hMXkw5aTZJJVYb": {
+    "type": "simple",
+    "sku": "WI-A0058",
+    "name": "Cable Automoción 2.5mm Rojo",
+    "supplierProductCode": "CO0872",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 195,
+    "unitCost": 0.61,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "RoeMPlXNU8N1BGsXC2ZK": {
+    "unit": "ud",
+    "components": [],
+    "isImport": false,
+    "createdAt": "2026-01-07T16:09:18.371Z",
+    "sku": "WI-A0361",
+    "minThreshold": 0,
+    "observations": "",
+    "supplierProductCode": "",
+    "name": "PCB19x13mm + Diodo / Selbi",
+    "family": "Varios",
+    "suppliers": [
+      "zp8VelQPJnqyOPkYrNp1"
+    ],
+    "type": "simple",
+    "unitCost": 5.9
+  },
+  "Rp7opKxt7Lr3NgGxg4HE": {
+    "type": "simple",
+    "sku": "WI-A0241",
+    "name": "Terminal Anilla Aislado Azul 1 a 2.5 mm 10 mm",
+    "supplierProductCode": "C01124",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.11,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "RxuWA4vodh3TA586aI3p": {
+    "type": "simple",
+    "sku": "WI-A0255",
+    "name": "ALTAVOZ 4” DOBLE CONO HIFI 10CM",
+    "supplierProductCode": "",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 3.95,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-12T16:48:05.018Z"
+  },
+  "S4uQtQxMycXmw5Uip83J": {
+    "type": "simple",
+    "sku": "WI-A0071",
+    "name": "Conector MCC DIN enchufe macho C091B PIN: 4 recto Amphenol",
+    "supplierProductCode": "C091-3324-501",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 5.79,
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "S5kkstfQCNSwpPLDirev": {
+    "type": "simple",
+    "sku": "WI-A0108",
+    "name": "CARCASA AEREA CONECTOR 182642-1 CPC",
+    "supplierProductCode": "S/N",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": "9.38",
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "S8kmaZ1bcLjtRIltx1fD": {
+    "type": "simple",
+    "sku": "WI-A0252",
+    "name": "CONECTOR 10 V. BLANCO",
+    "supplierProductCode": "IAK52003",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.675,
+    "suppliers": [
+      "eWTI0Q0xxWTj8CAj4aAM"
+    ],
+    "components": [],
+    "createdAt": "2026-01-12T16:44:28.967Z"
+  },
+  "SD1mPUK0kDQF4LLY0P8R": {
+    "type": "simple",
+    "sku": "WI-A0236",
+    "name": "Terminal Anilla Aislado Rojo  0.5 a 1.5 mm  6 mm",
+    "supplierProductCode": "C00400",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.11,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "SFyMmgxVpQGXOLqgRcM1": {
+    "type": "simple",
+    "sku": "WI-A0001",
+    "name": "TORNILLO NEGRO 4,2 x 19 ROSCACHAPA",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.0362,
+    "components": [],
+    "supplier": "SUMINISTROS ADARRA S.L",
+    "suppliers": [
+      "tc3UfMXI53uXBMbinTmL"
+    ],
+    "supplierProductCode": "S/N",
+    "family": "Tornillería"
+  },
+  "SL9ayTJepmN7I1zWrzCA": {
+    "type": "simple",
+    "sku": "WI-A0010",
+    "name": "CONECTOR HEMBRA 12V MINIFIT",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.2115,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "SLpxXUBRK8c9aR1eO1f2": {
+    "type": "simple",
+    "sku": "WI-A0331",
+    "name": "PLANCHA -Bornero Lurraldebus ",
+    "supplierProductCode": "",
+    "family": "Herrajes",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 3.92,
+    "suppliers": [
+      "IxjqG63AlORCSZwJvrAA"
+    ],
+    "components": []
+  },
+  "SOpztdHw4UkOjcqydOYs": {
+    "type": "simple",
+    "sku": "WI-A0190",
+    "name": "Conectores  Mat-n-Lok hembra 4",
+    "supplierProductCode": "C01017",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.68,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "SXL1i2wP1JGb4e4Hs8HX": {
+    "type": "simple",
+    "name": "CABLEADO 10MTS 4X0,5 Z1C4Z1+CON AMPHENOL T3324501",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 31.5,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [],
+    "supplierProductCode": "",
+    "family": "",
+    "sku": "WI-A0024",
+    "updatedAt": "2026-01-12T14:30:05.827Z"
+  },
+  "SbxTu9hlCnTfsa2p78Cn": {
+    "type": "simple",
+    "sku": "WI-A0369",
+    "name": "FootfallCam Installation Support (per device)",
+    "supplierProductCode": "FC-FSV13",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 48,
+    "suppliers": [
+      "TROYf4uDRUlfupkHBGhn"
+    ],
+    "components": [],
+    "createdAt": "2026-01-14T10:39:53.918Z"
+  },
+  "SfmJ6OPNZ5VRZYkIOBUM": {
+    "observations": "",
+    "createdAt": "2026-01-07T10:37:12.361Z",
+    "minThreshold": 0,
+    "components": [],
+    "type": "simple",
+    "unitCost": 2.49,
+    "sku": "WI-A0359",
+    "supplierProductCode": "",
+    "family": "Varios",
+    "isImport": false,
+    "unit": "ud",
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "name": "Filtro Audio -Jack",
+    "updatedAt": "2026-01-07T11:16:21.233Z"
+  },
+  "TKgkzhDFdhnlWc5vi1Ud": {
+    "type": "simple",
+    "sku": "WI-A0032",
+    "name": "Cable Automoción 1mm Blanco",
+    "supplierProductCode": "CO1095",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "TP5G7ogfljkrijQjk1U5": {
+    "type": "simple",
+    "sku": "WI-A0007",
+    "name": "T/ Hª MINIFIT CABLE 16AWG (1,5-2mm)",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.1185,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "TdHCbNcOAzcuH3pDQfSH": {
+    "type": "simple",
+    "sku": "WI-A0318",
+    "name": "PORTES",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG",
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "EV72Wg7tA38RBsts523l",
+      "NhNyX0rY2c5LXNoBfQmy",
+      "8ApKd4hqikx63v3YNTO4",
+      "3t7zqpvuNxHx31Pmz01G",
+      "Fzfhg03VV67mcpBY74Nu",
+      "XiY3tGGOV51BmUPNlPA9"
+    ]
+  },
+  "TgjpPEIBFmAazmSXofis": {
+    "type": "simple",
+    "sku": "WI-A0384",
+    "name": "Diodo Finder 220-230V para relé ",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:27:07.422Z"
+  },
+  "Tp9G4RtjOGdXU31ghGZ6": {
+    "type": "simple",
+    "sku": "WI-A0355",
+    "name": "Letrero LED Interior 96x19-LED module pitch V&H = 3.96mm - RS232 Interface",
+    "supplierProductCode": "L065232",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 445,
+    "suppliers": [
+      "pUlYqCRBYEHDTNbLWcNr"
+    ],
+    "components": []
+  },
+  "TsWMmox8YbNcZxgqogOg": {
+    "type": "simple",
+    "sku": "WI-A0399",
+    "name": "4Pin Extension Cable between AHD Camera and 360° AVM Controller,5M",
+    "supplierProductCode": "28#5m",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-02-11T10:09:48.198Z"
+  },
+  "TsWyrXFOKz7u8POWkMTK": {
+    "type": "simple",
+    "sku": "WI-A0022",
+    "name": "TERMINAL HEMBRA 09150006224",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 2.3283,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "U9ND7Mor69KZ9jxzNrHY": {
+    "type": "simple",
+    "sku": "WI-A0393",
+    "name": "Interruptor Camara C/FA",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 10.5,
+    "suppliers": [
+      "eWTI0Q0xxWTj8CAj4aAM"
+    ],
+    "components": [],
+    "createdAt": "2026-01-22T15:26:25.749Z"
+  },
+  "UEn6TA6jx5lVEPn8DHZ2": {
+    "type": "simple",
+    "sku": "WI-A0226",
+    "name": "Terminales MAT-N-Lok Hembra 0,5-1,5 mm",
+    "supplierProductCode": "C01014",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "UFcgUlc8oqXND4u22yrx": {
+    "type": "simple",
+    "sku": "WI-A0342",
+    "name": "Conector de RF / Coaxial, Coaxial BNC, Macho Recto, Crimpable",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "https://es.farnell.com/amphenol-rf/112514/conector-rf-bnc-macho-recto-cable/dp/2579737?gross_price=true&CMP=KNC-GES-GEN-SHOPPING-Pmax-High_ROAS&gad_source=1&gad_campaignid=18071281895&gbraid=0AAAAAD8yeHnFBLhJvtmfKuhZEnE0S0tm9&gclid=Cj0KCQjwvJHIBhCgARIsAEQnWlCmYRHLM52G3s7ws9Jn83xpWhhRaSkkI8hDY5nvIO0xA45i0BXb9SYaAucqEALw_wcB",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 2.7467,
+    "suppliers": [
+      "QEek60ZcA3eYGqcjJkQD"
+    ],
+    "components": []
+  },
+  "UXBQsANNdluYPdVpnvj9": {
+    "type": "simple",
+    "sku": "WI-A0239",
+    "name": "Terminal Anilla Aislado Rojo  0.5 a 1.5 mm  12 mm",
+    "supplierProductCode": "C01120",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.14,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "UeW6Fht9yuClxvnKZX4G": {
+    "type": "simple",
+    "sku": "WI-A0351",
+    "name": "Sensor de Puerta magnético-Guuzi",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 2.66,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": []
+  },
+  "UkKYvfgDOWghqB1IgGLa": {
+    "type": "simple",
+    "sku": "WI-A0186",
+    "name": "Conector Faston multi-vias nylon macho 6",
+    "supplierProductCode": "C00992",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "components": [],
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "unitCost": 0.37,
+    "family": "Conectores"
+  },
+  "V3shtS3JrkSmZtsUtn3y": {
+    "type": "simple",
+    "sku": "WI-A0034",
+    "name": "Cable Automoción 1mm Rojo",
+    "supplierProductCode": "CO1093",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "VEYcZL3B2HJYg4V6GV21": {
+    "type": "simple",
+    "sku": "WI-A0096",
+    "name": "WAGO BORNE SECCIONABLE S.2007 6MM2 GR. 2007-8811",
+    "supplierProductCode": "6600720280",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 4.6,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "VHs69glOk3pq4W6Spcq8": {
+    "type": "simple",
+    "sku": "WI-A0392",
+    "name": "Conector Enchufe Macho, 2.1 X 5.5 mm DC Alimentación Conector Enchufe, Conector Terminal de Tornillo DC, para Cámara CCTV (Verde)",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "https://www.amazon.es/dp/B08L98BP6G?ref=cm_sw_r_cso_wa_apan_dp_84RR21TC10NQVGG1FTJP&ref_=cm_sw_r_cso_wa_apan_dp_84RR21TC10NQVGG1FTJP&social_share=cm_sw_r_cso_wa_apan_dp_84RR21TC10NQVGG1FTJP",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2752,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": [],
+    "createdAt": "2026-01-22T12:43:13.639Z"
+  },
+  "VPIHd5kkdIWz0A4hz07a": {
+    "type": "simple",
+    "sku": "WI-A0350",
+    "name": "ESP32 ESP-WROOM-32-AZ-Delivery",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 8.66,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": []
+  },
+  "VPndyUGLBVM60aMWjUQA": {
+    "type": "simple",
+    "sku": "WI-A0128",
+    "name": "Cables FLRY-B Bi- Colores Rojo/Azul 1 mm",
+    "supplierProductCode": "C00879",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2306,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "VUqBSjAzxY273EP8J8lr": {
+    "type": "simple",
+    "sku": "WI-A0082",
+    "name": "WAGO TOPE FINAL 6MM TS35 249-116",
+    "supplierProductCode": "6600720011",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.35,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "VnPSjuAOJhaGmmTPQufk": {
+    "type": "simple",
+    "name": "Conector Superseal 1 a 6 vias Hembra 2",
+    "supplierProductCode": "C01037",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.39,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "sku": "WI-A0204",
+    "updatedAt": "2026-01-12T14:17:04.527Z"
+  },
+  "VpfvuZTVpECnZYNDltLl": {
+    "type": "simple",
+    "sku": "WI-A0256",
+    "name": "REJILLA REDONDA ALTAVOZ 4 NEGRA",
+    "supplierProductCode": "",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-12T16:49:12.296Z"
+  },
+  "W5oqchA0HP7Yp0F2wWQr": {
+    "type": "simple",
+    "sku": "WI-A0107",
+    "name": "Teminal macho mat-n-lok",
+    "supplierProductCode": "CO1013",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": "0.10",
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "WL8g8K6eL8hwaknVZAGa": {
+    "type": "simple",
+    "sku": "WI-A0059",
+    "name": "Cable Automoción 2.5mm",
+    "supplierProductCode": "CO0871",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 200,
+    "unitCost": 0.61,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "WTGuhVdjHzWRHDO0clwE": {
+    "type": "simple",
+    "sku": "WI-A0094",
+    "name": "WAGO PUENTE (1-3-5-7) 2002-477/011-000",
+    "supplierProductCode": "9990049948",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "unitCost": 1.36,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "WeqfP1yUf1EdMjVSEzoT": {
+    "type": "simple",
+    "sku": "WI-A0338",
+    "name": "Cámaras IP UNIVIEW modelo UNV IPC314SB-ADF28K-I0",
+    "supplierProductCode": "IPC314SB-ADF28K-I0",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 96.94,
+    "components": [],
+    "suppliers": [
+      "IIYjqkLd1CxuEwwmRKTD"
+    ]
+  },
+  "Wg0YAwUrmelnRO7qsw9S": {
+    "type": "simple",
+    "sku": "WI-A0233",
+    "name": "Terminal FASTON Aislado Rojo Macho 0.5-1.5 mm",
+    "supplierProductCode": "C00658",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 3.27,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "WwWjAL1K8qBG5HZW2YSm": {
+    "type": "simple",
+    "sku": "WI-A0211",
+    "name": "Conector Superseal 1 a 6 vias Macho 3",
+    "supplierProductCode": "C01042",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.39,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "WwovKuqXPGMvEPzYbbgH": {
+    "type": "simple",
+    "sku": "WI-A0270",
+    "name": "Terminal puntera Hueca 16 mm",
+    "supplierProductCode": "C00293",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0728,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "WxL0DH2Trcuteu0NA0Ye": {
+    "type": "simple",
+    "sku": "WI-A0368",
+    "name": "FootfallCam Delivery",
+    "supplierProductCode": "FDF",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 120,
+    "suppliers": [
+      "TROYf4uDRUlfupkHBGhn"
+    ],
+    "components": [],
+    "createdAt": "2026-01-14T10:38:55.931Z"
+  },
+  "XSxOmRrDEp6NSIZAzwIf": {
+    "type": "simple",
+    "sku": "WI-A0277",
+    "name": "Fusible plano mini Transparente 25 A",
+    "supplierProductCode": "C01135",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "XiGqfKyeTLOA9dPuIGWR": {
+    "type": "simple",
+    "sku": "WI-A0206",
+    "name": "Conector Superseal 1 a 6 vias Hembra 4",
+    "supplierProductCode": "C01035",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.51,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "XyKv22GIrKgLsuLiLFPt": {
+    "type": "simple",
+    "sku": "WI-A0371",
+    "name": "Latiguillo LMR200 Cable Coaxial FME M- FME H (5 M)",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 9.98,
+    "suppliers": [
+      "23mWv6W3Gjxt7Dng4WMT"
+    ],
+    "components": [],
+    "createdAt": "2026-01-19T08:50:49.740Z"
+  },
+  "Y6geNEPHULUoF5cfvYBA": {
+    "type": "simple",
+    "sku": "WI-A0284",
+    "name": "Fusible plano Estándar Azul 15A",
+    "supplierProductCode": "C01145",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "YDr2lakgLDY4ylyAnb9C": {
+    "type": "simple",
+    "sku": "WI-A0335",
+    "name": "Micrófono para montaje en superficie FCM-431",
+    "supplierProductCode": "FCM-431",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 77.805,
+    "components": [],
+    "suppliers": [
+      "L7pXI26XlHZggLyxAMG2"
+    ]
+  },
+  "YEyZ2ozorC9W0YDnFGV7": {
+    "type": "simple",
+    "sku": "WI-A0044",
+    "name": "Cable Automoción 1.5 mm Verde",
+    "supplierProductCode": "CO1077",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.374,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "YSL3SmffSrna7fQUPHUX": {
+    "type": "simple",
+    "sku": "WI-A0325",
+    "supplierProductCode": "00504033",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 2.6961,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "name": "Mts. Canal gris RAL7030 42x20 U23X 77 UNEX 40.20.77",
+    "updatedAt": "2026-02-23T12:41:07.676Z"
+  },
+  "YSiL4d82CnpmNi8D2ziX": {
+    "type": "simple",
+    "sku": "WI-A0244",
+    "name": "Terminal Anilla Aislado Amarillo 2.5 a 6 mm  12 mm",
+    "supplierProductCode": "C01129",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.15,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "YWExAFVXA1T8MoY4aCM4": {
+    "type": "simple",
+    "sku": "WI-A0243",
+    "name": "Terminal Anilla Aislado Azul 1 a 2.5 mm 6 mm",
+    "supplierProductCode": "C01122",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.11,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "YZINw8afCM1qTjLP9Cc9": {
+    "type": "simple",
+    "sku": "WI-A0083",
+    "name": "WAGO PUENTE 3 POLOS PARA BORNA 2,5MM 2002-403",
+    "supplierProductCode": "6600728103",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.4,
+    "components": [],
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "family": "Borneros Wago"
+  },
+  "Z44xkn5bgEqItpFkGFEc": {
+    "type": "simple",
+    "sku": "WI-A0147",
+    "name": "Pasacables PVC con ranura 29,9 mm (25,1x19,9 mm)",
+    "supplierProductCode": "GM-2518",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.175,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ZapStYmAE4A57JAuKhIA": {
+    "type": "simple",
+    "sku": "WI-A0100",
+    "name": "ANTENA DISCO 790-960/1710-2170/2500-2690 MHZ 5 MTS CABLE CLF200 Y FME-H",
+    "supplierProductCode": "CA02-0727035M/5",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 73.5,
+    "components": [],
+    "isImport": false,
+    "suppliers": [
+      "XiY3tGGOV51BmUPNlPA9"
+    ],
+    "updatedAt": "2026-01-19T08:45:25.640Z"
+  },
+  "ZcjD8Jh5TFoAKcKDJR3i": {
+    "type": "simple",
+    "sku": "WI-A0158",
+    "name": "Conector Molex Minifit Jr Macho 2",
+    "supplierProductCode": "C00175",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.73,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ZnTHzYKZbNpKGYYu2jnh": {
+    "type": "simple",
+    "sku": "WI-A0313",
+    "name": "Fusible plano mini 1 A",
+    "supplierProductCode": "S/N",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.6,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV",
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ZpES34ZVxedhKv9gxUrb": {
+    "type": "simple",
+    "sku": "WI-A0202",
+    "name": "Goma amarilla para conector Superseal Amarillo",
+    "supplierProductCode": "C01031",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.04,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "aKmeXRnHko8NQ8bwuey1": {
+    "type": "simple",
+    "name": "CARCASA AEREA CONECTOR 182642-1",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 4.698,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [],
+    "supplierProductCode": "",
+    "family": "",
+    "sku": "WI-A0026",
+    "updatedAt": "2026-01-12T14:28:39.694Z"
+  },
+  "aOUc5H94kUFIk4GdTZnd": {
+    "type": "simple",
+    "sku": "WI-A0074",
+    "name": "WAGO PEINE PUENTE 2002 1-3P 25A 8X25 GR.CLR. 2002-433",
+    "supplierProductCode": "9990047211",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.39,
+    "components": [],
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "family": "Borneros Wago"
+  },
+  "aQ6RFQMKRafxDAE1PrVM": {
+    "type": "simple",
+    "sku": "WI-A0079",
+    "name": "WAGO PUENTE 5 POLOS PARA BORNA 2,5MM 2002-405",
+    "supplierProductCode": "6600728105",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.77,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "aajnd4B1HEEhK8bOqGSg": {
+    "type": "simple",
+    "sku": "WI-A0391",
+    "name": "Conector FMS + Resistencia + Cable montando",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:43:37.489Z"
+  },
+  "acvKsXCrulvzkRLppMQt": {
+    "type": "simple",
+    "sku": "WI-A0072",
+    "name": "MTS. MANGUERA U/FTP FLEXIBLE 4x2xAWG26 CAT-6 LSHF",
+    "supplierProductCode": "S/N",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 305,
+    "unitCost": 0.6592,
+    "suppliers": [
+      "TqUnQLz5hzOnpEa6ScyV"
+    ],
+    "components": []
+  },
+  "am2bxqRSmq4U7zq3RXlp": {
+    "type": "simple",
+    "sku": "WI-A0143",
+    "name": "Pasacables Nylon empotrable 34,2 mm (29,3 x37,5 mm)",
+    "supplierProductCode": "RSB-35",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1525,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "b91FvaXkqz9xSykcV9RH": {
+    "type": "simple",
+    "sku": "WI-A0036",
+    "name": "Cable Automoción 1mm Gris",
+    "supplierProductCode": "CO1088",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "bWsc6shhcGIj58fVngCV": {
+    "type": "simple",
+    "sku": "WI-A0152",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "https://es.aliexpress.com/item/1005009124444293.html?spm=a2g0o.order_list.order_list_main.5.6fe6194dFpQwOR&gatewayAdapt=glo2esp",
+    "minThreshold": 100,
+    "isImport": false,
+    "components": [],
+    "unitCost": 13.72,
+    "name": "Conector RJ45 cat6 con Guia",
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV",
+      "IG1PssJALhTDNEugRzTG",
+      "wPUEJqSqpuKXbMF5X9Go"
+    ],
+    "supplierProductCode": "10.21.0201-100 "
+  },
+  "bYYoRKZKA5oDYVkbWQFi": {
+    "type": "simple",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "supplier": "LAMBDA",
+    "components": [],
+    "unitCost": 100.8,
+    "sku": "WI-A0061",
+    "supplierProductCode": "CA01-1524035M/10",
+    "family": "Equipos",
+    "name": "ANT. GPS+WIFI DUAL+790-960/1710-2700 CBLES 10 M",
+    "isImport": false,
+    "suppliers": [
+      "XiY3tGGOV51BmUPNlPA9",
+      "23mWv6W3Gjxt7Dng4WMT"
+    ],
+    "updatedAt": "2026-01-19T08:45:59.997Z"
+  },
+  "bqB0ED8znqQO82Chdc5A": {
+    "type": "simple",
+    "sku": "WI-A0153",
+    "name": "Auxiliar Audio Jack 3,5mm Hembra",
+    "supplierProductCode": "S/N",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": 0.73,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "components": []
+  },
+  "bt4uv8FibqQFuGKTqEA5": {
+    "type": "simple",
+    "sku": "WI-A0097",
+    "name": "WAGO PUENTE 5 VIAS (IMPARES) 2002-481/011-000",
+    "supplierProductCode": "9990072826",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "unitCost": 2.27,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "bwZcSJRVkQvRPic0ZJE7": {
+    "type": "simple",
+    "sku": "WI-A0265",
+    "name": "Terminal puntera Hueca 1mm",
+    "supplierProductCode": "C00476",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 0.0385
+  },
+  "bxxT6H0ZDVYYGuI1Vtxd": {
+    "type": "simple",
+    "sku": "WI-A0156",
+    "name": "Cinta Aislante 20x19 mm negro 19 mm",
+    "supplierProductCode": "C00868",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.74,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "cO5RJLH7MQZb27rbvWB9": {
+    "type": "simple",
+    "sku": "WI-A0234",
+    "name": "Terminal FASTON Aislado Azul  Macho 1-2.5 mm",
+    "supplierProductCode": "C00623",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 5.06,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "cUjujK2M5vzuU7gDN5x0": {
+    "type": "simple",
+    "sku": "WI-A0344",
+    "name": "Conector XLR Hembra Recto de 3 pines",
+    "supplierProductCode": "458-024",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "https://es.rs-online.com/web/p/conectores-xlr/0458024",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "Tu49rBXIIm5YjF6eU1US"
+    ],
+    "components": [],
+    "unitCost": 5.28
+  },
+  "cVkpxUVIfokkF1zwh3g4": {
+    "type": "simple",
+    "sku": "WI-A0292",
+    "name": "Portafusibles para 6 fusibles",
+    "supplierProductCode": "C00900",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 5.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "chIstKAofqpMFatv8fxA": {
+    "type": "simple",
+    "name": "TERMINAL HEMBRA TYCO CPC LATON",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "supplierProductCode": "S/N",
+    "unitCost": "0.72",
+    "family": "Terminales",
+    "sku": "WI-A0101"
+  },
+  "clR6bzCDySYA1kh7fuaw": {
+    "type": "simple",
+    "sku": "WI-A0155",
+    "name": "Caja exterior Control remoto filtro Audio",
+    "supplierProductCode": "S/N",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 100,
+    "isImport": false,
+    "unitCost": 0.3167,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "components": []
+  },
+  "cnXdnbULVU4vWRhrL8DD": {
+    "type": "simple",
+    "sku": "WI-A0105",
+    "name": "Portafusibles 4 vías para 4 fusibles",
+    "supplierProductCode": "CO0899",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": "4.34",
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "cpzc2JRVVSK3SXE0Rr66": {
+    "type": "simple",
+    "sku": "WI-A0020",
+    "name": "TERMINAL HEMBRA 09150006221",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 1.612,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "cuzrnNUCB3vt82TMZyLJ": {
+    "type": "simple",
+    "sku": "WI-A0376",
+    "name": "Altavoz para CB 3\" 25W 4Ω Jack 3,5mm mono",
+    "supplierProductCode": "",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:14:45.655Z"
+  },
+  "d8auDNySABwjeLXheTMH": {
+    "type": "simple",
+    "sku": "WI-A0281",
+    "name": "Fusible plano Estándar Naranja 5A",
+    "supplierProductCode": "C01148",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "d90QYi9RbtmBgxKlBAwq": {
+    "type": "simple",
+    "sku": "WI-A0112",
+    "name": "Conector B y C hembra para módulo cuádruple Han DD, 0,14 - 2,5 mm², engarzado",
+    "supplierProductCode": "9140423101",
+    "family": "Harting",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": true,
+    "unitCost": 13.035,
+    "suppliers": [
+      "3RljzUKSxT5ArHYSNKEF",
+      "Fzfhg03VV67mcpBY74Nu",
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "dDqS5yaXCPYAHv9FJF2p": {
+    "type": "simple",
+    "sku": "WI-A0189",
+    "name": "Conectores  Mat-n-Lok hembra 3",
+    "supplierProductCode": "C01016",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.42,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "dUB4Ol4MG0sYlNJOxmXL": {
+    "type": "simple",
+    "sku": "WI-A0280",
+    "name": "Fusible plano Estándar Rosa 4A",
+    "supplierProductCode": "C01149",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "dyNHoNFah9iQGOqjVSnz": {
+    "type": "simple",
+    "sku": "WI-A0390",
+    "name": "Filtro de audio con cable + jack montaje interno Winfin",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "XuVk9GGq5NRS4WP9SA3z"
+    ],
+    "components": [],
+    "createdAt": "2026-01-22T10:40:33.956Z"
+  },
+  "e27CNhzfDchwB2V1EnMV": {
+    "type": "simple",
+    "sku": "WI-A0271",
+    "name": "Fusible plano mini  Rosa  4 A",
+    "supplierProductCode": "C00903",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "eIHBbdhlQciNkWQ5eeQE": {
+    "type": "simple",
+    "sku": "WI-A0221",
+    "name": "Terminales FASTON con retén Hembra 9,6 mm",
+    "supplierProductCode": "C00463",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1488,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ePkkir7fMIiKeBL9DJ9v": {
+    "type": "simple",
+    "sku": "WI-A0306",
+    "name": "Tubo coarrugado Poliamida Abierto  13 mm",
+    "supplierProductCode": "C00348",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.7134,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "eUulvuqUWAc8XWBIC87i": {
+    "type": "simple",
+    "name": "Terminales FASTON con retén Hembra 2,8 mm",
+    "supplierProductCode": "C00217",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0475,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "sku": "WI-A0218",
+    "updatedAt": "2026-01-12T14:17:30.618Z"
+  },
+  "eaEhNJBU3qN25RMppeJU": {
+    "type": "simple",
+    "sku": "WI-A0033",
+    "name": "Cable Automoción 1mm Amarillo",
+    "supplierProductCode": "CO1094",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "Rollo de 100 mts y 200 mts",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "ewqWiFAbT6kvLf86HVC1": {
+    "type": "simple",
+    "sku": "WI-A0127",
+    "supplierProductCode": "652-LM-LP-1001L",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": "2.060",
+    "suppliers": [
+      "NhNyX0rY2c5LXNoBfQmy"
+    ],
+    "components": [],
+    "name": "Transformadores de audio/transformadores de señal LM-LP-1001L",
+    "updatedAt": "2026-01-12T16:20:50.863Z"
+  },
+  "exO5uuSQKbeQr2en4frA": {
+    "type": "simple",
+    "sku": "WI-A0237",
+    "name": "Terminal Anilla Aislado Rojo  0.5 a 1.5 mm  8 mm",
+    "supplierProductCode": "C01121",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.11,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "fAq0rOkb7ASms9gZm3YN": {
+    "type": "simple",
+    "sku": "WI-A0008",
+    "name": "CONECTOR HEMBRA 4V MINIFIT",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.0883,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "fDESus1M9cpa7xhHPmvv": {
+    "type": "simple",
+    "sku": "WI-A0165",
+    "name": "Conector Molex Minifit Jr Hembra terminal",
+    "supplierProductCode": "C00173",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.14,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "fWC903xKIyqxN6HBGOJ6": {
+    "type": "simple",
+    "sku": "WI-A0120",
+    "name": "BRIDA NEGRA 203X2,5",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "fcvjmzoVfR5S0ulIS8q4": {
+    "type": "simple",
+    "sku": "WI-A0228",
+    "name": "Terminales SuperSeal  Hembra 0,5-1,5 mm",
+    "supplierProductCode": "C01012",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "fjKwVpaj9SsYH3uzGETx": {
+    "type": "simple",
+    "sku": "WI-A0362",
+    "supplierProductCode": "S/N",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "BfsrsNdRyGymIQk8xK29"
+    ],
+    "components": [],
+    "createdAt": "2026-01-12T14:05:03.024Z",
+    "name": "Circuito impreso PCB19x13mm T-Mobilitat",
+    "updatedAt": "2026-01-12T14:09:07.915Z"
+  },
+  "foh76olmjyN7qsVC91Ll": {
+    "type": "simple",
+    "sku": "WI-A0387",
+    "name": "Fusible plano automoción 3A",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:31:21.503Z"
+  },
+  "fy3XBc2ara5cKjLakupt": {
+    "type": "simple",
+    "sku": "WI-A0067",
+    "name": "Base para Rele Automoción con Soporte",
+    "supplierProductCode": "CO0392",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 2.31,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "g4eJTwYdIEfVtjrqMRHb": {
+    "type": "simple",
+    "sku": "WI-A0257",
+    "name": "Terminal de Anilla serie GS Cobre  1 mm 10 mm",
+    "supplierProductCode": "C00924",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "gJ5ON9BYgkNjwuRYHxUt": {
+    "type": "simple",
+    "sku": "WI-A0289",
+    "supplierProductCode": "C00657",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.41,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "name": "Portafusible 1 Via apilable con tapa Faston 1"
+  },
+  "gLV2aKgGLqHtM4wqmyEB": {
+    "type": "simple",
+    "sku": "WI-A0201",
+    "name": "Conectores  Mat-n-Lok Macho 16",
+    "supplierProductCode": "C01026",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.12,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "gR3LgD0PZbY9tz6KyAyi": {
+    "type": "simple",
+    "sku": "WI-A0358",
+    "name": "CAN Cable Between 360 Controller and AC601,5m",
+    "supplierProductCode": "10-63#5M",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 6.6,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2025-12-17T08:22:20.394Z"
+  },
+  "gSgzILpRYHiuM6rJKLfs": {
+    "type": "simple",
+    "name": "Zumbador Activo 5V-VISSQH",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.44,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": [],
+    "sku": "WI-A0364",
+    "updatedAt": "2026-01-12T14:20:06.324Z"
+  },
+  "gUURQuMqT18lWotPhNJ9": {
+    "type": "simple",
+    "sku": "WI-A0383",
+    "name": "CABLE VGA MACHO-HEMBRA 7MTS",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [],
+    "components": [],
+    "createdAt": "2026-01-22T10:24:15.628Z"
+  },
+  "gUcm2WZSHVoP5xS5Um16": {
+    "type": "simple",
+    "sku": "WI-A0212",
+    "name": "Conector Superseal 1 a 6 vias Macho 4",
+    "supplierProductCode": "C01043",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.51,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "gVCmc6dNL84aAlH8mxjM": {
+    "type": "simple",
+    "sku": "WI-A0194",
+    "name": "Conectores  Mat-n-Lok hembra 16",
+    "supplierProductCode": "C01018",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.99,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "gdS4ARpCvdEaPyyTCrW6": {
+    "type": "simple",
+    "sku": "WI-A0290",
+    "name": "Portafusible Estanco apilable 1 a 2.5 mm",
+    "supplierProductCode": "C00393",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.86,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "gvTXWDOd8e6vXk2BN5Dv": {
+    "type": "simple",
+    "sku": "WI-A0248",
+    "name": "Terminal de Horquilla Aislados Rojo 0.5 a 1.5 mm 5mm/6mm",
+    "supplierProductCode": "C00231",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.74,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "hBQjcKLgy5UubyYW46ta": {
+    "type": "simple",
+    "sku": "WI-A0216",
+    "name": " Robacorrientes-Segregadores Azul 1,5-2,5 mm",
+    "supplierProductCode": "C00889",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.08,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "hFv5aa47FJtEzgroO8m2": {
+    "type": "simple",
+    "sku": "WI-A0182",
+    "name": "Conector Fastom multi-vias nylon Macho 1",
+    "supplierProductCode": "C00988",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.15,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "hJnzCmc2GGfnX6EqOTeP": {
+    "type": "simple",
+    "sku": "WI-A0068",
+    "name": "Micrófono flexo cable Jack 3.6mm",
+    "supplierProductCode": "AV-KM-MICRO",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 24.9,
+    "components": [],
+    "suppliers": [
+      "3t7zqpvuNxHx31Pmz01G",
+      "VL4XZiBHkM8Pad4KsKc3"
+    ]
+  },
+  "hR5hInxI4SH3wMEDrTE4": {
+    "type": "simple",
+    "sku": "WI-A0151",
+    "name": "Pasabridas con adhesivo 3M Negro 28x28 mm",
+    "supplierProductCode": "C00153",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1108,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "hUHr7N3BH0JTiSIWGOWJ": {
+    "type": "simple",
+    "name": "Cinta aislante EPDM 3M™ 23 de color Negro, 25mm",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "supplier": "BERDIN SL",
+    "components": [],
+    "isImport": false,
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "supplierProductCode": "SCOTCH-23-19",
+    "unitCost": "15.40",
+    "family": "Varios",
+    "sku": "WI-A0102"
+  },
+  "hWy7mld3QLEBqKI8fLir": {
+    "type": "simple",
+    "sku": "WI-A0209",
+    "name": "Conector Superseal 1 a 6 vias Macho 1",
+    "supplierProductCode": "C01040",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "hoPUlVDQEQhaMSxhygZn": {
+    "type": "simple",
+    "sku": "WI-A0031",
+    "name": "TERM. REDONDO 6.4MM PARA CABLE 2,5-4MM",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.0675,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "hqudbAk2xcJVULlfd3ta": {
+    "type": "simple",
+    "sku": "WI-A0357",
+    "name": "Interior Alamer CAN Communication",
+    "supplierProductCode": "AC601",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 57.52,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2025-12-17T08:21:15.003Z"
+  },
+  "hwWvW8PWqJMkBDe6A88Q": {
+    "type": "simple",
+    "name": "Terminal de Anilla serie GS Cobre  1 mm 12 mm",
+    "supplierProductCode": "C00925",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.07,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "sku": "WI-A0258",
+    "updatedAt": "2026-01-12T14:17:51.893Z"
+  },
+  "iP29FmbPeWGIMUsgRRnk": {
+    "type": "simple",
+    "sku": "WI-A0213",
+    "name": "Conector Superseal 1 a 6 vias Macho 5",
+    "supplierProductCode": "C01044",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.52,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "iSRSSD6b2K8BNLECuL6C": {
+    "type": "simple",
+    "sku": "WI-A0055",
+    "name": "Cable Automoción 2.5 mm Negro",
+    "supplierProductCode": "CO0875",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 200,
+    "unitCost": 0.61,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "iSVfEE2LRfgF9htfeJeR": {
+    "type": "simple",
+    "sku": "WI-A0263",
+    "name": "Terminal puntera Hueca 35mm",
+    "supplierProductCode": "C00295",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.24,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "iVSCQPaDk6AtPxmnzP8N": {
+    "type": "simple",
+    "sku": "WI-A0066",
+    "name": "Rele RR88 Interruptor 24V 30A Bornes con Diodo",
+    "supplierProductCode": "S/N",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 3.95,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "iWyCM27mZLh9UjMawJZj": {
+    "type": "simple",
+    "sku": "WI-A0183",
+    "name": "Conector Faston multi-vias nylon macho 2",
+    "supplierProductCode": "C00989",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.19,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ia6zI1Q6nqgephy86pp3": {
+    "type": "simple",
+    "sku": "WI-A0400",
+    "name": "4Pin Extension Cable between AHD Camera and 360° AVM Controller, 10M",
+    "supplierProductCode": "28#10m",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-02-11T10:10:44.642Z"
+  },
+  "ik0EZU7Er3Sdq6D2pjXn": {
+    "type": "simple",
+    "sku": "WI-A0054",
+    "supplierProductCode": "CO0876",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 196,
+    "unitCost": 0.61,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": [],
+    "name": "Cable Automoción 2.5mm Azul"
+  },
+  "ipCe8xvThmbBAUWg1nzK": {
+    "type": "simple",
+    "sku": "WI-A0087",
+    "name": "WAGO CINTA RESPUESTO PARA IMPRESORA 258-5000 258-5005",
+    "supplierProductCode": "6600725005",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 6.56,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "jyrMDAVVfM03G1v8Ai6f": {
+    "type": "simple",
+    "sku": "WI-A0124",
+    "name": "BRIDA NEGRA 385X4,8 mm",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "kC6KvYG1DepVdaEPeJ4w": {
+    "type": "simple",
+    "sku": "WI-A0002",
+    "name": "Extractores para 4 ",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 17.69,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": []
+  },
+  "kKhzYYLUW56eDz5Tysgd": {
+    "type": "simple",
+    "sku": "WI-A0146",
+    "name": "Pasacables PVC con ranura 23,7 mm (20,1x 15,5 mm)",
+    "supplierProductCode": "GM-2015 Cerr.",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.164,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "kLfQQNKole7jHZgTXMHq": {
+    "type": "simple",
+    "sku": "WI-A0185",
+    "name": "Conector Faston multi-vias nylon macho 4",
+    "supplierProductCode": "C00991",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.31,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "kS7JI5ZsnEt0vzX4caPI": {
+    "type": "simple",
+    "sku": "WI-A0332",
+    "name": "Señalizador Unex numero pequeño 1811-1 (100 unds)",
+    "supplierProductCode": "1811-1",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": [],
+    "unitCost": 1.243
+  },
+  "kdgHmfzLri9wCmc1R3Ln": {
+    "type": "simple",
+    "sku": "WI-A0132",
+    "name": "Cables FLRY-B Bi- Colores Rojo/ Verde 1 mm",
+    "supplierProductCode": "C00291",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2306,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "kfMHc0UIH7wW2zI561ke": {
+    "type": "simple",
+    "sku": "WI-A0345",
+    "name": "Convertidores CC/CC aislados DDR-60G-24",
+    "supplierProductCode": "DDR-60G-24",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 30.01,
+    "components": [],
+    "suppliers": [
+      "NhNyX0rY2c5LXNoBfQmy",
+      "MWcnLEnNzwPs7JtV1QYS"
+    ],
+    "updatedAt": "2025-12-16T16:16:57.643Z"
+  },
+  "kiGGETPr541bBzVMP3yS": {
+    "type": "simple",
+    "sku": "WI-A0386",
+    "name": "Fusible plano automoción 2A",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.064,
+    "suppliers": [
+      "GMdSRxEPPazc1GxxKCGV",
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "createdAt": "2026-01-22T10:29:57.035Z"
+  },
+  "km68dz1WfQ15M687XxSe": {
+    "type": "simple",
+    "sku": "WI-A0178",
+    "name": "Conector Fastom multi-vias nylon Hembra 3",
+    "supplierProductCode": "C00749",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.3,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "kqK1CtV2eLXJGkeWMm1R": {
+    "type": "simple",
+    "sku": "WI-A0203",
+    "supplierProductCode": "C01038",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.38,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "name": "Conector Superseal 1 a 6 vias Hembra 1"
+  },
+  "kvr3E2HSiSWKjhGtzO5H": {
+    "type": "simple",
+    "sku": "WI-A0363",
+    "name": "Diodos de Protección contra ESD SM30T33CAY ",
+    "supplierProductCode": "SM30T33CAY ",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.17,
+    "suppliers": [
+      "NhNyX0rY2c5LXNoBfQmy"
+    ],
+    "components": [],
+    "createdAt": "2026-01-12T14:07:05.458Z"
+  },
+  "l2UBaBQ06lAP92gkH4Gf": {
+    "type": "simple",
+    "sku": "WI-A0394",
+    "name": "Kingston Industrial microSD - 16GB microSDHC Industrial C10 A1 pSLC Tarjeta + adaptador SD - SDCIT2/16GB",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 27.66,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": [],
+    "createdAt": "2026-01-29T14:10:30.869Z"
+  },
+  "l3Td8eo2dD0egdfL05wb": {
+    "type": "simple",
+    "sku": "WI-A0321",
+    "name": "Herraje abrazadera Switch Etherwan ",
+    "supplierProductCode": "",
+    "family": "Herrajes",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "IxjqG63AlORCSZwJvrAA"
+    ],
+    "components": []
+  },
+  "l6oe1uafxK8eR5F2jGHW": {
+    "suppliers": [
+      "Tu49rBXIIm5YjF6eU1US"
+    ],
+    "name": "Conector macho modular RJ45 Cat8 Macho Roline ",
+    "unitCost": 16.08,
+    "components": [],
+    "unit": "ud",
+    "family": "Conectores",
+    "observations": "",
+    "sku": "WI-A0329",
+    "type": "simple",
+    "supplierProductCode": "2660809",
+    "isImport": false,
+    "minThreshold": 0
+  },
+  "l8GyBK1I0YNOiRV7DfkF": {
+    "type": "simple",
+    "sku": "WI-A0240",
+    "name": "Terminal Anilla Aislado Azul 1 a 2.5 mm 12 mm",
+    "supplierProductCode": "C01125",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 0.14
+  },
+  "lONjdffhQxY8j56IzKRn": {
+    "type": "simple",
+    "sku": "WI-A0115",
+    "name": "Arandela especial para marco de acoplamiento Han-Modular",
+    "supplierProductCode": "9140009936",
+    "family": "Harting",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": true,
+    "unitCost": 0.51,
+    "suppliers": [
+      "Fzfhg03VV67mcpBY74Nu",
+      "3RljzUKSxT5ArHYSNKEF",
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "lOhmmUKmpYqLTFwJyRXM": {
+    "type": "simple",
+    "sku": "WI-A0116",
+    "name": "BRIDA NEGRA 100 x 2,5mm.",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW",
+      "GMdSRxEPPazc1GxxKCGV"
+    ]
+  },
+  "lmU1W3Qa4eaFpNmq0byP": {
+    "type": "simple",
+    "sku": "WI-A0352",
+    "name": "Prototipo placa PCB-GTIWUNG",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.66,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": []
+  },
+  "lqFsBAuJ2QmUv75MOX7e": {
+    "type": "simple",
+    "name": "PISON METALICO C/CABLE GRIS/NEGRO ( CABLE 5 MTS )",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 49.5,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [],
+    "supplierProductCode": "",
+    "family": "",
+    "sku": "WI-A0025",
+    "updatedAt": "2026-01-12T14:27:38.036Z"
+  },
+  "mPfIFafU3IoZJnI1JgRE": {
+    "type": "simple",
+    "sku": "WI-A0303",
+    "name": "Tubo coarrugado Poliamida 22mm/25.5 mm",
+    "supplierProductCode": "C00980",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 1.278
+  },
+  "mQtFGzpmd61wfvbBKCwh": {
+    "type": "simple",
+    "sku": "WI-A0385",
+    "name": "Fusible plano automoción 1A",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.064,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "GMdSRxEPPazc1GxxKCGV"
+    ],
+    "components": [],
+    "createdAt": "2026-01-22T10:28:24.405Z"
+  },
+  "mgqQiH12SnmQIKMOtJnU": {
+    "type": "simple",
+    "sku": "WI-A0041",
+    "name": "Cable Automoción 1.5 mm Verde",
+    "supplierProductCode": "CO1081",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": [],
+    "unitCost": 0.374
+  },
+  "nJDdMD6wiijvG4YkTN2W": {
+    "type": "simple",
+    "sku": "WI-A0215",
+    "name": " Robacorrientes-Segregadores Rojo 0,25-1,65 mm",
+    "supplierProductCode": "C00890",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.08,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "nV7WYg0bXwgsVxrLnNso": {
+    "type": "simple",
+    "sku": "WI-A0340",
+    "name": "Altavoz exponencial 12W 5\" JETFON TH-55FP",
+    "supplierProductCode": "TH-55FP",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "https://www.amazon.es/Altavoz-exponencial-12W-JETFON-TH-55FP/dp/B084W2RYVM",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 14.98,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": []
+  },
+  "nWxkADRLxhde0m7VXZ9S": {
+    "type": "simple",
+    "sku": "WI-A0291",
+    "name": "Portafusibles para 4 fusibles",
+    "supplierProductCode": "C00899",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 3.94,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "oAzrZmxCcNzHRcLmHuFA": {
+    "type": "simple",
+    "sku": "WI-A0336",
+    "name": "RASPBERRY PLC 38AR (Raspberry PI 4B (8GB RAM), No Additional Com. Board 1, No Additional Com. Board 2)",
+    "supplierProductCode": "38AR",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 456,
+    "suppliers": [
+      "F3LZL8ahoTyn3fyWK9K4"
+    ],
+    "components": []
+  },
+  "oKoZaXvassMrT5m56VOX": {
+    "type": "simple",
+    "sku": "WI-A0005",
+    "name": "T/ Hª MINIFIT CABLE 18AWG (0,75-1mm) suelto",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.2,
+    "components": [],
+    "supplier": "RINAFILS SL (COELECTRIX)"
+  },
+  "oMfit1Ij0VaV7xhqOUpi": {
+    "type": "simple",
+    "sku": "WI-A0198",
+    "name": "Conectores  Mat-n-Lok Macho 6",
+    "supplierProductCode": "C01023",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.6,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "oVpgslMaeL0qttHEL2BM": {
+    "type": "simple",
+    "sku": "WI-A0126",
+    "name": "Altavoz para CB 3\" 7W 8Ω Jack 3,5mm mono",
+    "supplierProductCode": " CB.CMD-550",
+    "family": "Equipos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": "7.99",
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "ohNU6yI0i83lwaAgRd3k": {
+    "type": "simple",
+    "sku": "WI-A0222",
+    "name": "Terminales FASTON con retén Macho 2,8 mm",
+    "supplierProductCode": "C00223",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0532,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "omA8W1IoN1LBnicgaT3r": {
+    "type": "simple",
+    "sku": "WI-A039",
+    "name": "FHD 360°AROUND-VIEW SYSTEM Controller, with WiFi+GPS+4G+Built in AI",
+    "supplierProductCode": "BV060A18CVWG4 Plus",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-02-11T09:55:56.159Z"
+  },
+  "p86z46tQyBr1KOPfx4GB": {
+    "type": "simple",
+    "sku": "WI-A0042",
+    "name": "Cable Automoción 1.5mm Amarillo",
+    "supplierProductCode": "CO1080",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.374,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "pG37JV3cPyMvl3NhM4Rr": {
+    "type": "simple",
+    "name": "Conector Superseal 1 a 6 vias Macho 6",
+    "supplierProductCode": "C01045",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "sku": "WI-A0214"
+  },
+  "pHPk7CRc9DhO90tN0lF3": {
+    "type": "simple",
+    "sku": "WI-A0085",
+    "name": "WAGO PUENTE 7 POLOS PARA BORNA 2,5MM 2002-407",
+    "supplierProductCode": "6600728107",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 1.2,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "pI5Dm2BqTaFiFBgGms1n": {
+    "type": "simple",
+    "name": "CONECTOR CPC 16V TYCO",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "supplierProductCode": "S/N",
+    "unitCost": "5.31",
+    "family": "Conectores",
+    "sku": "WI-A0103"
+  },
+  "pIaKB2KcxOvh74taKNsu": {
+    "type": "simple",
+    "sku": "WI-A0188",
+    "name": "Conectores  Mat-n-Lok hembra 2",
+    "supplierProductCode": "C01015",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.4,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "pPpodgVH9xkQ0GHVRLZ5": {
+    "type": "simple",
+    "sku": "WI-A0167",
+    "name": "Conector Molex Minifit Jr Hembra 4",
+    "supplierProductCode": "C00188",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.77,
+    "components": [],
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "Tu49rBXIIm5YjF6eU1US"
+    ]
+  },
+  "pUz3AhMFsqMEL7Fc1in8": {
+    "type": "simple",
+    "sku": "WI-A0039",
+    "name": "Cable Automoción 1.5 mm Negro",
+    "supplierProductCode": "CO1083",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": [],
+    "unitCost": 0.374
+  },
+  "pZ80GtY8rm6yhv2gTntq": {
+    "type": "simple",
+    "sku": "WI-A0104",
+    "name": "Portafusibles para 6 fusibles",
+    "supplierProductCode": "CO0900",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": "5.81",
+    "suppliers": [],
+    "components": []
+  },
+  "pbvsaqEI5ExEbLGwjorf": {
+    "type": "simple",
+    "sku": "WI-A0140",
+    "name": "Funda macarrón PVC flexible negro 26 mm",
+    "supplierProductCode": "C00261",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.4958,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "piO7ZE7zsYjLDoWYNsAo": {
+    "type": "simple",
+    "sku": "WI-A0278",
+    "name": "Fusible plano mini Verde 30A",
+    "supplierProductCode": "C01134",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0632,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "pjLaweBri3iZuGyvR2AW": {
+    "type": "simple",
+    "sku": "WI-A0296",
+    "name": "Funda Termoretractil HFT en bobinas negro 2 mm",
+    "supplierProductCode": "C00595",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1988,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "pz28WDRUxO3xi1njGdzD": {
+    "type": "simple",
+    "sku": "WI-A0030",
+    "name": "FASTON ARO DIAMETRO",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.0188,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "q6aIrBLWEGyYoG0UJi7f": {
+    "type": "simple",
+    "sku": "WI-A0354",
+    "name": "Router 4G DualSIM con WIFI, GPS RUT 956",
+    "supplierProductCode": "RUT956",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 200.2,
+    "components": [],
+    "suppliers": [
+      "EWao7bxkxEsSWjiEj8bd"
+    ]
+  },
+  "q8o6SC8O7WvRPH4Ce1LF": {
+    "type": "simple",
+    "sku": "WI-A0343",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "components": [],
+    "suppliers": [
+      "q6Ha8y5zOROlQJ9noTHK"
+    ],
+    "unitCost": 16.57,
+    "name": "Tubo de acero inoxidable Ø 33,7 x 1.5 mm (1\") x 2000 mm."
+  },
+  "qImu2lqclxUitaI86uwi": {
+    "type": "simple",
+    "sku": "WI-A0037",
+    "name": "Cable Automoción 1mm Negro",
+    "supplierProductCode": "CO1087",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "qx2OYfiA6txzMDXmnTb0": {
+    "type": "simple",
+    "sku": "WI-A0398",
+    "name": "1080P AHD Fisheye Camera, 1.45mm, 180°, with Night Vision",
+    "supplierProductCode": "FHD135410CA",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-02-11T10:08:56.173Z"
+  },
+  "r4Kcmi8Pl220PsyLZuo6": {
+    "type": "simple",
+    "sku": "WI-A0207",
+    "name": "Conector Superseal 1 a 6 vias Hembra 5",
+    "supplierProductCode": "C01034",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.62,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "rDj2c0gEFbCDip7spO5O": {
+    "type": "simple",
+    "sku": "WI-A0192",
+    "name": "Conectores  Mat-n-Lok hembra 9",
+    "supplierProductCode": "C01020",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.77,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "rE4fcIsSicyAe3q2XcOQ": {
+    "type": "simple",
+    "sku": "WI-A0049",
+    "name": "Cable Automoción 2 mm Blanco",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.47,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": [],
+    "supplierProductCode": "CO1069"
+  },
+  "rKkCF2GcQ4Ss0APeNjZT": {
+    "type": "simple",
+    "sku": "WI-A0043",
+    "name": "Cable Automoción 1.5 mm Rojo",
+    "supplierProductCode": "CO1079",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.374,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "rjbF9KwRmSPXsrgypdMJ": {
+    "unitCost": 1.101,
+    "unit": "ud",
+    "sku": "WI-A0327",
+    "type": "simple",
+    "components": [],
+    "suppliers": [
+      "Tu49rBXIIm5YjF6eU1US"
+    ],
+    "family": "Harting",
+    "observations": "",
+    "name": "Contacto para conector circular HARTING serie D-Sub Standard, Hembra, tamaño 1.8mm, para cable de 24→ 20 AWG",
+    "isImport": false,
+    "minThreshold": 0,
+    "supplierProductCode": " 1903387"
+  },
+  "rkBc9qGSOo6Ugirq0bx9": {
+    "type": "simple",
+    "sku": "WI-A0090",
+    "name": "WAGO TAPA FINAL BRNA TOPJOBS NARANJA 2002-1492",
+    "supplierProductCode": "6600728056",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.3,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "rm2LlwMY4y9df4R0K1Ux": {
+    "type": "simple",
+    "sku": "WI-A0018",
+    "name": "CONECTOR 42P HEMBRA 09140423101",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 13,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "sOJUkflo9YEv6a9fiHD0": {
+    "type": "simple",
+    "sku": "WI-A0333",
+    "name": "Señalizador Unex numero pequeño 1811-4(100 unds)",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.243,
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "sV3hpTK2vKO5kHe62An2": {
+    "type": "simple",
+    "sku": "WI-A0073",
+    "name": "WAGO PUENTE 5 VIAS (IMPARES) 2002-405/011-000",
+    "supplierProductCode": "9990047297",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.41,
+    "components": [],
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "family": "Borneros Wago"
+  },
+  "szUn1175DTU3q3mZ735l": {
+    "type": "simple",
+    "sku": "WI-A0170",
+    "name": "Conector Molex Minifit Jr Hembra 10",
+    "supplierProductCode": "C00185",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.86,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "szspbLcxoTIjQFLTFWlp": {
+    "type": "simple",
+    "sku": "WI-A0191",
+    "name": "Conectores  Mat-n-Lok hembra 6",
+    "supplierProductCode": "C01021",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.73,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "tDA7HlztoFz36wq7wEUN": {
+    "type": "simple",
+    "sku": "WI-A0110",
+    "name": "Contacto coaxial, pin, 50 Ω DIN 41626, conexión soldada",
+    "supplierProductCode": "9140006111",
+    "family": "Harting",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": true,
+    "unitCost": 16.185,
+    "suppliers": [
+      "Fzfhg03VV67mcpBY74Nu"
+    ],
+    "components": []
+  },
+  "tMXXUleCZ52JMgukmfy6": {
+    "type": "simple",
+    "sku": "WI-A0264",
+    "name": "Terminal puntera Hueca 50mm",
+    "supplierProductCode": "C00294",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.3,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "tNRK36MNQ1na3AWzAyD8": {
+    "type": "simple",
+    "sku": "WI-A0150",
+    "name": "Pasabridas con adhesivo 3M Blanco 28x28 mm",
+    "supplierProductCode": "C00154",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1108,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "tpuvNFuZxGZ8sPGLUfbT": {
+    "type": "simple",
+    "sku": "WI-A0311",
+    "name": "Mts. Canal gris RAL7030 25x20 U23X 77 UNEX 25.20.77",
+    "supplierProductCode": "S/N",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "isImport": false,
+    "unitCost": 1.9038,
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "tqJXiMHNc9TzPH1y4dpX": {
+    "type": "simple",
+    "sku": "WI-A0397",
+    "name": "10.1 Inches Color Display For 360° AVM System Use",
+    "supplierProductCode": "HD100293DC",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd"
+    ],
+    "components": [],
+    "createdAt": "2026-02-11T10:00:18.349Z"
+  },
+  "tt2Uzo5K5XrrmC20a290": {
+    "type": "simple",
+    "sku": "WI-A0251",
+    "name": "Terminal de Horquilla Aislados Azul 1 a 2.5 mm 5mm/6mm",
+    "supplierProductCode": "C00230",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.74,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "uDx6mstmegwEUwHaLyDx": {
+    "type": "simple",
+    "sku": "WI-A0294",
+    "name": "Funda Termoretractil HFT en bobinas negro 6 mm",
+    "supplierProductCode": "C00597",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.1735,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "uPCpvedftuzomLZ4Cpuv": {
+    "type": "simple",
+    "sku": "WI-A0286",
+    "name": "Fusible plano Estándar Transparente 25 A",
+    "supplierProductCode": "C01143",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ubl53zVQ881jg7e43f27": {
+    "type": "simple",
+    "sku": "WI-A0196",
+    "name": "Conectores  Mat-n-Lok Macho 3",
+    "supplierProductCode": "C01028",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.41,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "uydJJJWCrb133K2oAvFM": {
+    "type": "simple",
+    "sku": "WI-A0348",
+    "name": "SW-420 AZ-Delivery",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 2.16,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": []
+  },
+  "v1G7U4HtBxwoqpcI3Eyd": {
+    "type": "simple",
+    "sku": "WI-A0014",
+    "name": "ARANDELA HARTING 09140009936",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.4,
+    "supplier": "STEKER LADEN",
+    "components": [],
+    "supplierProductCode": "09140009936",
+    "family": "Harting",
+    "suppliers": [
+      "Fzfhg03VV67mcpBY74Nu",
+      "3RljzUKSxT5ArHYSNKEF"
+    ]
+  },
+  "vAJrdaK444xMpKymQhV4": {
+    "type": "simple",
+    "sku": "WI-A0164",
+    "name": "Conector Molex Minifit Jr Macho 16",
+    "supplierProductCode": "C00180",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.01,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "vCPjDZ5p6zTtF8zbxBX9": {
+    "type": "simple",
+    "sku": "WI-A0353",
+    "name": "Rele MAHLE MR-95 24v 20/10A",
+    "supplierProductCode": "",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 2.56,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "vFpNQ2ZCJ3bhEl1ZuSiB": {
+    "type": "simple",
+    "sku": "WI-A0023",
+    "name": "RELE FINDER 805102400000",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 28.7213,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "supplierProductCode": "94.04SMA",
+    "family": "Varios"
+  },
+  "vJc70GzRwcLTW5nu5uOR": {
+    "type": "simple",
+    "sku": "WI-A0309",
+    "name": "Tubo coarrugado Poliamida Abierto  22 mm",
+    "supplierProductCode": "C00345",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.278,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "vKA5EDbVnhXYz7QXZcXT": {
+    "type": "simple",
+    "sku": "WI-A0375",
+    "name": "FUNDA TRASERA CONECTOR RJ45",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "wPUEJqSqpuKXbMF5X9Go"
+    ],
+    "components": [],
+    "createdAt": "2026-01-22T07:26:29.768Z",
+    "unitCost": 0.078,
+    "updatedAt": "2026-01-22T07:32:03.105Z"
+  },
+  "va0sU35ITtr1BlI4VN8p": {
+    "type": "simple",
+    "sku": "WI-A0180",
+    "name": "Conector Fastom multi-vias nylon Hembra 6",
+    "supplierProductCode": "C00747",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.37,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "vbRoA1A8sAcGb0EgiMuk": {
+    "type": "simple",
+    "sku": "WI-A0217",
+    "name": " Robacorrientes-Segregadores Amarillo 2,5-6 mm",
+    "supplierProductCode": "C00785",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.13,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "vii36XfSOv79Y2BF6c2F": {
+    "type": "simple",
+    "sku": "WI-A0048",
+    "name": "Cable Automoción 2 mm Negro",
+    "supplierProductCode": "CO1070",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.47,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "vl9IkKZM5e4ZfkmcI2ZW": {
+    "type": "simple",
+    "sku": "WI-A0040",
+    "name": "Cable Automoción 1.5 mm Blanco",
+    "supplierProductCode": "CO1082",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "unitCost": 0.28,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "vmsMWhZXtzKr3cuwGKlN": {
+    "type": "simple",
+    "sku": "WI-A0122",
+    "name": "BRIDA NEGRA 300X4,8",
+    "supplierProductCode": "S/N",
+    "family": "Bridas",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "components": [],
+    "suppliers": [
+      "cSSDbKA5SWkJq1JOQDdZ",
+      "tQXcxkPeWSx70MP6CBfW"
+    ]
+  },
+  "vspDspEShCjbd3kOJDqL": {
+    "type": "simple",
+    "sku": "WI-A0130",
+    "supplierProductCode": "C00418",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2306,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "name": "Cables FLRY-B Bi- Colores Rojo/negro 0.75 mm",
+    "updatedAt": "2026-01-23T11:23:38.735Z"
+  },
+  "w3qaRqVryfVyANnQVGT3": {
+    "type": "simple",
+    "sku": "WI-A0349",
+    "name": "LM2596 DC-DC 3A-TECNOIOT",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 4.21,
+    "suppliers": [
+      "IG1PssJALhTDNEugRzTG"
+    ],
+    "components": []
+  },
+  "wSB19I6MjN5wkswEw9BO": {
+    "isImport": false,
+    "unitCost": 3.93,
+    "suppliers": [
+      "Tu49rBXIIm5YjF6eU1US"
+    ],
+    "components": [],
+    "family": "Harting",
+    "observations": "",
+    "sku": "WI-A0328",
+    "supplierProductCode": "6931098P",
+    "type": "simple",
+    "name": "Contacto de alimentación de conector D-Sub HARTING 09691827420, Serie D-Sub Mixed, Hembra",
+    "minThreshold": 0,
+    "unit": "ud"
+  },
+  "wZ5UBooDF2fposu9fnaa": {
+    "type": "simple",
+    "sku": "WI-A0205",
+    "name": "Conector Superseal 1 a 6 vias Hembra 3",
+    "supplierProductCode": "C01036",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.41,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "wamiZzgpKguS3ZUPEJg0": {
+    "type": "simple",
+    "sku": "WI-A0093",
+    "name": "WAGO PLACA SECCIONADORA FINAL 1,5MM NARANJA 2007-8892",
+    "supplierProductCode": "9990053694",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.33,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "wanq0UPC3nmv9sYUg5hf": {
+    "type": "simple",
+    "sku": "WI-A0137",
+    "name": "Funda macarrón PVC flexible negro 12mm",
+    "supplierProductCode": "C00707",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2876,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "wheZzxvzzlrMBYbN96yY": {
+    "type": "simple",
+    "sku": "WI-A0295",
+    "name": "Funda Termoretractil HFT en bobinas negro 9 mm",
+    "supplierProductCode": "C00598",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2395,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "whocpzGAKn9nDEBL02cw": {
+    "type": "simple",
+    "sku": "WI-A0136",
+    "name": "Funda macarrón PVC flexible negro 10 mm",
+    "supplierProductCode": "C00706",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.3149,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "wweTXHq4OuPAlMeFWLHa": {
+    "type": "simple",
+    "sku": "WI-A0021",
+    "name": "TERMINAL HEMBRA 09150006223",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 2.3283,
+    "supplier": "STEKER LADEN",
+    "components": []
+  },
+  "xLyzDuxJYmyfTrH1t7CN": {
+    "type": "simple",
+    "sku": "WI-A0129",
+    "name": "Cables FLRY-B Bi- Colores Rojo/Blanco 1 mm",
+    "supplierProductCode": "C00886",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2306,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "xaPv2syMxd9PD8OJM9Dy": {
+    "type": "simple",
+    "sku": "WI-A0080",
+    "name": "WAGO TAPA PARA BORNA 2,5MM PUSH IN NARANJA 2002-1692",
+    "supplierProductCode": "6600728045",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.16,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "xb9nw2teXUf1XrXAAf55": {
+    "type": "simple",
+    "sku": "WI-A0285",
+    "name": "Fusible plano Estándar Amarillo de  20A",
+    "supplierProductCode": "C01144",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.0585,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "xcJJBjofi666UwC3nNCi": {
+    "type": "simple",
+    "sku": "WI-A0131",
+    "name": "Cables FLRY-B Bi- Colores Rojo/negro 1 mm",
+    "supplierProductCode": "C00238",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2306,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "xuQ7XC8DgpjuU5NZMP3q": {
+    "type": "simple",
+    "sku": "WI-A0145",
+    "name": "Pasacables PVC con ranura 23,7 mm (20,1x 15,5 mm)",
+    "supplierProductCode": "GM-2015",
+    "family": "Varios",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.164,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "xwzymRhUT3QtpvKWPcZ4": {
+    "type": "simple",
+    "sku": "WI-A0316",
+    "name": "Conector D-Sub-DB9 Hembra",
+    "supplierProductCode": "S/N",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.286,
+    "suppliers": [
+      "8ApKd4hqikx63v3YNTO4"
+    ],
+    "components": []
+  },
+  "y3ETQVrhmvdBpdECealE": {
+    "type": "simple",
+    "sku": "WI-A0308",
+    "name": "Tubo coarrugado Poliamida Abierto  17 mm",
+    "supplierProductCode": "C0346",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.0228,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "y4yhn4Y1zhY5ELBm7JN6": {
+    "type": "simple",
+    "sku": "WI-A0245",
+    "name": "Terminal Anilla Aislado Amarillo 2.5 a 6 mm  10 mm",
+    "supplierProductCode": "C01128",
+    "family": "Terminales",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.13,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "ylRQVXOOPRgGZUVfLOo0": {
+    "type": "simple",
+    "sku": "WI-A0081",
+    "name": "WAGO BORNA BASE 2 CDTORS.S.2002 66,5MM GR 2002-1661",
+    "supplierProductCode": "6600728057",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 1.58,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "yp8DoU6YLxyRNSLOYoQ8": {
+    "type": "simple",
+    "sku": "WI-A0065",
+    "name": "Cable Automoción 4 mm Rojo",
+    "supplierProductCode": "CO0802",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 49,
+    "unitCost": 0.81,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "yq8611mhfRTsIsl5BFiP": {
+    "type": "simple",
+    "sku": "WI-A0092",
+    "name": "WAGO TAPA PARA BORNA 2,5MM SECCIONABLE/FUSIBLE NJA 2002-1692",
+    "supplierProductCode": "6600728061",
+    "family": "Borneros Wago",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 1,
+    "unitCost": 0.31,
+    "suppliers": [
+      "S9oB9oa2TftiPWNnxf40"
+    ],
+    "components": []
+  },
+  "z9LmTpsTAzaJKrYsfEso": {
+    "type": "simple",
+    "name": "CONERTOR RETEN TRASERO FMS ",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.95,
+    "supplier": "TRANSFER MULTISORT ELEKTRONIK SL (TME)",
+    "components": [],
+    "isImport": false,
+    "suppliers": [],
+    "supplierProductCode": "",
+    "family": "",
+    "sku": "WI-A0013",
+    "updatedAt": "2026-01-12T14:26:16.224Z"
+  },
+  "zCWUAd2W61XhrrP7rgLU": {
+    "type": "simple",
+    "sku": "WI-A0395",
+    "name": "Aduanas de Importación de Material ",
+    "supplierProductCode": "",
+    "family": "",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0,
+    "suppliers": [
+      "E1cg6tLW9HcmW8asEMpd",
+      "TROYf4uDRUlfupkHBGhn"
+    ],
+    "components": [],
+    "createdAt": "2026-02-03T07:07:54.466Z"
+  },
+  "zHsaNbfIMHiHgiPf5yT4": {
+    "type": "simple",
+    "sku": "WI-A0301",
+    "name": "Tubo coarrugado Poliamida14mm/18.3mm",
+    "supplierProductCode": "C00982",
+    "family": "Tubos",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": [],
+    "unitCost": 0.9082
+  },
+  "zMF5VQixsNs7TguVAsmM": {
+    "type": "simple",
+    "sku": "WI-A0062",
+    "name": "Cable Automoción 4 mm Azul",
+    "supplierProductCode": "CO0805",
+    "family": "Cableado",
+    "unit": "ml",
+    "observations": "",
+    "minThreshold": 47,
+    "unitCost": 0.81,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW",
+      "cSSDbKA5SWkJq1JOQDdZ"
+    ],
+    "components": []
+  },
+  "zfIOMcU7V8cak8n59jQX": {
+    "type": "simple",
+    "sku": "WI-A0028",
+    "name": "TERMINAL TORN.8,5 CABLE 1-2,5",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 10,
+    "unitCost": 0.12,
+    "supplier": "RINAFILS SL (COELECTRIX)",
+    "components": []
+  },
+  "zsI9N77FzbY6CyUmydFO": {
+    "type": "simple",
+    "sku": "WI-A0133",
+    "name": "Cables FLRY-B Bi- Colores Gris/Blanco 1 mm",
+    "supplierProductCode": "C00881",
+    "family": "Cableado",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 0.2306,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  },
+  "zu5kZcfrhq0ug7JHLMFd": {
+    "type": "simple",
+    "sku": "WI-A0174",
+    "name": "Conector 2 vías SUPERSEAL 2,8 estanco Macho",
+    "supplierProductCode": "C00359",
+    "family": "Conectores",
+    "unit": "ud",
+    "observations": "",
+    "minThreshold": 0,
+    "isImport": false,
+    "unitCost": 1.93,
+    "suppliers": [
+      "tQXcxkPeWSx70MP6CBfW"
+    ],
+    "components": []
+  }
+}

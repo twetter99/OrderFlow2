@@ -389,6 +389,8 @@ export type InformeViaje = {
 
 // --- Tipos para el módulo de Inteligencia de Precios ---
 
+export type InventoryMovementType = 'reception' | 'consumption' | 'adjustment' | 'transfer';
+
 export type InventoryHistoryEntry = {
   id: string;
   itemId: string;           // ID del artículo del inventario
@@ -398,13 +400,19 @@ export type InventoryHistoryEntry = {
   supplierName: string;     // Nombre del proveedor (desnormalizado)
   purchaseOrderId: string;  // ID de la orden de compra
   orderNumber: string;      // Número de orden (desnormalizado)
-  quantity: number;         // Cantidad comprada
+  quantity: number;         // Cantidad comprada / consumida (positivo = entrada, negativo = salida)
   unitPrice: number;        // Precio unitario en esa compra
-  totalPrice: number;       // Precio total (quantity * unitPrice)
+  unitCost?: number;        // Alias de unitPrice
+  totalPrice: number;       // Precio total (abs(quantity) * unitPrice)
   unit: string;             // Unidad de medida
-  date: string | Timestamp; // Fecha de la compra/recepción
+  date: string | Timestamp; // Fecha del movimiento
   projectId?: string;       // ID del proyecto asociado (opcional)
   projectName?: string;     // Nombre del proyecto (desnormalizado)
+  locationId?: string;      // ID de la ubicación/almacén
+  type?: InventoryMovementType; // Tipo de movimiento (por defecto 'reception')
+  userId?: string;          // UID del usuario que registró el movimiento
+  userName?: string;        // Nombre del usuario (desnormalizado)
+  notes?: string;           // Notas / motivo del ajuste
 };
 
 export type PriceMetrics = {
@@ -417,4 +425,107 @@ export type PriceMetrics = {
   priceVariation: number;   // Porcentaje de variación (max-min)/avg * 100
   lastPrice: number;
   lastPurchaseDate: string;
+};
+
+// --- Tipos para el módulo de Análisis, Trazabilidad y Dashboard de Inventario ---
+
+export type AnalyticsDateRange = {
+  from: string; // ISO date
+  to: string;   // ISO date
+};
+
+export type SupplierSummary = {
+  supplierId: string;
+  supplierName: string;
+  totalSpent: number;
+  totalQuantity: number;
+  purchaseCount: number;
+  avgPrice: number;
+};
+
+export type ProjectSummary = {
+  projectId: string;
+  projectName: string;
+  totalSpent: number;
+  totalQuantity: number;
+  receptionCount: number;
+};
+
+export type MaterialAnalysis = {
+  itemId: string;
+  itemSku: string;
+  itemName: string;
+  family?: string;
+  unit: string;
+  totalPurchased: number;    // Cantidad total comprada en el rango
+  totalConsumed: number;     // Cantidad total consumida en el rango
+  totalSpent: number;        // Importe total gastado (solo recepciones)
+  weightedAvgPrice: number;  // Precio medio ponderado
+  minPrice: number;
+  maxPrice: number;
+  lastPrice: number;
+  lastPurchaseDate: string;
+  topSuppliers: SupplierSummary[];
+  topProjects: ProjectSummary[];
+  movementCount: number;
+};
+
+export type TraceabilityMovement = {
+  id: string;
+  date: string;
+  type: InventoryMovementType;
+  itemId: string;
+  itemSku: string;
+  itemName: string;
+  supplierId?: string;
+  supplierName?: string;
+  projectId?: string;
+  projectName?: string;
+  locationId?: string;
+  orderNumber?: string;
+  purchaseOrderId?: string;
+  quantity: number;
+  unitPrice: number;
+  totalPrice: number;
+  unit: string;
+  userId?: string;
+  userName?: string;
+  notes?: string;
+};
+
+export type TimeSeriesPoint = {
+  period: string;      // Etiqueta del periodo (día, semana, mes)
+  date: string;        // ISO date del inicio del periodo
+  totalSpent: number;
+  totalQuantity: number;
+  receptionCount: number;
+  consumptionCount: number;
+};
+
+export type MaterialDashboardData = {
+  itemId: string;
+  itemSku: string;
+  itemName: string;
+  unit: string;
+  currentPeriodSpent: number;
+  previousPeriodSpent: number;
+  spentChangePercent: number;
+  currentPeriodQty: number;
+  previousPeriodQty: number;
+  qtyChangePercent: number;
+  timeSeries: TimeSeriesPoint[];
+  topProjects: ProjectSummary[];
+  topSuppliers: SupplierSummary[];
+  weightedAvgPrice: number;
+  lastPrice: number;
+};
+
+export type GlobalDashboardData = {
+  totalSpent: number;
+  totalMovements: number;
+  topMaterialsBySpend: { itemId: string; itemSku: string; itemName: string; totalSpent: number; totalQuantity: number; unit: string }[];
+  topMaterialsByQuantity: { itemId: string; itemSku: string; itemName: string; totalQuantity: number; totalSpent: number; unit: string }[];
+  spendTimeSeries: TimeSeriesPoint[];
+  priceAlerts: { itemId: string; itemSku: string; itemName: string; changePercent: number; currentAvgPrice: number; previousAvgPrice: number }[];
+  consumptionAlerts: { itemId: string; itemSku: string; itemName: string; currentQty: number; avgQty: number; deviationFactor: number }[];
 };

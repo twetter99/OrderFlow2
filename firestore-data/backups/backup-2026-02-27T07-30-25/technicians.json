@@ -1,0 +1,137 @@
+{
+  "M93YsnzNtboajpouSmvZ": {
+    "name": "Ramon Burgoa",
+    "specialty": "General",
+    "category": "Jefe de Equipo / Encargado de Instalación",
+    "email": "rbugoa@winfin.es",
+    "notes": "Jefe de Equipo",
+    "rates": {
+      "rateWorkHour": 65,
+      "rateTravelHour": 35,
+      "rateOvertimeWeekdayDay": 85,
+      "rateOvertimeWeekdayNight": 105,
+      "rateOvertimeWeekendDay": 105,
+      "rateOvertimeWeekendNight": 120,
+      "rateNotes": "sujetas a revision "
+    },
+    "password": "6WZNfi",
+    "phone": "629125529"
+  },
+  "MajPREYf9WsJ27bXtvou": {
+    "name": "Robesley Hernandez ",
+    "specialty": "General",
+    "category": "Técnico Instalador",
+    "phone": "642354807",
+    "notes": "",
+    "rates": {
+      "rateWorkHour": 0,
+      "rateTravelHour": 0,
+      "rateOvertimeWeekdayDay": 0,
+      "rateOvertimeWeekdayNight": 0,
+      "rateOvertimeWeekendDay": 0,
+      "rateOvertimeWeekendNight": 0,
+      "rateNotes": ""
+    }
+  },
+  "Pzk64DwDQshGfHSzJyjV": {
+    "name": "Asier Mariño",
+    "specialty": "General",
+    "category": "Técnico Ayudante / Auxiliar",
+    "phone": "606102141",
+    "notes": "",
+    "rates": {
+      "rateWorkHour": 0,
+      "rateTravelHour": 0,
+      "rateOvertimeWeekdayDay": 0,
+      "rateOvertimeWeekdayNight": 0,
+      "rateOvertimeWeekendDay": 0,
+      "rateOvertimeWeekendNight": 0,
+      "rateNotes": ""
+    },
+    "createdAt": {
+      "_seconds": 1765803874,
+      "_nanoseconds": 536000000
+    }
+  },
+  "Tg1kz9Tc8IAHTDzmrQ1c": {
+    "name": "Miguel Blanco",
+    "specialty": "General",
+    "category": "Jefe de Equipo / Encargado de Instalación",
+    "phone": "682173775",
+    "notes": "",
+    "rates": {
+      "rateWorkHour": 0,
+      "rateTravelHour": 0,
+      "rateOvertimeWeekdayDay": 0,
+      "rateOvertimeWeekdayNight": 0,
+      "rateOvertimeWeekendDay": 0,
+      "rateOvertimeWeekendNight": 0,
+      "rateNotes": ""
+    }
+  },
+  "XzWmwW5rL8JaN5VtzPWi": {
+    "name": "Gorka García",
+    "specialty": "General",
+    "category": "Técnico Instalador",
+    "phone": "621302509",
+    "notes": "",
+    "rates": {
+      "rateWorkHour": 0,
+      "rateTravelHour": 0,
+      "rateOvertimeWeekdayDay": 0,
+      "rateOvertimeWeekdayNight": 0,
+      "rateOvertimeWeekendDay": 0,
+      "rateOvertimeWeekendNight": 0,
+      "rateNotes": ""
+    }
+  },
+  "i30OVbWEGCdnPw7fO6R9": {
+    "specialty": "General",
+    "category": "Jefe de Equipo / Encargado de Instalación",
+    "notes": "BASE PRINCIPAL DONOSTI",
+    "rates": {
+      "rateWorkHour": 0,
+      "rateTravelHour": 0,
+      "rateOvertimeWeekdayDay": 0,
+      "rateOvertimeWeekdayNight": 0,
+      "rateOvertimeWeekendDay": 0,
+      "rateOvertimeWeekendNight": 0,
+      "rateNotes": ""
+    },
+    "phone": "64764941",
+    "name": "Asier Pardavila"
+  },
+  "iNqCFwDMMU8luLo6xq3v": {
+    "name": "Oscar Vicente Sánchez",
+    "specialty": "General",
+    "category": "Técnico Instalador",
+    "phone": "687709343",
+    "notes": "",
+    "rates": {
+      "rateWorkHour": 0,
+      "rateTravelHour": 0,
+      "rateOvertimeWeekdayDay": 0,
+      "rateOvertimeWeekdayNight": 0,
+      "rateOvertimeWeekendDay": 0,
+      "rateOvertimeWeekendNight": 0,
+      "rateNotes": ""
+    }
+  },
+  "knit48NSlFGir6Y0vx12": {
+    "name": "David Martin",
+    "specialty": "General",
+    "category": "Técnico de Mantenimiento",
+    "phone": "686847168",
+    "email": "dmartin@winfin.es",
+    "notes": "",
+    "rates": {
+      "rateWorkHour": 0,
+      "rateTravelHour": 0,
+      "rateOvertimeWeekdayDay": 0,
+      "rateOvertimeWeekdayNight": 0,
+      "rateOvertimeWeekendDay": 0,
+      "rateOvertimeWeekendNight": 0,
+      "rateNotes": ""
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-02-27T07:30:25.847Z",
+  "projectId": "orderflow-pxtw9",
+  "collections": {
+    "clients": 58,
+    "deliveryNotes": 0,
+    "installationTemplates": 0,
+    "inventory": 403,
+    "inventoryLocations": 168,
+    "locations": 4,
+    "operadores": 47,
+    "payments": 0,
+    "projects": 17,
+    "purchaseOrders": 146,
+    "replanteos": 0,
+    "supervisores": 3,
+    "supplierInvoices": 1,
+    "suppliers": 53,
+    "technicians": 8,
+    "usuarios": 3,
+    "users": 0
+  }
+}

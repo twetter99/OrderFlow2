@@ -1,0 +1,117 @@
+{
+  "XNun2OzY8rdIBJkCnU5SyWhLSpE2": {
+    "uid": "XNun2OzY8rdIBJkCnU5SyWhLSpE2",
+    "personId": "sup-jvKwqvvmdIybd4LaKtdq",
+    "name": "Beatriz Blanco",
+    "email": "bmblanco@winfin.es",
+    "phone": "666 66 66 66 ",
+    "providerId": "password",
+    "createdAt": {
+      "_seconds": 1754322492,
+      "_nanoseconds": 201000000
+    },
+    "permissions": [
+      "dashboard",
+      "inventory",
+      "locations",
+      "receptions",
+      "despatches",
+      "purchasing",
+      "completed-orders",
+      "supplier-invoices",
+      "payments",
+      "resource-planning",
+      "projects",
+      "travel-planning",
+      "installation-templates",
+      "replan",
+      "project-tracking",
+      "clients",
+      "users",
+      "ai-assistant",
+      "supervisores",
+      "settings",
+      "documentation",
+      "technicians",
+      "reminders",
+      "approval-flows",
+      "operadores",
+      "reports",
+      "suppliers"
+    ],
+    "lastLoginAt": {
+      "_seconds": 1772175900,
+      "_nanoseconds": 688000000
+    }
+  },
+  "hstmO2zM2JQDRnbrvjJHPz3i3nj2": {
+    "email": "juan@winfin.es",
+    "phone": "682173774",
+    "name": "Juan Blanco",
+    "personId": "hstmO2zM2JQDRnbrvjJHPz3i3nj2",
+    "role": "admin",
+    "permissions": [
+      "dashboard",
+      "projects",
+      "installation-templates",
+      "replan",
+      "resource-planning",
+      "travel-planning",
+      "inventory",
+      "locations",
+      "receptions",
+      "despatches",
+      "purchasing",
+      "completed-orders",
+      "suppliers",
+      "supplier-invoices",
+      "payments",
+      "project-tracking",
+      "reports",
+      "documentation",
+      "ai-assistant",
+      "clients",
+      "operadores",
+      "technicians",
+      "supervisores",
+      "users",
+      "approval-flows",
+      "settings",
+      "reminders",
+      "project-tracking",
+      "price-intelligence"
+    ],
+    "lastLoginAt": {
+      "_seconds": 1772176623,
+      "_nanoseconds": 762000000
+    }
+  },
+  "nJ0hu2tWcFT7VvkKgvzM4Rc912l1": {
+    "uid": "nJ0hu2tWcFT7VvkKgvzM4Rc912l1",
+    "personId": "sup-b9PwSd3rkd0w1wA26bQT",
+    "name": "Gema Sarahi Sobalvarro",
+    "email": "gsobalvarro@winfin.es",
+    "phone": "666 66 66 66 ",
+    "providerId": "password",
+    "createdAt": {
+      "_seconds": 1754321966,
+      "_nanoseconds": 301000000
+    },
+    "permissions": [
+      "dashboard",
+      "inventory",
+      "locations",
+      "receptions",
+      "despatches",
+      "purchasing",
+      "completed-orders",
+      "suppliers",
+      "operadores",
+      "clients"
+    ],
+    "lastLoginAt": {
+      "_seconds": 1772096357,
+      "_nanoseconds": 264000000
+    }
+  }
+}
