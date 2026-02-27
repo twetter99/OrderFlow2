@@ -18,6 +18,7 @@ import type {
 } from "@/lib/types";
 import { format, subDays, startOfWeek, startOfMonth, parseISO, isWithinInterval, differenceInCalendarDays } from "date-fns";
 import { es } from "date-fns/locale";
+import { sanitizeForClient } from "@/lib/utils";
 
 // ──────────────────────────────────────────────────────────────────────────────
 // HELPERS
@@ -75,17 +76,17 @@ function safeEntry(doc: FirebaseFirestore.DocumentSnapshot): InventoryHistoryEnt
 
 export async function getAnalyticsInventoryItems(): Promise<InventoryItem[]> {
   const snap = await db.collection("inventory").get();
-  return snap.docs.map((d) => ({ id: d.id, ...d.data() } as InventoryItem));
+  return snap.docs.map((d) => sanitizeForClient({ id: d.id, ...d.data() }) as InventoryItem);
 }
 
 export async function getAnalyticsSuppliers(): Promise<Supplier[]> {
   const snap = await db.collection("suppliers").get();
-  return snap.docs.map((d) => ({ id: d.id, ...d.data() } as Supplier));
+  return snap.docs.map((d) => sanitizeForClient({ id: d.id, ...d.data() }) as Supplier);
 }
 
 export async function getAnalyticsProjects(): Promise<Project[]> {
   const snap = await db.collection("projects").get();
-  return snap.docs.map((d) => ({ id: d.id, ...d.data() } as Project));
+  return snap.docs.map((d) => sanitizeForClient({ id: d.id, ...d.data() }) as Project);
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
