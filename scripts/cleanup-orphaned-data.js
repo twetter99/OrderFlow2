@@ -14,22 +14,29 @@ const path = require("path");
 // Cargar variables de entorno
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
-const serviceAccountPath = process.env.GOOGLE_APPLICATION_CREDENTIALS
-  || process.env.FIREBASE_SERVICE_ACCOUNT_KEY
-  || path.resolve(__dirname, "../serviceAccountKey.json");
+// Usar las mismas variables de entorno que firebase-admin.ts
+const projectId = process.env.FIREBASE_PROJECT_ID;
+const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+const privateKey = process.env.FIREBASE_PRIVATE_KEY;
 
-try {
-  const serviceAccount = require(path.resolve(serviceAccountPath));
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-  });
-} catch (e) {
-  if (!admin.apps.length) {
-    admin.initializeApp({
-      projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "orderflow-pxtw9",
-    });
-  }
+if (!projectId || !clientEmail || !privateKey) {
+  console.error("❌ Faltan variables de entorno: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY");
+  console.error("   Asegúrate de que el archivo .env está configurado correctamente.");
+  process.exit(1);
 }
+
+let formattedPrivateKey = privateKey;
+if (privateKey.includes('\\n')) {
+  formattedPrivateKey = privateKey.replace(/\\n/g, '\n');
+}
+
+admin.initializeApp({
+  credential: admin.credential.cert({
+    projectId,
+    clientEmail,
+    privateKey: formattedPrivateKey,
+  }),
+});
 
 const db = admin.firestore();
 const isDryRun = !process.argv.includes("--execute");
