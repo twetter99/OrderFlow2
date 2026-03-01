@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { LoginForm } from "@/components/auth/login-form";
 import Image from "next/image";
 import { Loader2 } from 'lucide-react';
@@ -11,13 +11,15 @@ import React from 'react';
 export default function LoginPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   
-  // Si el usuario ya está autenticado (incluso en segundo plano), redirigir
+  // Si el usuario ya está autenticado, redirigir a returnUrl o dashboard
   React.useEffect(() => {
     if (!loading && user) {
-        router.push('/dashboard');
+        const returnUrl = searchParams.get('returnUrl') || '/dashboard';
+        router.push(returnUrl);
     }
-  }, [user, loading, router]);
+  }, [user, loading, router, searchParams]);
 
 
   // Muestra un loader general si el contexto de autenticación aún está procesando

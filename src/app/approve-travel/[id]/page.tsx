@@ -4,9 +4,9 @@ import { TravelApprovalPage } from "./travel-approval-client";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 async function getTravelReport(id: string): Promise<InformeViaje | null> {
@@ -40,7 +40,8 @@ async function getTravelReport(id: string): Promise<InformeViaje | null> {
 }
 
 export default async function ApproveTravelReportPage({ params }: PageProps) {
-  const report = await getTravelReport(params.id);
+  const { id } = await params;
+  const report = await getTravelReport(id);
 
   if (!report) {
     notFound();

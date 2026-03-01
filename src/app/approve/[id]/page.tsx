@@ -67,9 +67,9 @@ function StatusBadge({ status }: { status: PurchaseOrder['status'] }) {
 }
 
 // --- CORRECCIÓN APLICADA AQUÍ ---
-// Se ajusta la forma de recibir y usar los 'params' para ser compatible con Next.js
-export default async function PublicApprovalPage({ params }: { params: { id: string }}) {
- const { id } = params; // Accedemos al ID de forma segura
+// Se ajusta la forma de recibir y usar los 'params' para ser compatible con Next.js 16+
+export default async function PublicApprovalPage({ params }: { params: Promise<{ id: string }> }) {
+ const { id } = await params;
  const order = await getOrderDetails(id);
 
  // Si la orden no se encuentra, mostramos una página de error clara
