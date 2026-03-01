@@ -6,9 +6,9 @@ import { LoginForm } from "@/components/auth/login-form";
 import Image from "next/image";
 import { Loader2 } from 'lucide-react';
 import { useAuth } from '@/context/auth-context';
-import React from 'react';
+import React, { Suspense } from 'react';
 
-export default function LoginPage() {
+function LoginContent() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -50,5 +50,17 @@ export default function LoginPage() {
         <LoginForm />
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-screen w-full items-center justify-center bg-black">
+        <Loader2 className="h-10 w-10 animate-spin text-white" />
+      </div>
+    }>
+      <LoginContent />
+    </Suspense>
   );
 }
