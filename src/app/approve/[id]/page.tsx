@@ -89,45 +89,47 @@ export default async function PublicApprovalPage({ params }: { params: Promise<{
  const formatCurrency = (value: number) => new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(value);
 
  return (
-   <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4 font-sans">
+   <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-3 sm:px-6 py-6 font-sans">
      <div className="w-full max-w-4xl mx-auto">
-       <header className="mb-8 text-center">
+       <header className="mb-6 sm:mb-8 text-center">
            <Image 
                src="/images/logo.png" 
                alt="Logo de la empresa" 
-               width={200} 
-               height={50}
-               className="mx-auto mb-6"
+               width={160} 
+               height={40}
+               className="mx-auto mb-4 sm:mb-6 w-[120px] sm:w-[200px] h-auto"
            />
-           <h1 className="text-4xl font-bold tracking-tight text-gray-900">Solicitud de Aprobación</h1>
-           <p className="mt-2 text-lg text-gray-600">Revisa los detalles de la orden de compra antes de tomar una acción.</p>
+           <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-gray-900">Solicitud de Aprobación</h1>
+           <p className="mt-1 sm:mt-2 text-sm sm:text-lg text-gray-600">Revisa los detalles de la orden de compra.</p>
        </header>
 
        <Card className="w-full shadow-lg">
-         <CardHeader>
+         <CardHeader className="px-3 sm:px-6">
             <StatusBadge status={order.status} />
          </CardHeader>
-         <CardContent className="grid gap-6">
+         <CardContent className="grid gap-4 sm:gap-6 px-3 sm:px-6">
            {/* Detalles principales de la orden */}
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-               <div className="space-y-1">
-                   <p className="text-gray-500 font-semibold flex items-center gap-2"><Truck className="h-4 w-4"/> Proveedor</p>
-                   <p className="font-medium text-gray-900 text-base">{order.supplier}</p>
+           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 text-sm">
+               <div className="flex sm:block items-center justify-between sm:space-y-1">
+                   <p className="text-gray-500 font-semibold flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"><Truck className="h-3 w-3 sm:h-4 sm:w-4"/> Proveedor</p>
+                   <p className="font-medium text-gray-900 text-sm sm:text-base">{order.supplier}</p>
                </div>
-               <div className="space-y-1">
-                   <p className="text-gray-500 font-semibold flex items-center gap-2"><User className="h-4 w-4"/> Proyecto</p>
-                   <p className="font-medium text-gray-900 text-base">{order.projectName || 'No especificado'}</p>
+               <div className="flex sm:block items-center justify-between sm:space-y-1">
+                   <p className="text-gray-500 font-semibold flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"><User className="h-3 w-3 sm:h-4 sm:w-4"/> Proyecto</p>
+                   <p className="font-medium text-gray-900 text-sm sm:text-base">{order.projectName || 'No especificado'}</p>
                </div>
-               <div className="space-y-1">
-                   <p className="text-gray-500 font-semibold flex items-center gap-2"><CalendarDays className="h-4 w-4"/> Fecha de Orden</p>
-                   <p className="font-medium text-gray-900 text-base">{new Date(order.date as string).toLocaleDateString('es-ES')}</p>
+               <div className="flex sm:block items-center justify-between sm:space-y-1">
+                   <p className="text-gray-500 font-semibold flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"><CalendarDays className="h-3 w-3 sm:h-4 sm:w-4"/> Fecha</p>
+                   <p className="font-medium text-gray-900 text-sm sm:text-base">{new Date(order.date as string).toLocaleDateString('es-ES')}</p>
                </div>
            </div>
 
-           {/* Tabla de artículos */}
+           {/* Artículos - Tabla en desktop, Cards en móvil */}
            <div>
-               <h3 className="text-lg font-semibold text-gray-900 mb-2 flex items-center gap-2"><Package className="h-5 w-5"/> Artículos Solicitados</h3>
-               <div className="border rounded-lg overflow-hidden">
+               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 flex items-center gap-2"><Package className="h-4 w-4 sm:h-5 sm:w-5"/> Artículos</h3>
+               
+               {/* Tabla para pantallas grandes */}
+               <div className="hidden sm:block border rounded-lg overflow-hidden">
                    <table className="min-w-full divide-y divide-gray-200">
                        <thead className="bg-gray-50">
                        <tr>
@@ -149,11 +151,27 @@ export default async function PublicApprovalPage({ params }: { params: Promise<{
                        </tbody>
                    </table>
                </div>
+
+               {/* Cards para móvil */}
+               <div className="sm:hidden space-y-3">
+                   {order.items.map((item, index) => (
+                       <div key={index} className="border rounded-lg p-3 bg-white">
+                           <p className="font-medium text-gray-900 text-sm mb-2">{item.itemName}</p>
+                           <div className="flex justify-between text-xs text-gray-500">
+                               <span>Cantidad: {item.quantity}</span>
+                               <span>P/U: {formatCurrency(item.price)}</span>
+                           </div>
+                           <div className="flex justify-end mt-1">
+                               <span className="text-sm font-semibold text-gray-700">{formatCurrency(item.price * item.quantity)}</span>
+                           </div>
+                       </div>
+                   ))}
+               </div>
            </div>
            
            {/* Resumen de totales */}
             <div className="flex justify-end">
-               <div className="w-full max-w-xs space-y-2">
+               <div className="w-full sm:max-w-xs space-y-2">
                    <div className="flex justify-between text-sm text-gray-600">
                        <span>Subtotal</span>
                        <span>{formatCurrency(order.total)}</span>
@@ -162,7 +180,7 @@ export default async function PublicApprovalPage({ params }: { params: Promise<{
                        <span>IVA (21%)</span>
                        <span>{formatCurrency(order.total * 0.21)}</span>
                    </div>
-                   <div className="flex justify-between text-lg font-bold text-gray-900 pt-2 border-t mt-2">
+                   <div className="flex justify-between text-base sm:text-lg font-bold text-gray-900 pt-2 border-t mt-2">
                        <span>TOTAL</span>
                        <span>{formatCurrency(order.total * 1.21)}</span>
                    </div>
@@ -172,7 +190,7 @@ export default async function PublicApprovalPage({ params }: { params: Promise<{
          </CardContent>
          {/* Mostramos los botones solo si la orden está pendiente */}
          {isActionable && (
-           <CardFooter className="bg-gray-50 px-6 py-4 flex justify-end gap-3">
+           <CardFooter className="bg-gray-50 px-3 sm:px-6 py-4 flex flex-col sm:flex-row justify-end gap-3">
                <RejectButton orderId={order.id} />
                <ApproveButton orderId={order.id} />
            </CardFooter>
