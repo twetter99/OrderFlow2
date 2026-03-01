@@ -243,11 +243,166 @@ export async function updatePurchaseOrderStatus(id: string, status: PurchaseOrde
   }
 }
 
+/**
+ * Limpia TODOS los datos derivados de una orden de compra antes de eliminarla.
+ * Incluye: inventory_history, inventoryLocations (stock), project totals,
+ * supplierInvoices (referencias), y backorders.
+ */
+async function cleanupOrderData(orderId: string, orderData: PurchaseOrder) {
+  const cleanupLog: string[] = [];
+  let historyDocs: FirebaseFirestore.QueryDocumentSnapshot[] = [];
+
+  try {
+    // 1. Limpiar inventory_history y revertir stock en inventoryLocations
+    const historySnapshot = await db.collection("inventory_history")
+      .where("purchaseOrderId", "==", orderId)
+      .get();
+    historyDocs = historySnapshot.docs;
+
+    if (!historySnapshot.empty) {
+      const batch = db.batch();
+      let totalRevertedAmount = 0;
+
+      for (const doc of historySnapshot.docs) {
+        const historyData = doc.data();
+
+        // Revertir stock en inventoryLocations
+        if (historyData.itemId && historyData.locationId && historyData.quantity) {
+          const invLocSnapshot = await db.collection("inventoryLocations")
+            .where("itemId", "==", historyData.itemId)
+            .where("locationId", "==", historyData.locationId)
+            .get();
+
+          if (!invLocSnapshot.empty) {
+            const locDoc = invLocSnapshot.docs[0];
+            const currentQty = locDoc.data().quantity || 0;
+            const newQty = Math.max(0, currentQty - Math.abs(historyData.quantity));
+            batch.update(locDoc.ref, { quantity: newQty });
+            cleanupLog.push(`inventoryLocations: ${historyData.itemName} → ${newQty}`);
+          }
+        }
+
+        totalRevertedAmount += historyData.totalPrice || 0;
+        batch.delete(doc.ref);
+      }
+
+      await batch.commit();
+      cleanupLog.push(`inventory_history: ${historySnapshot.size} registros eliminados (${totalRevertedAmount.toFixed(2)}€)`);
+    }
+
+    // 2. Revertir totales del proyecto
+    if (orderData.project && orderData.total) {
+      try {
+        let projectRef = db.collection("projects").doc(orderData.project);
+        let projectDoc = await projectRef.get();
+
+        if (!projectDoc.exists && orderData.projectName) {
+          const byName = await db.collection("projects")
+            .where("name", "==", orderData.projectName).limit(1).get();
+          if (!byName.empty) {
+            projectDoc = byName.docs[0];
+            projectRef = db.collection("projects").doc(projectDoc.id);
+          }
+        }
+
+        if (projectDoc.exists) {
+          const projectData = projectDoc.data() as Project;
+          const updates: Record<string, number> = {};
+          const status = orderData.status;
+
+          if (status === 'Aprobada' || status === 'Enviada al Proveedor') {
+            updates.spent = Math.max(0, (projectData.spent || 0) - orderData.total);
+            updates.materialsCommitted = Math.max(0, (projectData.materialsCommitted || 0) - orderData.total);
+          } else if (status === 'Recibida') {
+            updates.spent = Math.max(0, (projectData.spent || 0) - orderData.total);
+            updates.materialsReceived = Math.max(0, (projectData.materialsReceived || 0) - orderData.total);
+          } else if (status === 'Recibida Parcialmente') {
+            const receivedAmount = historyDocs.reduce((sum, d) => sum + (d.data().totalPrice || 0), 0);
+            const pendingAmount = orderData.total - receivedAmount;
+            updates.spent = Math.max(0, (projectData.spent || 0) - orderData.total);
+            updates.materialsReceived = Math.max(0, (projectData.materialsReceived || 0) - receivedAmount);
+            updates.materialsCommitted = Math.max(0, (projectData.materialsCommitted || 0) - pendingAmount);
+          }
+          // Pendiente de Aprobación y Rechazado no afectan totales
+
+          if (Object.keys(updates).length > 0) {
+            await projectRef.update(updates);
+            cleanupLog.push(`project ${orderData.projectName}: ${JSON.stringify(updates)}`);
+          }
+        }
+      } catch (projErr) {
+        console.error("⚠️ Error revirtiendo totales del proyecto:", projErr);
+      }
+    }
+
+    // 3. Limpiar referencia en supplierInvoices
+    const invoicesSnapshot = await db.collection("supplierInvoices")
+      .where("purchaseOrderIds", "array-contains", orderId)
+      .get();
+
+    if (!invoicesSnapshot.empty) {
+      const batch = db.batch();
+      for (const doc of invoicesSnapshot.docs) {
+        batch.update(doc.ref, {
+          purchaseOrderIds: admin.firestore.FieldValue.arrayRemove(orderId)
+        });
+      }
+      await batch.commit();
+      cleanupLog.push(`supplierInvoices: referencia eliminada de ${invoicesSnapshot.size} facturas`);
+    }
+
+    // 4. Limpiar relaciones de backorders
+    if (orderData.backorderIds && orderData.backorderIds.length > 0) {
+      const batch = db.batch();
+      for (const backorderId of orderData.backorderIds) {
+        const backorderRef = db.collection("purchaseOrders").doc(backorderId);
+        const backorderDoc = await backorderRef.get();
+        if (backorderDoc.exists) {
+          batch.update(backorderRef, { originalOrderId: admin.firestore.FieldValue.delete() });
+        }
+      }
+      await batch.commit();
+      cleanupLog.push(`backorders: ${orderData.backorderIds.length} hijos desvinculados`);
+    }
+
+    if (orderData.originalOrderId) {
+      const parentRef = db.collection("purchaseOrders").doc(orderData.originalOrderId);
+      const parentDoc = await parentRef.get();
+      if (parentDoc.exists) {
+        await parentRef.update({
+          backorderIds: admin.firestore.FieldValue.arrayRemove(orderId)
+        });
+        cleanupLog.push(`padre ${orderData.originalOrderId}: referencia de backorder eliminada`);
+      }
+    }
+
+  } catch (error) {
+    console.error("❌ Error durante limpieza de datos de orden:", error);
+    cleanupLog.push(`❌ Error: ${(error as Error).message}`);
+  }
+
+  return cleanupLog;
+}
+
 export async function deletePurchaseOrder(id: string) {
   try {
+    // Leer la orden ANTES de eliminarla para hacer limpieza completa
+    const orderDoc = await db.collection("purchaseOrders").doc(id).get();
+
+    if (orderDoc.exists) {
+      const orderData = { id: orderDoc.id, ...orderDoc.data() } as PurchaseOrder;
+      const cleanupLog = await cleanupOrderData(id, orderData);
+      console.log(`🧹 Limpieza para orden ${id}:`, cleanupLog);
+    }
+
     await db.collection("purchaseOrders").doc(id).delete();
+
     revalidatePath("/purchasing");
-    return { success: true, message: "Pedido eliminado." };
+    revalidatePath("/completed-orders");
+    revalidatePath("/inventory");
+    revalidatePath("/project-tracking");
+    revalidateTag("project-tracking");
+    return { success: true, message: "Pedido eliminado y datos relacionados limpiados." };
   } catch (error) {
     console.error("Error deleting purchase order: ", error);
     return { success: false, message: "No se pudo eliminar el pedido." };
@@ -256,15 +411,29 @@ export async function deletePurchaseOrder(id: string) {
 
 export async function deleteMultiplePurchaseOrders(ids: string[]) {
     try {
+        // Limpiar datos de cada orden antes de eliminarlas
+        for (const id of ids) {
+          const orderDoc = await db.collection("purchaseOrders").doc(id).get();
+          if (orderDoc.exists) {
+            const orderData = { id: orderDoc.id, ...orderDoc.data() } as PurchaseOrder;
+            const cleanupLog = await cleanupOrderData(id, orderData);
+            console.log(`🧹 Limpieza para orden ${id}:`, cleanupLog);
+          }
+        }
+
         const batch = db.batch();
         ids.forEach(id => {
             const docRef = db.collection("purchaseOrders").doc(id);
             batch.delete(docRef);
         });
         await batch.commit();
+
         revalidatePath("/purchasing");
         revalidatePath("/completed-orders");
-        return { success: true, message: `${ids.length} pedidos eliminados.` };
+        revalidatePath("/inventory");
+        revalidatePath("/project-tracking");
+        revalidateTag("project-tracking");
+        return { success: true, message: `${ids.length} pedidos eliminados y datos relacionados limpiados.` };
     } catch(error) {
         console.error("Error deleting multiple orders: ", error);
         return { success: false, message: "No se pudieron eliminar los pedidos." };
